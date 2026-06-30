@@ -16,7 +16,9 @@ A Progressive Web Application (PWA) dedicated to deep, technical coffee knowledg
 
 ## Features
 - **Bilingual (EN/ES)**: Global language toggle on the hub that persists across all courses. All content is available in English and Spanish.
-- **Offline First**: Built with `vite-plugin-pwa`, allowing the app to be installed natively on mobile devices and used without an internet connection.
+- **Interactive Simulators**: Built with `recharts`, featuring live math-driven interactive curves for roasting thermodynamics, and extraction control charts for both filter brewing and espresso.
+- **Knowledge Check Flashcards**: Support for interactive 3D-flip flashcards embedded directly into the topics to test user comprehension.
+- **Auto-Updating Offline PWA**: Built with `vite-plugin-pwa`. Installs natively on mobile devices and works offline. When new content is deployed, the service worker detects it and automatically reloads the page to serve the freshest syllabus.
 - **Rich Text Lessons**: Uses `react-markdown` to render complex technical articles, external links, and formatting directly in the app.
 - **Local Progress Tracking**: Your checkboxes and notes are saved to your browser's `localStorage`. They persist across sessions safely without requiring an account.
 - **Modular Data Structure**: All syllabus data is stored in clean ES modules under `src/data/<course>/`, making it incredibly simple to add new courses, modules, or lessons.
@@ -75,7 +77,11 @@ export default {
         b: "Short blurb",
         content: `Your **rich markdown** text goes here. [External Link](https://example.com)`,
         points: ["Key point 1", "Key point 2"],
-        refs: ["Optional reference citations"]
+        refs: ["Optional reference citations"],
+        simulator: "roast-curve", // Optional: "roast-curve", "brew-chart", or "espresso-flow"
+        flashcards: [ // Optional
+          { q: "Question text?", a: "Answer text." }
+        ]
       }
     ]
   },

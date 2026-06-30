@@ -38,6 +38,17 @@ export default {
           "Rao, S. (2008). <i>The Professional Barista's Handbook</i>."
         ],
         "simulator": "espresso-flow",
+        "challenges": [
+          {
+            "id": "espresso:m1:dial-in",
+            "title": "Dial In the Shot",
+            "desc": "Adjust grind, ratio, pressure, and pre-infusion to land in the espresso ideal zone: 18–22% extraction yield AND 8–12% TDS.",
+            "xp": 30,
+            "badge": "espresso_ace",
+            "successMsg": "Shot dialled in. Your parameters hit the espresso sweet spot — balanced extraction at full concentration.",
+            "target": { "ey": [18, 22], "tds": [8, 12] }
+          }
+        ],
         "flashcards": [
           { "q": "Why is espresso paradoxically the strongest yet least-extracted form of coffee?", "a": "The tiny water volume saturates with solubles quickly, limiting how deep extraction can go. Typical EY is only 17–19% vs. filter's 20–22%." },
           { "q": "What is the typical TDS range for espresso vs. filter coffee?", "a": "Espresso: ~8–12% TDS (extremely strong). Filter coffee: ~1.2–1.5% TDS." },
@@ -85,6 +96,17 @@ export default {
           "Rao, S. (2008). <i>The Professional Barista's Handbook</i>."
         ],
         "simulator": "espresso-flow",
+        "challenges": [
+          {
+            "id": "espresso:m1:dial-in",
+            "title": "Calibra el Shot",
+            "desc": "Ajusta molienda, proporción, presión y pre-infusión para aterrizar en la zona ideal del espresso: 18–22% de rendimiento de extracción Y 8–12% de TDS.",
+            "xp": 30,
+            "badge": "espresso_ace",
+            "successMsg": "Shot calibrado. Tus parámetros alcanzaron el punto óptimo del espresso — extracción balanceada a plena concentración.",
+            "target": { "ey": [18, 22], "tds": [8, 12] }
+          }
+        ],
         "flashcards": [
           { "q": "¿Por qué el espresso es paradójicamente la forma más fuerte pero menos extraída del café?", "a": "El pequeño volumen de agua se satura de solubles rápidamente, limitando la profundidad de extracción. El EY típico es solo 17–19% vs. el 20–22% del filtrado." },
           { "q": "¿Cuál es el rango típico de TDS del espresso vs. el café de filtro?", "a": "Espresso: ~8–12% TDS (extremadamente fuerte). Café de filtro: ~1.2–1.5% TDS." },

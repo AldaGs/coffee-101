@@ -34,6 +34,17 @@ export default {
           "The necessity of predictive adjustments rather than reactive ones"
         ],
         "simulator": "roast-curve",
+        "challenges": [
+          {
+            "id": "roast:m1:first-crack-8min",
+            "title": "Hit First Crack at 8:00",
+            "desc": "Adjust charge temperature, gas, and airflow to reach First Crack between 7:40 and 8:20.",
+            "xp": 25,
+            "badge": "roast_master",
+            "successMsg": "Perfect momentum. Your RoR carried the beans right into First Crack on time.",
+            "target": { "fcTime": [460, 500] }
+          }
+        ],
         "flashcards": [
           { "q": "What is thermal momentum in coffee roasting?", "a": "The delay between adjusting the gas/heat and the beans actually absorbing it — caused by the roaster's own metal mass acting as a heat reservoir." },
           { "q": "Should a roaster react to what the temperature is doing now, or anticipate what it will do in 60 seconds?", "a": "Anticipate — reactive adjustments always arrive late because of thermal inertia. Roasting is predictive driving, not reactive." },
@@ -95,6 +106,17 @@ export default {
           "La necesidad de ajustes predictivos en lugar de reactivos"
         ],
         "simulator": "roast-curve",
+        "challenges": [
+          {
+            "id": "roast:m1:first-crack-8min",
+            "title": "Alcanza el Primer Crack a las 8:00",
+            "desc": "Ajusta la temperatura de carga, el gas y el flujo de aire para alcanzar el Primer Crack entre 7:40 y 8:20.",
+            "xp": 25,
+            "badge": "roast_master",
+            "successMsg": "Impulso perfecto. Tu RoR llevó los granos exactamente al Primer Crack a tiempo.",
+            "target": { "fcTime": [460, 500] }
+          }
+        ],
         "flashcards": [
           { "q": "¿Qué es el momento térmico en el tueste de café?", "a": "El retraso entre ajustar el gas y que los granos absorban ese calor — causado por la masa metálica del tostador que actúa como reservorio térmico." },
           { "q": "¿Debe un tostador reaccionar a lo que ocurre ahora, o anticipar lo que sucederá en 60 segundos?", "a": "Anticipar — los ajustes reactivos siempre llegan tarde por la inercia térmica. Tostar es una conducción predictiva, no reactiva." },

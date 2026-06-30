@@ -19,6 +19,17 @@ export default {
           "SCA (Specialty Coffee Association). <i>SCA Brewing Control Chart</i>. https://sca.coffee"
         ],
         "simulator": "brew-chart",
+        "challenges": [
+          {
+            "id": "brew:m1:gold-cup",
+            "title": "Hit the Gold Cup Zone",
+            "desc": "Adjust grind, ratio, temperature, and agitation to land inside the SCA Gold Cup rectangle: 18–22% extraction yield AND 1.15–1.45% TDS.",
+            "xp": 20,
+            "badge": "gold_cup",
+            "successMsg": "Gold Cup achieved. Your recipe hits the SCA's ideal balance of strength and extraction.",
+            "target": { "ey": [18, 22], "tds": [1.15, 1.45] }
+          }
+        ],
         "flashcards": [
           { "q": "What percentage of a coffee bean is insoluble cellulose that never dissolves?", "a": "~70%. The remaining ~30% is potentially soluble flavor compounds (acids, sugars, lipids, alkaloids)." },
           { "q": "What is Extraction Yield (EY)?", "a": "The percentage of dry coffee mass that actually dissolves into the brew water. SCA targets 18–22%." },
@@ -85,6 +96,17 @@ export default {
           "SCA (Specialty Coffee Association). <i>SCA Brewing Control Chart</i>. https://sca.coffee"
         ],
         "simulator": "brew-chart",
+        "challenges": [
+          {
+            "id": "brew:m1:gold-cup",
+            "title": "Alcanza la Zona Gold Cup",
+            "desc": "Ajusta la molienda, proporción, temperatura y agitación para aterrizar dentro del rectángulo Gold Cup de la SCA: 18–22% de rendimiento de extracción Y 1.15–1.45% de TDS.",
+            "xp": 20,
+            "badge": "gold_cup",
+            "successMsg": "¡Gold Cup logrado! Tu receta alcanza el equilibrio ideal de fuerza y extracción de la SCA.",
+            "target": { "ey": [18, 22], "tds": [1.15, 1.45] }
+          }
+        ],
         "flashcards": [
           { "q": "¿Qué porcentaje del grano de café es celulosa insoluble que nunca se disuelve?", "a": "~70%. El 30% restante son compuestos de sabor potencialmente solubles (ácidos, azúcares, lípidos, alcaloides)." },
           { "q": "¿Qué es el Rendimiento de Extracción (EY)?", "a": "El porcentaje de la masa seca del café que realmente se disuelve en el agua. La SCA apunta a 18–22%." },

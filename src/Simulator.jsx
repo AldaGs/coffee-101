@@ -4,7 +4,7 @@ const RoastSimulator = lazy(() => import('./simulators/RoastSimulator'));
 const BrewSimulator = lazy(() => import('./simulators/BrewSimulator'));
 const EspressoSimulator = lazy(() => import('./simulators/EspressoSimulator'));
 
-export default function Simulator({ type, lang = 'en' }) {
+export default function Simulator({ type, lang = 'en', challenge }) {
   if (!type) return null;
 
   return (
@@ -13,9 +13,9 @@ export default function Simulator({ type, lang = 'en' }) {
         {lang === 'es' ? 'Simulador Interactivo' : 'Interactive Simulator'}
       </h3>
       <Suspense fallback={<div style={{ padding: '40px', textAlign: 'center', color: 'var(--ink-soft)' }}>Loading simulator...</div>}>
-        {type === 'roast-curve' && <RoastSimulator lang={lang} />}
-        {type === 'brew-chart' && <BrewSimulator lang={lang} />}
-        {type === 'espresso-flow' && <EspressoSimulator lang={lang} />}
+        {type === 'roast-curve' && <RoastSimulator lang={lang} challenge={challenge} />}
+        {type === 'brew-chart' && <BrewSimulator lang={lang} challenge={challenge} />}
+        {type === 'espresso-flow' && <EspressoSimulator lang={lang} challenge={challenge} />}
       </Suspense>
     </div>
   );

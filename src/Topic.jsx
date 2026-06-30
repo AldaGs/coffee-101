@@ -100,7 +100,7 @@ export default function Topic({ courseId, modId, topicIdx, topicData, ui, lang, 
             </div>
           )}
           
-          {topicData.simulator && <Simulator type={topicData.simulator} lang={lang} />}
+          {topicData.simulator && <Simulator type={topicData.simulator} lang={lang} challenge={topicData.challenges?.[0]} />}
           
           {topicData.flashcards && (
             <KnowledgeCheck

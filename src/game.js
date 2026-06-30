@@ -71,14 +71,18 @@ export function getStreak() {
 
 // ── Badges ─────────────────────────────────────────────────
 export const BADGE_DEFS = [
-  { id: 'first_review', icon: '🎓', label: 'First Review', desc: 'Complete your first card review.' },
-  { id: 'streak_3',     icon: '🔥', label: '3-Day Streak',  desc: 'Review 3 days in a row.' },
-  { id: 'streak_7',     icon: '⚡', label: 'Week Streak',   desc: 'Review 7 days in a row.' },
-  { id: 'streak_30',    icon: '🌟', label: 'Month Streak',  desc: 'Review 30 days in a row.' },
-  { id: 'xp_100',       icon: '☕', label: 'Apprentice',    desc: 'Earn 100 XP.' },
-  { id: 'xp_500',       icon: '🫘', label: 'Journeyman',    desc: 'Earn 500 XP.' },
-  { id: 'xp_1000',      icon: '🏅', label: 'Expert',        desc: 'Earn 1,000 XP.' },
-  { id: 'xp_2000',      icon: '🏆', label: 'Master Barista',desc: 'Earn 2,000 XP.' },
+  { id: 'first_review',     icon: '🎓', label: 'First Review',   desc: 'Complete your first card review.' },
+  { id: 'streak_3',         icon: '🔥', label: '3-Day Streak',   desc: 'Review 3 days in a row.' },
+  { id: 'streak_7',         icon: '⚡', label: 'Week Streak',    desc: 'Review 7 days in a row.' },
+  { id: 'streak_30',        icon: '🌟', label: 'Month Streak',   desc: 'Review 30 days in a row.' },
+  { id: 'xp_100',           icon: '☕', label: 'Apprentice',     desc: 'Earn 100 XP.' },
+  { id: 'xp_500',           icon: '🫘', label: 'Journeyman',     desc: 'Earn 500 XP.' },
+  { id: 'xp_1000',          icon: '🏅', label: 'Expert',         desc: 'Earn 1,000 XP.' },
+  { id: 'xp_2000',          icon: '🏆', label: 'Master Barista', desc: 'Earn 2,000 XP.' },
+  { id: 'first_challenge',  icon: '🎯', label: 'First Challenge',desc: 'Complete any simulator challenge.' },
+  { id: 'roast_master',     icon: '🌡️', label: 'Roast Master',   desc: 'Hit First Crack on time in the roast-curve challenge.' },
+  { id: 'gold_cup',         icon: '🏅', label: 'Gold Cup',       desc: 'Land in the SCA Gold Cup zone in the brew-chart challenge.' },
+  { id: 'espresso_ace',     icon: '☕', label: 'Espresso Ace',   desc: 'Dial in the perfect espresso shot.' },
 ];
 
 export function getEarnedBadges() {
@@ -107,6 +111,30 @@ export function checkBadges() {
     try { localStorage.setItem(KEYS.badges, JSON.stringify(earned)); } catch {}
   }
   return newBadges.map(id => BADGE_DEFS.find(b => b.id === id)).filter(Boolean);
+}
+
+// ── Challenges ──────────────────────────────────────────────
+const CHALLENGE_KEY = 'game:challenges';
+
+export function getChallengesCompleted() {
+  try { return JSON.parse(localStorage.getItem(CHALLENGE_KEY)) || []; } catch { return []; }
+}
+
+export function isChallengeCompleted(id) {
+  return getChallengesCompleted().includes(id);
+}
+
+export function completeChallenge(id, xp, badgeId) {
+  const completed = getChallengesCompleted();
+  const isNew = !completed.includes(id);
+  if (isNew) {
+    completed.push(id);
+    try { localStorage.setItem(CHALLENGE_KEY, JSON.stringify(completed)); } catch {}
+    addXP(xp);
+    awardBadge('first_challenge');
+    if (badgeId) awardBadge(badgeId);
+  }
+  return isNew;
 }
 
 export function awardBadge(id) {

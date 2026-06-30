@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { UI_DICT } from './data/translations';
-import { brewingData } from './data/brewing';
-import { espressoData } from './data/espresso';
-import { roastingData } from './data/roasting';
+import { brewingData } from './data/brewing/index.js';
+import { espressoData } from './data/espresso/index.js';
+import { roastingData } from './data/roasting/index.js';
 import Topic from './Topic';
 
 const DATA_MAP = {

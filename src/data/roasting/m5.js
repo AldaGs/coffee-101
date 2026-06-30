@@ -8,7 +8,7 @@ export default {
       {
         "t": "Calculating RoR",
         "b": "The derivative of bean temperature over time.",
-        "content": "Bean Temperature (BT) tells you how hot the coffee is right now. **Rate of Rise (RoR)** tells you how fast the coffee is getting hotter.\n\nMathematically, it is the derivative of the BT curve, usually measured in degrees per 30 or 60 seconds. For example, an RoR of 15°C/min means that if you change nothing, the coffee will be 15 degrees hotter in exactly one minute.\n\nWatching BT is like looking at your car's odometer. Watching RoR is like looking at the speedometer. If you want to avoid crashing (stalling or scorching), you must drive by looking at the speedometer.",
+        "content": "Bean Temperature (BT) tells you how hot the coffee is right now. **Rate of Rise (RoR)** tells you how fast the coffee is getting hotter.\n\nMathematically, it is the [derivative](https://en.wikipedia.org/wiki/Derivative) of the BT curve, usually measured in degrees per 30 or 60 seconds. For example, an RoR of 15°C/min means that if you change nothing, the coffee will be 15 degrees hotter in exactly one minute.\n\nWatching BT is like looking at your car's odometer. Watching RoR is like looking at the speedometer. If you want to avoid crashing (stalling or scorching), you must drive by looking at the speedometer.",
         "points": [
           "RoR = ∆BT / ∆Time",
           "Leading indicator vs. Lagging indicator (RoR tells you what will happen before BT shows it)"
@@ -48,7 +48,7 @@ export default {
       {
         "t": "Calculando el RoR",
         "b": "La derivada de la temperatura del grano sobre el tiempo.",
-        "content": "La Temperatura del Grano (BT) te dice qué tan caliente está el café ahora mismo. La **Tasa de Ascenso (RoR)** te dice qué tan rápido se está calentando el café.\n\nMatemáticamente, es la derivada de la curva BT, usualmente medida en grados por 30 o 60 segundos. Por ejemplo, un RoR de 15°C/min significa que si no cambias nada, el café estará 15 grados más caliente en exactamente un minuto.\n\nMirar el BT es como mirar el odómetro de tu auto. Mirar el RoR es como mirar el velocímetro. Si quieres evitar chocar (estancarte o quemar), debes conducir mirando el velocímetro.",
+        "content": "La Temperatura del Grano (BT) te dice qué tan caliente está el café ahora mismo. La **Tasa de Ascenso (RoR)** te dice qué tan rápido se está calentando el café.\n\nMatemáticamente, es la [derivada](https://es.wikipedia.org/wiki/Derivada) de la curva BT, usualmente medida en grados por 30 o 60 segundos. Por ejemplo, un RoR de 15°C/min significa que si no cambias nada, el café estará 15 grados más caliente en exactamente un minuto.\n\nMirar el BT es como mirar el odómetro de tu auto. Mirar el RoR es como mirar el velocímetro. Si quieres evitar chocar (estancarte o quemar), debes conducir mirando el velocímetro.",
         "points": [
           "RoR = ∆BT / ∆Tiempo",
           "Indicador adelantado vs. retrasado (el RoR te dice qué pasará antes de que el BT lo muestre)"

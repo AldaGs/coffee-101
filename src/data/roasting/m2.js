@@ -8,7 +8,7 @@ export default {
       {
         "t": "Cellular structure of green coffee",
         "b": "A coffee bean is a dense matrix of cellulose, water, and potential flavor precursors.",
-        "content": "Before roasting, a green coffee bean is an incredibly dense, hard seed. Its cellular structure is made of rigid cellulose walls.\n\nInside this cellulose matrix are the building blocks of flavor:\n- **Water**: Usually 10-12% of the bean's weight.\n- **Sugars**: Primarily sucrose, which will caramelize later.\n- **Acids**: Chlorogenic, citric, and malic acids.\n- **Amino acids & Proteins**: Essential for the Maillard reaction.\n\nThe roaster's job is to use heat to evaporate the water, soften the cellulose, and force these precursors to react with each other without burning them to carbon.",
+        "content": "Before roasting, a green coffee bean is an incredibly dense, hard seed. Its cellular structure is made of rigid [cellulose](https://en.wikipedia.org/wiki/Cellulose) walls.\n\nInside this cellulose matrix are the building blocks of flavor:\n- **Water**: Usually 10-12% of the bean's weight.\n- **Sugars**: Primarily [sucrose](https://en.wikipedia.org/wiki/Sucrose), which will caramelize later.\n- **Acids**: [Chlorogenic](https://en.wikipedia.org/wiki/Chlorogenic_acid), [citric](https://en.wikipedia.org/wiki/Citric_acid), and [malic](https://en.wikipedia.org/wiki/Malic_acid) acids.\n- **[Amino acids](https://en.wikipedia.org/wiki/Amino_acid) & Proteins**: Essential for the Maillard reaction.\n\nThe roaster's job is to use heat to evaporate the water, soften the cellulose, and force these precursors to react with each other without burning them to carbon.",
         "points": [
           "Cellulose as the rigid structural framework",
           "Moisture content (10-12%) and its role in heat transfer",
@@ -41,7 +41,7 @@ export default {
       {
         "t": "The Drying Phase (Endothermic)",
         "b": "Evaporating the free moisture to prepare the bean for chemical reactions.",
-        "content": "From the Turning Point until the beans turn pale yellow (around 150°C / 300°F), the roast is in the **Drying Phase**.\n\nDuring this phase, the beans are **Endothermic**—they are aggressively absorbing heat from the roaster. The primary physical action here is the evaporation of 'free water' near the surface of the bean.\n\nChemically, very little flavor development is happening here. However, this phase sets up the rest of the roast. If you push through the drying phase too fast, the outside of the bean will dry while the core remains raw and wet, leading to grassy, astringent flavors in the cup.",
+        "content": "From the Turning Point until the beans turn pale yellow (around 150°C / 300°F), the roast is in the **Drying Phase**.\n\nDuring this phase, the beans are **[Endothermic](https://en.wikipedia.org/wiki/Endothermic_process)**—they are aggressively absorbing heat from the roaster. The primary physical action here is the evaporation of 'free water' near the surface of the bean.\n\nChemically, very little flavor development is happening here. However, this phase sets up the rest of the roast. If you push through the drying phase too fast, the outside of the bean will dry while the core remains raw and wet, leading to grassy, astringent flavors in the cup.",
         "points": [
           "Endothermic heat absorption",
           "Evaporation of free water vs. bound water",
@@ -67,7 +67,7 @@ export default {
       {
         "t": "Estructura celular del café verde",
         "b": "Un grano de café es una matriz densa de celulosa, agua y precursores potenciales de sabor.",
-        "content": "Antes de tostarse, un grano de café verde es una semilla increíblemente densa y dura. Su estructura celular está hecha de paredes de celulosa rígida.\n\nDentro de esta matriz están los bloques de construcción del sabor:\n- **Agua**: Usualmente 10-12% del peso.\n- **Azúcares**: Principalmente sacarosa.\n- **Ácidos**: Clorogénicos, cítricos y málicos.\n- **Aminoácidos y Proteínas**: Esenciales para la reacción de Maillard.\n\nEl trabajo del tostador es usar calor para evaporar el agua, ablandar la celulosa y forzar a estos precursores a reaccionar sin quemarlos hasta convertirlos en carbón.",
+        "content": "Antes de tostarse, un grano de café verde es una semilla increíblemente densa y dura. Su estructura celular está hecha de paredes de [celulosa](https://es.wikipedia.org/wiki/Celulosa) rígida.\n\nDentro de esta matriz están los bloques de construcción del sabor:\n- **Agua**: Usualmente 10-12% del peso.\n- **Azúcares**: Principalmente [sacarosa](https://es.wikipedia.org/wiki/Sacarosa).\n- **Ácidos**: [Clorogénicos](https://es.wikipedia.org/wiki/%C3%81cido_clorog%C3%A9nico), [cítricos](https://es.wikipedia.org/wiki/%C3%81cido_c%C3%ADtrico) y [málicos](https://es.wikipedia.org/wiki/%C3%81cido_m%C3%A1lico).\n- **[Aminoácidos](https://es.wikipedia.org/wiki/Amino%C3%A1cido) y Proteínas**: Esenciales para la reacción de Maillard.\n\nEl trabajo del tostador es usar calor para evaporar el agua, ablandar la celulosa y forzar a estos precursores a reaccionar sin quemarlos hasta convertirlos en carbón.",
         "points": [
           "La celulosa como el marco estructural rígido",
           "El contenido de humedad (10-12%) y su papel en la transferencia de calor",
@@ -100,7 +100,7 @@ export default {
       {
         "t": "La Fase de Secado (Endotérmica)",
         "b": "Evaporando la humedad libre para preparar el grano para reacciones químicas.",
-        "content": "Desde el Turning Point hasta que los granos se vuelven de color amarillo pálido (alrededor de 150°C), el tueste está en la **Fase de Secado**.\n\nDurante esta fase, los granos son **Endotérmicos**—están absorbiendo agresivamente el calor. La acción física principal aquí es la evaporación del 'agua libre' cerca de la superficie del grano.\n\nQuímicamente, ocurre muy poco desarrollo de sabor aquí. Sin embargo, si pasas por la fase de secado demasiado rápido, el exterior se secará mientras el núcleo permanece crudo y húmedo, lo que lleva a sabores herbáceos y astringentes en la taza.",
+        "content": "Desde el Turning Point hasta que los granos se vuelven de color amarillo pálido (alrededor de 150°C), el tueste está en la **Fase de Secado**.\n\nDurante esta fase, los granos son **[Endotérmicos](https://es.wikipedia.org/wiki/Reacci%C3%B3n_endot%C3%A9rmica)**—están absorbiendo agresivamente el calor. La acción física principal aquí es la evaporación del 'agua libre' cerca de la superficie del grano.\n\nQuímicamente, ocurre muy poco desarrollo de sabor aquí. Sin embargo, si pasas por la fase de secado demasiado rápido, el exterior se secará mientras el núcleo permanece crudo y húmedo, lo que lleva a sabores herbáceos y astringentes en la taza.",
         "points": [
           "Absorción de calor endotérmica",
           "Evaporación de agua libre vs. agua unida",

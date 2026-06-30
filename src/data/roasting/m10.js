@@ -18,7 +18,7 @@ export default {
       {
         "t": "Quenching (Water injection)",
         "b": "A controversial commercial technique for stopping roasts instantly.",
-        "content": "In massive commercial operations (like Folgers or Starbucks), they cannot wait 4 minutes for coffee to cool. They use a technique called **Quenching**.\n\nSeconds before dropping the coffee, water is sprayed directly into the hot roasting drum. The water flashes to steam, instantly halting the roast and cooling the beans. \n\nWhile efficient, this introduces moisture back into the roasted coffee, drastically reducing shelf life and dulling the flavor. It also makes the coffee weigh more (water weight), which increases profits. Specialty coffee strictly forbids quenching, relying entirely on air cooling.",
+        "content": "In massive commercial operations (like Folgers or Starbucks), they cannot wait 4 minutes for coffee to cool. They use a technique called **Quenching**.\n\nSeconds before dropping the coffee, water is sprayed directly into the hot roasting drum. The water flashes to steam ([evaporative cooling](https://en.wikipedia.org/wiki/Evaporative_cooling)), instantly halting the roast and cooling the beans. \n\nWhile efficient, this introduces moisture back into the roasted coffee, drastically reducing shelf life and dulling the flavor. It also makes the coffee weigh more (water weight), which increases profits. Specialty coffee strictly forbids quenching, relying entirely on air cooling.",
         "points": [
           "The physics of evaporative cooling via quenching",
           "The negative impact on shelf life, flavor clarity, and staling rates",
@@ -46,7 +46,7 @@ export default {
       {
         "t": "Quenching (Inyección de agua)",
         "b": "Una técnica comercial controvertida para detener tuestes al instante.",
-        "content": "En operaciones comerciales masivas, no pueden esperar 4 minutos a que el café se enfríe. Usan una técnica llamada **Quenching**.\n\nSegundos antes de sacar el café, se rocía agua directamente dentro del tambor caliente. El agua se convierte instantáneamente en vapor, deteniendo el tueste y enfriando los granos.\n\nAunque es eficiente, esto reintroduce humedad en el café tostado, reduciendo drásticamente su vida útil y apagando el sabor. También hace que el café pese más (peso de agua), lo que aumenta las ganancias. El café de especialidad prohíbe estrictamente el quenching, dependiendo enteramente del enfriamiento por aire.",
+        "content": "En operaciones comerciales masivas, no pueden esperar 4 minutos a que el café se enfríe. Usan una técnica llamada **Quenching**.\n\nSegundos antes de sacar el café, se rocía agua directamente dentro del tambor caliente. El agua se convierte instantáneamente en vapor ([enfriamiento evaporativo](https://es.wikipedia.org/wiki/Enfriamiento_evaporativo)), deteniendo el tueste y enfriando los granos.\n\nAunque es eficiente, esto reintroduce humedad en el café tostado, reduciendo drásticamente su vida útil y apagando el sabor. También hace que el café pese más (peso de agua), lo que aumenta las ganancias. El café de especialidad prohíbe estrictamente el quenching, dependiendo enteramente del enfriamiento por aire.",
         "points": [
           "La física del enfriamiento evaporativo vía quenching",
           "El impacto negativo en la vida útil, claridad de sabor y tasas de envejecimiento",

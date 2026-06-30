@@ -1,16 +1,53 @@
-# React + Vite
+# Coffee 101 PWA
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A Progressive Web Application (PWA) dedicated to deep, technical coffee knowledge. This app covers comprehensive syllabi for Coffee Roasting, Espresso, and Filter Brewing. It acts as an offline-first learning hub where you can read rich lessons, track your progress, and take local notes.
 
-Currently, two official plugins are available:
+## Features
+- **Offline First**: Built with `vite-plugin-pwa`, allowing the app to be installed natively on mobile devices and used without an internet connection.
+- **Rich Text Lessons**: Uses `react-markdown` to render complex technical articles, external links, and formatting directly in the app.
+- **Local Progress Tracking**: Your checkboxes and notes are saved to your browser's `localStorage`. They persist across sessions safely without requiring an account.
+- **Modular Data Structure**: All syllabus data is stored in clean Javascript arrays (`src/data/`), making it incredibly simple to add new courses, modules, or lessons.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting Started
 
-## React Compiler
+To run this project locally:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+2. **Start the Development Server**
+   ```bash
+   npm run dev
+   ```
+   Open `http://localhost:5173` in your browser.
 
-## Expanding the Oxlint configuration
+3. **Build for Production**
+   ```bash
+   npm run build
+   ```
+   This generates the optimized build and the Service Workers required for PWA installation in the `dist` directory.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Adding Content
+
+To add new content or modify existing lessons:
+1. Navigate to the `src/data/` directory.
+2. Open the relevant file (e.g., `roasting.js`).
+3. Locate the module and topic you want to edit.
+4. Add or modify the `content` property using Markdown syntax. For example:
+   ```javascript
+   {
+     t: "Topic Title",
+     b: "Short blurb",
+     content: `Your **rich markdown** text goes here. [External Link](https://example.com)`,
+     // ...
+   }
+   ```
+5. Save the file. The app will automatically render the new Markdown content.
+
+## Tech Stack
+- **React**: UI library
+- **Vite**: Build tool and dev server
+- **React Router**: For navigation between courses
+- **Vite PWA**: For service worker generation and manifest configuration
+- **React Markdown**: For rendering rich text lessons

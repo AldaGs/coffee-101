@@ -5,7 +5,7 @@ import { getAllCardIds } from './cardRegistry';
 import { getDueIds } from './sr';
 import { getLevel, getStreak, touchStreak, getEarnedBadges, BADGE_DEFS } from './game';
 
-const COURSE_ORDER = ['brewing', 'espresso', 'roasting', 'history', 'agronomy', 'sensory', 'barista'];
+const COURSE_ORDER = ['brewing', 'espresso', 'roasting', 'roasting2', 'history', 'agronomy', 'sensory', 'barista'];
 
 function Dashboard() {
   const [stats, setStats] = useState(null);

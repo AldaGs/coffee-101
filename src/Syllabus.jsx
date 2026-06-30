@@ -29,6 +29,7 @@ export default function Syllabus() {
     localStorage.setItem('coffee101-lang', l);
   };
   const [progress, setProgress] = useState({ done: 0, total: 0 });
+  const [openTopicKey, setOpenTopicKey] = useState(null);
 
   // Update theme on body to support course-specific styles (like roasting)
   useEffect(() => {
@@ -116,7 +117,7 @@ export default function Syllabus() {
             <p className="module-desc">{mod.desc}</p>
             
             {mod.topics.map((top, tIdx) => (
-              <Topic 
+              <Topic
                 key={`${mod.id}-${tIdx}`}
                 courseId={courseId}
                 modId={mod.id}
@@ -125,6 +126,8 @@ export default function Syllabus() {
                 ui={ui}
                 lang={currentLang}
                 updateProgress={updateProgress}
+                openTopicKey={openTopicKey}
+                setOpenTopicKey={setOpenTopicKey}
               />
             ))}
           </div>

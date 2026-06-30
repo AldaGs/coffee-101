@@ -6,8 +6,7 @@ import { WikiLink } from './WikiCard';
 
 const MD_COMPONENTS = { a: WikiLink };
 
-export default function Topic({ courseId, modId, topicIdx, topicData, ui, lang, updateProgress }) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Topic({ courseId, modId, topicIdx, topicData, ui, lang, updateProgress, openTopicKey, setOpenTopicKey }) {
   const [isDone, setIsDone] = useState(false);
   const [note, setNote] = useState('');
   const [showHint, setShowHint] = useState(false);
@@ -17,6 +16,7 @@ export default function Topic({ courseId, modId, topicIdx, topicData, ui, lang, 
   const baseKey = `${courseId}-syllabus:${modId}-${topicIdx}`;
   const doneKey = `${baseKey}-done`;
   const noteKey = `${baseKey}-note`;
+  const isOpen = openTopicKey === baseKey;
 
   // Load state from local storage on mount
   useEffect(() => {
@@ -48,7 +48,7 @@ export default function Topic({ courseId, modId, topicIdx, topicData, ui, lang, 
     }, 500);
   };
 
-  const toggleOpen = () => setIsOpen(!isOpen);
+  const toggleOpen = () => setOpenTopicKey(isOpen ? null : baseKey);
 
   return (
     <div className={`topic ${isDone ? 'done' : ''}`}>

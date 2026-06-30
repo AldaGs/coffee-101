@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import ReactMarkdown from 'react-markdown';
 
 export default function Topic({ courseId, modId, topicIdx, topicData, ui, updateProgress }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,7 +69,13 @@ export default function Topic({ courseId, modId, topicIdx, topicData, ui, update
       
       {isOpen && (
         <div className="topic-body open">
-          {topicData.points && topicData.points.length > 0 && (
+          {topicData.content && (
+            <div className="topic-content" style={{ marginTop: '16px', fontSize: '14.5px', lineHeight: '1.7', color: 'var(--ink)' }}>
+              <ReactMarkdown>{topicData.content}</ReactMarkdown>
+            </div>
+          )}
+          
+          {(!topicData.content && topicData.points && topicData.points.length > 0) && (
             <>
               <h4>{ui.covers}</h4>
               <ul>

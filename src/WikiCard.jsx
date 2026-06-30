@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 
 const CACHE_PREFIX = 'wiki-cache:';
 const CACHE_TTL = 7 * 24 * 60 * 60 * 1000;
@@ -45,13 +46,14 @@ export function WikiLink({ href, children }) {
         {children}
         <span className="wiki-link-badge">W</span>
       </a>
-      {open && (
+      {open && createPortal(
         <WikiCardDialog
           title={title}
           lang={urlLang}
           href={href}
           onClose={() => setOpen(false)}
-        />
+        />,
+        document.body
       )}
     </>
   );

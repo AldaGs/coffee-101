@@ -1,60 +1,56 @@
 export default {
   "en": {
     "mod": "Module 9",
-    "title": "Sensory validation and troubleshooting",
+    "title": "Bar workflow and commercial scaling",
     "id": "m9",
-    "desc": "Closing the loop between machine/puck variables and cup outcome — diagnosing espresso-specific defects back to mechanistic cause.",
+    "desc": "Taking theoretical espresso physics and translating them into a system that can handle 100 customers an hour.",
     "topics": [
       {
-        "t": "Reading shot defects back to cause",
-        "b": "A diagnostic table connecting symptom to mechanism, adapted for espresso's faster feedback loop and higher variable sensitivity than filter.",
+        "t": "Ergonomics and the 'Triangle'",
+        "b": "Every step you take behind the bar costs seconds. In a rush, seconds compound into failed shots and angry customers.",
+        "content": "Theoretical perfection falls apart if the physical layout of the bar is wrong. \n\nThe **Espresso Triangle** (Grinder, Tamp Station, Group Head) should require zero steps to navigate. If a barista has to pivot their entire body or walk to fetch milk, they lose 3 seconds per drink. Over 200 drinks, that is 10 minutes of pure delay.\n\nFurthermore, bad ergonomics (tamping at the wrong height, awkwardly angling wrists) leads directly to repetitive strain injuries (RSI). A commercial bar must be designed so that the physical execution of pulling a shot is as frictionless and physically safe as possible.",
         "points": [
-          "Sour, thin, fast-flowing shot → likely under-extraction or active channeling: check distribution/tamp before adjusting grind alone",
-          "Bitter, harsh, slow/choked shot → likely over-extraction from too-fine grind or excessive dose for the basket: coarsen grind, check dose-to-basket ratio",
-          "Inconsistent shot-to-shot results at identical settings → strong signal of distribution/dosing inconsistency rather than a recipe problem — fix process before touching numbers"
-        ],
-        "refs": [
-          "Barista Hustle Æ curriculum, op. cit. — defect-mechanism mapping specific to espresso.",
-          "Espresso Aficionados, op. cit."
+          "Workflow optimization as a core pillar of beverage quality (slow bars serve cold drinks)",
+          "The 'step-zero' layout philosophy: everything needed for the drink is within arm's reach",
+          "Tamping ergonomics and the adoption of automatic tampers (PuqPress) in high-volume settings to prevent RSI"
         ]
       },
       {
-        "t": "Building a shot-to-cupping feedback log",
-        "b": "Same operational principle as the roasting and brewing syllabi — consistent logging is what turns dial-in from intuition into a transferable process.",
+        "t": "Menu design based on extraction limits",
+        "b": "Why you shouldn't serve a 16oz latte with a light roast single origin espresso.",
+        "content": "Your menu must obey the physical limits of your coffee.\n\nA light roast Ethiopian espresso is beautiful, but it might only yield 36g of liquid with a delicate, tea-like body. If you put that 36g into 14oz of milk, the coffee flavor will completely vanish.\n\n- **Large Milk Drinks (12oz+)**: Require heavy, highly soluble coffees (medium/dark roasts or robusta blends) that can cut through the massive volume of fat and sugar.\n- **Light Roasts / Co-ferments**: Belong in small milk drinks (Cortados, 4oz flat whites) or served black, where their delicate acidity isn't drowned.\n\nDesign your menu around the coffee you roast, rather than forcing a delicate coffee into an inappropriate beverage size.",
         "points": [
-          "Logging dose, yield, time, pressure profile (if available), grind setting, and tasting notes per shot",
-          "Cross-referencing espresso logs against roast and filter-brew logs for the same lot, to build a complete picture of how a given Finca Oltehua lot behaves across extraction methods",
-          "Using this evidence base in any future espresso-service decisions for a physical bar, separate from the filter-focused pop-up work you've already validated"
+          "Solubility limits vs. dilution ratios in milk beverages",
+          "Pairing roast profiles to specific menu items (the case for a dedicated milk-blend)",
+          "Managing customer expectations when serving specialty (smaller volume) vs. commercial (massive volume) sizes"
         ]
       }
     ]
   },
   "es": {
     "mod": "Módulo 9",
-    "title": "Validación sensorial y resolución de problemas",
+    "title": "Flujo de trabajo en barra y escalado comercial",
     "id": "m9",
-    "desc": "Cerrar el ciclo entre las variables de máquina/pastilla y el resultado en taza — diagnosticar defectos específicos de espresso hasta su causa mecanística.",
+    "desc": "Tomar la física teórica del espresso y traducirla a un sistema que pueda manejar 100 clientes por hora.",
     "topics": [
       {
-        "t": "Leer defectos del shot hasta su causa",
-        "b": "Una tabla diagnóstica que conecta el síntoma con el mecanismo, adaptada al ciclo de retroalimentación más rápido del espresso y su mayor sensibilidad de variables comparado con filtrado.",
+        "t": "Ergonomía y el 'Triángulo'",
+        "b": "Cada paso que das detrás de la barra cuesta segundos. En una hora pico, los segundos se acumulan en shots fallidos y clientes enojados.",
+        "content": "La perfección teórica se desmorona si la disposición física de la barra está mal.\n\nEl **Triángulo del Espresso** (Molino, Estación de compactado, Grupo de la máquina) debe requerir cero pasos para navegarse. Si un barista tiene que pivotar todo su cuerpo o caminar para buscar leche, pierde 3 segundos por bebida. En 200 bebidas, son 10 minutos de retraso puro.\n\nAdemás, la mala ergonomía (compactar a la altura equivocada, doblar las muñecas torpemente) lleva directamente a lesiones por esfuerzo repetitivo (RSI). Una barra comercial debe estar diseñada para que la ejecución física de un shot sea lo más libre de fricción y segura posible.",
         "points": [
-          "Shot ácido, delgado, de flujo rápido → probable subextracción o canalización activa: revisar distribución/tamping antes de ajustar solo la molienda",
-          "Shot amargo, áspero, lento/ahogado → probable sobreextracción por molienda demasiado fina o dosis excesiva para la canasta: engrosar la molienda, revisar proporción dosis-canasta",
-          "Resultados inconsistentes shot a shot con ajustes idénticos → señal fuerte de inconsistencia en distribución/dosificación más que un problema de receta — arreglar el proceso antes de tocar los números"
-        ],
-        "refs": [
-          "Currículo Æ de Barista Hustle, op. cit. — mapeo de defecto-mecanismo específico de espresso.",
-          "Espresso Aficionados, op. cit."
+          "La optimización del flujo de trabajo como pilar de la calidad de la bebida",
+          "La filosofía de diseño de 'cero pasos': todo lo necesario está al alcance de la mano",
+          "Ergonomía de compactado y la adopción de tampers automáticos (PuqPress) en entornos de alto volumen para prevenir lesiones"
         ]
       },
       {
-        "t": "Construir un registro de shot a cata",
-        "b": "Mismo principio operativo que los programas de tueste y extracción filtrada — el registro consistente es lo que convierte la calibración de intuición en un proceso transferible.",
+        "t": "Diseño de menú basado en límites de extracción",
+        "b": "Por qué no deberías servir un latte de 16oz con un espresso de origen único de tueste claro.",
+        "content": "Tu menú debe obedecer los límites físicos de tu café.\n\nUn espresso etíope de tueste claro es hermoso, pero podría rendir solo 36g de líquido con un cuerpo delicado. Si pones esos 36g en 14oz de leche, el sabor a café desaparecerá por completo.\n\n- **Bebidas grandes con leche (12oz+)**: Requieren cafés pesados y altamente solubles (tuestes medios/oscuros o mezclas) que puedan atravesar el volumen masivo de grasa.\n- **Tuestes claros / Co-fermentos**: Pertenecen a bebidas pequeñas (Cortados, Flat Whites de 4oz) o servidos solos, donde su acidez no se ahoga.\n\nDiseña tu menú alrededor del café que tuestas, en lugar de forzar un café delicado en un tamaño de bebida inapropiado.",
         "points": [
-          "Registrar dosis, rendimiento, tiempo, perfil de presión (si está disponible), ajuste de molienda y notas de cata por cada shot",
-          "Cruzar los registros de espresso contra los registros de tueste y extracción filtrada del mismo lote, para construir una imagen completa de cómo se comporta un lote dado de Finca Oltehua en distintos métodos de extracción",
-          "Usar esta base de evidencia en cualquier decisión futura de servicio de espresso para una barra física, aparte del trabajo enfocado en filtrado que ya validaste en el pop-up"
+          "Límites de solubilidad vs. proporciones de dilución en bebidas con leche",
+          "Emparejar perfiles de tueste con bebidas específicas del menú (el argumento para tener un blend dedicado a bebidas con leche)",
+          "Manejar las expectativas del cliente al servir tamaños de especialidad (menor volumen) vs. comerciales (volumen masivo)"
         ]
       }
     ]

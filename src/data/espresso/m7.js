@@ -1,92 +1,82 @@
 export default {
   "en": {
     "mod": "Module 7",
-    "title": "Machine architecture",
+    "title": "Dialing in practically",
     "id": "m7",
-    "desc": "How pump type, boiler design, and group head engineering translate the physics above into what a barista can actually control.",
+    "desc": "The step-by-step logic loop for adjusting a recipe without chasing your tail.",
     "topics": [
       {
-        "t": "Pump types and their control implications",
-        "b": "Vibration pumps, rotary pumps, and variable-speed gear pumps offer fundamentally different control resolution.",
+        "t": "Locking the variables",
+        "b": "Never change two variables at once. Lock Dose, aim for a Yield, and adjust Grind.",
+        "content": "The most common mistake new baristas make is changing the dose, grind, and yield all at the same time to fix a bad shot. This makes it impossible to know which change actually worked.\n\nThe professional dialing-in sequence:\n1. **Lock Dose**: Pick a dose that fits your basket (e.g., 18g) and never touch it again.\n2. **Lock Yield**: Pick a target ratio based on the roast (e.g., 1:2 = 36g out).\n3. **Adjust Grind**: Pull the shot. If it tastes sour and runs fast, grind finer. If it tastes bitter and runs slow, grind coarser.\n\nOnly once you hit the limits of what the grinder can do should you consider changing the Yield.",
         "points": [
-          "Vibration pumps: fixed-speed, simplest and most common in entry/mid-tier machines, no native profiling capability",
-          "Rotary pumps: smoother, quieter, constant-speed but can be paired with external flow control hardware",
-          "Variable-speed gear pumps: the enabling technology for true pressure/flow profiling (Module 5), found in higher-end profiling machines"
+          "The 'One Variable Rule' of scientific method applied to the bar",
+          "Dose as a structural constraint, not a flavor variable",
+          "Grind as the primary daily variable to combat aging coffee/humidity changes"
         ],
         "refs": [
-          "Maxim's Espresso, op. cit. — explicit pump mechanism breakdown.",
-          "Manufacturer technical documentation across machine tiers — verify current models directly, as this is a fast-moving hardware category."
+          "Rao (2008), op. cit."
         ]
       },
       {
-        "t": "Boiler architecture and temperature stability",
-        "b": "Single boiler, heat exchanger (HX), and dual boiler designs trade off cost, recovery time, and temperature consistency differently.",
+        "t": "The salami shot",
+        "b": "A diagnostic exercise to physically taste how extraction changes over time.",
+        "content": "To truly understand espresso extraction, you must break a single shot into its chronological parts. This is called a **Salami Shot**.\n\nInstead of pulling the shot into one cup, you swap a new cup under the spouts every 5 seconds:\n- **Cup 1 (0-10s)**: Viscous, intensely sour, overwhelmingly concentrated.\n- **Cup 2 (10-20s)**: Sweet, balanced, syrupy.\n- **Cup 3 (20-30s)**: Watery, astringent, harsh, bitter.\n\nWhen you mix these cups together, you get a balanced espresso. But by tasting them separately, you learn exactly what 'under-extracted' (Cup 1) and 'over-extracted' (Cup 3) actually mean on your palate.",
         "points": [
-          "Single boiler: simplest, cheapest, but requires temperature surfing or wait time between steaming and brewing",
-          "Heat exchanger (HX): one boiler serves both steam and brew water via a heat exchanger coil, common in commercial/prosumer machines, with some temperature stability trade-offs immediately after steam use",
-          "Dual boiler: independent boilers for steam and brew, generally the most temperature-stable architecture, at higher cost and energy use"
-        ],
-        "refs": [
-          "Illy & Viani (2005), op. cit. — technical reference covering boiler thermodynamics.",
-          "Manufacturer technical documentation — verify specs for any specific machine under consideration."
+          "Chronological stratification of extraction (acids first, sugars mid, bitters late)",
+          "Using the Salami Shot as a palate calibration tool for staff",
+          "Understanding that a balanced shot is a blend of unbalanced chronological fractions"
         ]
       },
       {
-        "t": "Group head thermal mass and pre-infusion chamber design",
-        "b": "Less commonly discussed but mechanically important — the volume and material between the valve and the puck affects pre-infusion timing and shot-to-shot consistency.",
+        "t": "Daily calibration and the effect of aging/humidity",
+        "b": "Why a recipe that worked perfectly yesterday at 8 AM runs 5 seconds faster today at 2 PM.",
+        "content": "Espresso is a living system. Your recipe is never 'finished.'\n\nCoffee beans are hygroscopic; they absorb moisture from the air. \n- If it rains in the afternoon, the beans absorb humidity, becoming softer. They will grind differently and the shots will slow down.\n- As the coffee ages (days off roast), it loses CO2 and becomes less brittle. The shots will naturally run faster over the course of a week.\n\nA professional barista expects the dial to drift. You must taste the espresso every morning and make micro-adjustments to the grinder to bring the physical extraction back in line with the target.",
         "points": [
-          "E61-style groups with larger internal chambers ('gicleur' space) take measurably longer to fill before pressure reaches the puck, compared to machines with smaller jets/chambers",
-          "This internal volume effectively extends the pre-infusion-like phase even on machines without an explicit pre-infusion feature",
-          "Relevant to anyone comparing machines on paper — two machines with identical pump specs can deliver meaningfully different early-shot dynamics due to group geometry alone"
-        ],
-        "refs": [
-          "Home-Barista forum technical discussion. 'Pressure profiling, flow profiling, and a new rule of thirds.' https://www.home-barista.com — practitioner-level but technically detailed breakdown of this specific mechanism."
+          "Hygroscopy and ambient humidity's effect on particle shattering during grinding",
+          "CO2 loss over time reducing puck resistance (requiring finer grinds as the bag ages)",
+          "The necessity of dialing in *every* shift, not just when opening a new bag"
         ]
       }
     ]
   },
   "es": {
     "mod": "Módulo 7",
-    "title": "Arquitectura de la máquina",
+    "title": "Calibración práctica (Dialing in)",
     "id": "m7",
-    "desc": "Cómo el tipo de bomba, el diseño del boiler y la ingeniería del grupo traducen la física anterior en lo que un barista puede realmente controlar.",
+    "desc": "El ciclo lógico paso a paso para ajustar una receta sin dar vueltas en círculos.",
     "topics": [
       {
-        "t": "Tipos de bomba y sus implicaciones de control",
-        "b": "Las bombas de vibración, rotativas y de engranajes de velocidad variable ofrecen resoluciones de control fundamentalmente distintas.",
+        "t": "Fijar las variables",
+        "b": "Nunca cambies dos variables a la vez. Fija la Dosis, apunta a un Rendimiento y ajusta la Molienda.",
+        "content": "El error más común de los baristas novatos es cambiar dosis, molienda y rendimiento al mismo tiempo para arreglar un mal shot. Esto hace imposible saber qué cambio realmente funcionó.\n\nLa secuencia profesional de calibración:\n1. **Fijar Dosis**: Elige una dosis que quepa en tu canastilla (ej. 18g) y nunca la vuelvas a tocar.\n2. **Fijar Rendimiento**: Elige un ratio objetivo según el tueste (ej. 1:2 = 36g de salida).\n3. **Ajustar Molienda**: Extrae el shot. Si sabe ácido y corre rápido, muele más fino. Si sabe amargo y corre lento, muele más grueso.\n\nSolo cuando alcances los límites de lo que puede hacer el molino deberías considerar cambiar el Rendimiento.",
         "points": [
-          "Bombas de vibración: velocidad fija, las más simples y comunes en máquinas de gama básica/media, sin capacidad nativa de perfilado",
-          "Bombas rotativas: más suaves, más silenciosas, velocidad constante pero pueden combinarse con hardware externo de control de flujo",
-          "Bombas de engranajes de velocidad variable: la tecnología habilitadora para perfilado de presión/flujo verdadero (Módulo 5), presente en máquinas de perfilado de gama alta"
+          "La 'Regla de una variable' del método científico aplicada a la barra",
+          "La dosis como restricción estructural, no como variable de sabor",
+          "La molienda como la variable diaria principal para combatir el envejecimiento/humedad"
         ],
         "refs": [
-          "Maxim's Espresso, op. cit. — desglose explícito del mecanismo de las bombas.",
-          "Documentación técnica del fabricante en distintos niveles de máquina — verifica los modelos actuales directamente, ya que esta es una categoría de hardware en evolución rápida."
+          "Rao (2008), op. cit."
         ]
       },
       {
-        "t": "Arquitectura del boiler y estabilidad de temperatura",
-        "b": "Los diseños de boiler único, intercambiador de calor (HX) y doble boiler intercambian costo, tiempo de recuperación y consistencia de temperatura de forma distinta.",
+        "t": "El Salami Shot",
+        "b": "Un ejercicio diagnóstico para probar físicamente cómo cambia la extracción con el tiempo.",
+        "content": "Para entender realmente la extracción de espresso, debes dividir un solo shot en sus partes cronológicas. Esto se llama un **Salami Shot**.\n\nEn lugar de extraer en una sola taza, cambias una taza nueva bajo las salidas cada 5 segundos:\n- **Taza 1 (0-10s)**: Viscoso, intensamente ácido, abrumadoramente concentrado.\n- **Taza 2 (10-20s)**: Dulce, equilibrado, almibarado.\n- **Taza 3 (20-30s)**: Acuoso, astringente, áspero, amargo.\n\nCuando mezclas estas tazas, obtienes un espresso equilibrado. Pero al probarlas por separado, aprendes exactamente qué significa en tu paladar 'subextraído' (Taza 1) y 'sobreextraído' (Taza 3).",
         "points": [
-          "Boiler único: el más simple y económico, pero requiere 'surfear' la temperatura o tiempo de espera entre vaporizar y extraer",
-          "Intercambiador de calor (HX): un boiler sirve tanto al vapor como al agua de extracción mediante una bobina intercambiadora, común en máquinas comerciales/prosumer, con cierto compromiso de estabilidad de temperatura inmediatamente después de usar el vapor",
-          "Doble boiler: boilers independientes para vapor y extracción, generalmente la arquitectura más estable en temperatura, a mayor costo y consumo de energía"
-        ],
-        "refs": [
-          "Illy & Viani (2005), op. cit. — referencia técnica que cubre la termodinámica de boilers.",
-          "Documentación técnica del fabricante — verifica las especificaciones de cualquier máquina específica bajo consideración."
+          "Estratificación cronológica de la extracción (ácidos primero, azúcares en medio, amargos al final)",
+          "Usar el Salami Shot como herramienta de calibración de paladar para el personal",
+          "Entender que un shot equilibrado es una mezcla de fracciones cronológicas desequilibradas"
         ]
       },
       {
-        "t": "Masa térmica del grupo y diseño de la cámara de pre-infusión",
-        "b": "Menos discutido comúnmente pero mecánicamente importante — el volumen y material entre la válvula y la pastilla afecta el tiempo de pre-infusión y la consistencia shot a shot.",
+        "t": "Calibración diaria y el efecto del envejecimiento/humedad",
+        "b": "Por qué una receta que funcionaba perfecto ayer a las 8 AM hoy a las 2 PM corre 5 segundos más rápido.",
+        "content": "El espresso es un sistema vivo. Tu receta nunca está 'terminada'.\n\nLos granos son higroscópicos; absorben humedad del aire.\n- Si llueve en la tarde, los granos absorben humedad y se ablandan. Se molerán distinto y los shots se ralentizarán.\n- A medida que el café envejece, pierde CO2 y se vuelve menos quebradizo. Los shots naturalmente correrán más rápido a lo largo de la semana.\n\nUn barista profesional espera que la calibración se desvíe. Debes probar el espresso cada mañana y hacer microajustes al molino para alinear la extracción física con el objetivo.",
         "points": [
-          "Los grupos estilo E61 con cámaras internas más grandes (espacio de 'gicleur') tardan medible más tiempo en llenarse antes de que la presión llegue a la pastilla, comparado con máquinas con inyectores/cámaras más pequeñas",
-          "Este volumen interno extiende efectivamente la fase tipo pre-infusión incluso en máquinas sin una función explícita de pre-infusión",
-          "Relevante para cualquiera que compare máquinas en papel — dos máquinas con especificaciones de bomba idénticas pueden entregar dinámicas de inicio de shot significativamente distintas solo por la geometría del grupo"
-        ],
-        "refs": [
-          "Discusión técnica del foro Home-Barista. 'Pressure profiling, flow profiling, and a new rule of thirds.' https://www.home-barista.com — desglose a nivel práctico pero técnicamente detallado de este mecanismo específico."
+          "Higroscopia y el efecto de la humedad ambiental en la fractura de partículas",
+          "La pérdida de CO2 reduce la resistencia de la pastilla (requiriendo moliendas más finas con los días)",
+          "La necesidad de calibrar *cada* turno, no solo al abrir una bolsa nueva"
         ]
       }
     ]

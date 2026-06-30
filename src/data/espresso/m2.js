@@ -1,90 +1,72 @@
 export default {
   "en": {
     "mod": "Module 2",
-    "title": "Puck preparation",
+    "title": "Grinder dynamics and puck resistance",
     "id": "m2",
-    "desc": "The single highest-leverage stage in espresso — most extraction unevenness originates here, before water ever touches the puck.",
+    "desc": "In espresso, the coffee bed IS the valve. Your grinder determines not just surface area, but flow rate and pressure.",
     "topics": [
       {
-        "t": "Dosing and distribution",
-        "b": "Even distribution of grounds in the basket before tamping is a precondition for even extraction — uneven density anywhere becomes a channel later.",
+        "t": "The puck as a hydraulic resistor",
+        "b": "Unlike filter coffee where gravity sets the limit, an espresso machine throws 9 bars of pressure at the bed. The puck must resist it.",
+        "content": "In a pour-over, if your grind is slightly wrong, the brew finishes 15 seconds late. In espresso, if your grind is slightly wrong, the shot chokes completely or gushes out in 10 seconds.\n\nBecause an espresso pump forces water at 9 bars (130 psi) into the basket, the coffee bed (the **Puck**) is the only thing providing resistance. The flow rate of the shot is dictated almost entirely by how tightly the coffee particles pack together. Grinding finer increases this resistance; grinding coarser decreases it.\n\nThis means your grind size does not just control surface area for extraction; **it physically acts as a valve** controlling the flow of water.",
         "points": [
-          "Common distribution tools/techniques (WDT — Weiss Distribution Technique, leveling tools) and the clumping problem they address",
-          "Static buildup in grinders as a distribution-disrupting factor, especially relevant with fine espresso grind",
-          "Dose consistency (by weight, not volume) as a prerequisite for any other variable to be meaningfully repeatable"
+          "Flow rate is directly proportional to pressure and inversely proportional to puck resistance (Darcy's Law proxy)",
+          "Why micro-adjustments in espresso grinders matter far more than in filter grinders",
+          "The non-linear relationship between grind size and shot time (a tiny shift can choke a shot)"
         ],
         "refs": [
-          "Cameron et al. (2020), op. cit. — models distribution unevenness as a primary channeling predictor.",
-          "Barista Hustle. 'Æ 3.xx Puck Preparation' lessons. https://www.baristahustle.com"
+          "Fasano, A. & Talamucci, F. (2013). 'Modelling the espresso coffee brewing process.' <i>Applied Mathematical Modelling</i>.",
+          "Cameron et al. (2020), op. cit."
         ]
       },
       {
-        "t": "Tamping mechanics",
-        "b": "Tamping's actual job is creating a uniformly dense, level bed — pressure consistency matters more than absolute tamp force within a wide range.",
+        "t": "Fines migration and bed compaction",
+        "b": "Why a shot starts slow and speeds up — the physical shifting of particles under 9 bars of pressure.",
+        "content": "When 9 bars of pressure hit a coffee puck, the physical structure collapses and compresses downwards. \n\nSimultaneously, the microscopic coffee dust (**Fines**) is washed downward by the water, migrating toward the bottom of the metal basket. These fines clog the holes of the basket, creating immense resistance early in the shot.\n\nHowever, as the shot progresses, the water extracts solubles from the coffee. The puck physically loses about 20% of its solid mass. As it loses mass, its resistance drops. This is why espresso shots start with slow, dark drips and finish with a fast, blond, gushing stream.",
         "points": [
-          "Common misconception: tamp force itself matters less than tamp levelness and consistency shot-to-shot",
-          "Polishing/finishing motion debates — largely about operator consistency rather than a strong independent physical effect",
-          "WDT before tamping as increasingly standard practice to break up clumps before compaction locks them in place"
+          "How fines migrate downward and partially blind the basket holes",
+          "Puck mass loss during extraction (~20%) and resulting loss of structural integrity/resistance",
+          "Why profiling machines drop pressure late in the shot (to counteract the puck's degrading resistance)"
         ],
         "refs": [
-          "Cameron et al. (2020), op. cit.",
-          "Espresso Aficionados. 'Espresso Profiling.' https://espressoaf.com/guides/profiling.html"
-        ]
-      },
-      {
-        "t": "Basket and dose ratio selection",
-        "b": "Basket geometry (ridgeless vs. ridged, precision baskets) and dose-to-basket-volume ratio both materially affect achievable evenness.",
-        "points": [
-          "Precision baskets (tighter hole tolerance, often ridgeless) generally reduce channeling risk versus older OEM baskets",
-          "Dose-to-basket-capacity ratio — under or overfilling a given basket changes bed depth and density in ways that affect flow evenness independent of dose weight alone"
-        ],
-        "refs": [
-          "Manufacturer technical documentation (VST, IMS precision basket data) — verify current specs directly, as basket geometry data is mostly manufacturer- and forum-published rather than peer-reviewed."
+          "Navarini, L. et al. (2009), op. cit.",
+          "Rao (2008), op. cit."
         ]
       }
     ]
   },
   "es": {
     "mod": "Módulo 2",
-    "title": "Preparación de la pastilla",
+    "title": "Dinámica de molienda y resistencia de la pastilla",
     "id": "m2",
-    "desc": "La etapa de mayor apalancamiento en espresso — la mayoría de la desuniformidad de extracción se origina aquí, antes de que el agua toque la pastilla.",
+    "desc": "En el espresso, el lecho de café ES la válvula. Tu molino no solo determina el área superficial, sino el caudal y la presión.",
     "topics": [
       {
-        "t": "Dosificación y distribución",
-        "b": "La distribución uniforme de los molidos en el portafiltro antes del tamping es una condición previa para una extracción uniforme — cualquier densidad despareja se convierte después en un canal.",
+        "t": "La pastilla como resistencia hidráulica",
+        "b": "A diferencia del café filtrado donde la gravedad marca el límite, una máquina de espresso arroja 9 bares de presión. La pastilla debe resistirla.",
+        "content": "En un pour-over, si tu molienda está ligeramente mal, la extracción termina 15 segundos tarde. En el espresso, si está ligeramente mal, el shot se ahoga por completo o sale a borbotones en 10 segundos.\n\nDebido a que una bomba de espresso fuerza el agua a 9 bares (130 psi), el lecho de café (la **Pastilla** o Puck) es lo único que proporciona resistencia. El caudal (flow rate) del shot está dictado casi enteramente por qué tan apretadas están las partículas. Moler más fino aumenta esta resistencia; moler más grueso la disminuye.\n\nEsto significa que el tamaño de molienda no solo controla el área superficial; **actúa físicamente como una válvula** controlando el flujo de agua.",
         "points": [
-          "Herramientas/técnicas de distribución comunes (WDT — Weiss Distribution Technique, herramientas niveladoras) y el problema de apelmazamiento que abordan",
-          "La carga estática en los molinos como factor que perturba la distribución, especialmente relevante con la molienda fina de espresso",
-          "Consistencia de dosis (por peso, no por volumen) como prerrequisito para que cualquier otra variable sea repetible de forma significativa"
+          "El caudal es directamente proporcional a la presión e inversamente proporcional a la resistencia de la pastilla (proxy de la Ley de Darcy)",
+          "Por qué los micro-ajustes en molinos de espresso importan mucho más que en filtrado",
+          "La relación no lineal entre tamaño de molienda y tiempo del shot"
         ],
         "refs": [
-          "Cameron et al. (2020), op. cit. — modela la desuniformidad de distribución como predictor principal de canalización.",
-          "Barista Hustle. Lecciones 'Æ 3.xx Puck Preparation.' https://www.baristahustle.com"
+          "Fasano, A. & Talamucci, F. (2013). 'Modelling the espresso coffee brewing process.' <i>Applied Mathematical Modelling</i>.",
+          "Cameron et al. (2020), op. cit."
         ]
       },
       {
-        "t": "Mecánica del tamping",
-        "b": "La función real del tamping es crear un lecho uniformemente denso y nivelado — la consistencia de la presión importa más que la fuerza absoluta del tamp dentro de un rango amplio.",
+        "t": "Migración de finos y compactación del lecho",
+        "b": "Por qué un shot comienza lento y se acelera — el desplazamiento físico de partículas bajo 9 bares de presión.",
+        "content": "Cuando 9 bares de presión golpean una pastilla de café, la estructura física colapsa y se comprime hacia abajo.\n\nSimultáneamente, el polvo microscópico de café (**Finos**) es arrastrado por el agua, migrando hacia el fondo de la canastilla de metal. Estos finos obstruyen los orificios, creando una inmensa resistencia al inicio del shot.\n\nSin embargo, a medida que avanza la extracción, el agua disuelve solubles del café. La pastilla pierde físicamente alrededor del 20% de su masa sólida. Al perder masa, su resistencia cae. Es por esto que los shots de espresso comienzan con gotas lentas y oscuras y terminan con un flujo rápido, rubio y acuoso.",
         "points": [
-          "Concepto erróneo común: la fuerza del tamp en sí importa menos que su nivelación y consistencia shot a shot",
-          "Debates sobre el movimiento de pulido/acabado — en gran parte sobre la consistencia del operador más que un efecto físico independiente fuerte",
-          "WDT antes del tamping como práctica cada vez más estándar para romper grumos antes de que la compactación los fije en su lugar"
+          "Cómo los finos migran hacia abajo y ciegan parcialmente los orificios de la canastilla",
+          "Pérdida de masa de la pastilla durante la extracción (~20%) y la resultante pérdida de resistencia",
+          "Por qué las máquinas con perfiles de presión bajan la presión al final del shot (para contrarrestar la pérdida de resistencia de la pastilla)"
         ],
         "refs": [
-          "Cameron et al. (2020), op. cit.",
-          "Espresso Aficionados. 'Espresso Profiling.' https://espressoaf.com/guides/profiling.html"
-        ]
-      },
-      {
-        "t": "Selección de canasta y proporción de dosis",
-        "b": "La geometría de la canasta (sin reborde vs. con reborde, canastas de precisión) y la proporción dosis-a-volumen-de-canasta afectan ambas materialmente la uniformidad alcanzable.",
-        "points": [
-          "Las canastas de precisión (tolerancia de orificio más ajustada, a menudo sin reborde) generalmente reducen el riesgo de canalización frente a canastas OEM más antiguas",
-          "La proporción dosis-a-capacidad-de-canasta — sub o sobrellenar una canasta dada cambia la profundidad y densidad del lecho de formas que afectan la uniformidad del flujo independientemente del peso de la dosis por sí solo"
-        ],
-        "refs": [
-          "Documentación técnica del fabricante (datos de canastas de precisión VST, IMS) — verifica las especificaciones actuales directamente, ya que estos datos son mayormente publicados por fabricantes y foros más que revisados por pares."
+          "Navarini, L. et al. (2009), op. cit.",
+          "Rao (2008), op. cit."
         ]
       }
     ]

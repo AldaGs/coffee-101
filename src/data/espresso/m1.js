@@ -1,68 +1,72 @@
 export default {
   "en": {
     "mod": "Module 1",
-    "title": "What makes espresso physically different",
+    "title": "Defining espresso physically",
     "id": "m1",
-    "desc": "Espresso isn't 'strong filter coffee' — it's a different physical regime entirely, defined by forced flow through a compacted, high-resistance bed.",
+    "desc": "Espresso is not a roast degree or a bean type; it is a specific thermodynamic state of extraction under pressure.",
     "topics": [
       {
-        "t": "Defining espresso",
-        "b": "Pressurized hot water forced through a compacted bed of finely ground coffee in roughly 25-35 seconds — the compaction and pressure are what create the regime, not just the grind size.",
+        "t": "The biphasic/triphasic nature of espresso",
+        "b": "Filter coffee is a simple solution. Espresso is a solution, a suspension, and an emulsion all at once.",
+        "content": "Espresso is not just strong coffee; its physics are entirely different. While filter coffee is a simple solution of dissolved solids in water, espresso is a **[Triphasic system](https://en.wikipedia.org/wiki/Colloid)**.\n\n1. **Solution**: Water-soluble compounds (acids, sugars) dissolved into the liquid.\n2. **Emulsion**: Microscopic droplets of coffee oil (lipids) forced into the water by high pressure. This emulsion is primarily responsible for espresso's heavy, syrupy body.\n3. **Suspension**: Solid micro-fines (tiny coffee dust) suspended in the liquid, adding texture.\n\nAdditionally, the CO2 trapped in the beans is forced into solution by pressure, then immediately expands when it hits atmospheric pressure in the cup, creating the **Crema** (a foam phase). Because it is an emulsion, espresso coats the palate and lingers far longer than filter coffee.",
         "points": [
-          "Typical parameters: ~9 bar pressure, ~92-96°C, ~1:1.5-1:2.5 brew ratio, 25-35s extraction window",
-          "Crema formation: CO2 and oils emulsified under pressure — a physical byproduct of the pressurized extraction, not a quality indicator on its own",
-          "Why espresso's extraction yield range overlaps with filter (~18-22%) despite wildly different mechanics — same target zone, different path to get there"
+          "Solution (dissolved solids), Emulsion (dispersed oils), Suspension (suspended fines), and Foam (crema/CO2)",
+          "Why espresso coats the palate differently than filter (oil emulsion mechanics)",
+          "Defining espresso by its pressure (typically 7-9 bar) rather than strength alone"
         ],
         "refs": [
-          "Rao, S. (2014). <i>The Coffee Roaster's Companion</i> — espresso-relevant sections on bean behavior under pressure extraction.",
-          "Illy, A. & Viani, R., eds. (2005). <i>Espresso Coffee: The Science of Quality</i>, 2nd ed. Academic Press — foundational technical reference."
+          "Illy, A. & Viani, R. (2005). <i>Espresso Coffee: The Science of Quality</i>, 2nd Ed. Academic Press — the definitive text on espresso physics.",
+          "Navarini, L. et al. (2009). 'Espresso coffee foam: mineral composition and its physical properties.' <i>Food Biophysics</i>."
         ]
       },
       {
-        "t": "Why pressure changes extraction physics fundamentally",
-        "b": "Forcing water through a fine, compacted bed under pressure changes the diffusion and flow regime compared to gravity-fed percolation.",
+        "t": "Concentration vs. Extraction in a pressurized environment",
+        "b": "Why espresso yields are typically lower than filter, even though concentration (TDS) is vastly higher.",
+        "content": "In filter brewing, you might extract 20% of the coffee bean (Extraction Yield or EY) to create a beverage that is 1.3% coffee and 98.7% water (TDS).\n\nIn espresso, you use a tiny amount of water. You might create a beverage that is **8% to 12% TDS** (extremely strong). However, because you use so little water, it becomes saturated with solubles very quickly. This makes it difficult to extract as much from the coffee bean itself. A traditional espresso might only achieve a **17% to 19% EY**.\n\nThis is the central paradox of espresso: it is the strongest form of coffee, but it is often the least thoroughly extracted. Pushing past 20% EY in espresso usually requires ultra-precise flat-burr grinders and longer ratios.",
         "points": [
-          "Darcy's law for flow through porous media as the governing physical relationship — flow rate depends on pressure differential, bed permeability, and viscosity",
-          "Compaction (tamping) deliberately reduces bed permeability to force the pressure/flow relationship into the desired range",
-          "Why grind size matters more sensitively in espresso than filter — small changes in particle size meaningfully change bed permeability and therefore flow rate at fixed pressure"
+          "Typical espresso TDS (8-12%+) vs. typical EY (often struggling to hit 18-20% compared to filter's easy 20-22%)",
+          "The limit of solubility when water volume is severely restricted",
+          "Why the 'ristretto' (1:1 ratio) is intensely concentrated but almost always technically under-extracted"
         ],
         "refs": [
-          "Cameron, M.I. et al. (2020). 'Systematically improving espresso: insights from mathematical modeling and experiment.' <i>Matter</i>, 3(3), 1–18 — primary modern physics reference for espresso flow.",
-          "Moroney, K.M. et al. (2016). 'Asymptotic analysis of the dominant mechanisms in the coffee extraction process.' <i>SIAM J. Applied Mathematics</i>."
+          "Cameron et al. (2020), op. cit. — extensively models the physical limits of espresso extraction.",
+          "Rao, S. (2008). <i>The Professional Barista's Handbook</i>."
         ]
       }
     ]
   },
   "es": {
     "mod": "Módulo 1",
-    "title": "Qué hace al espresso físicamente distinto",
+    "title": "Definición física del espresso",
     "id": "m1",
-    "desc": "El espresso no es 'café filtrado fuerte' — es un régimen físico completamente distinto, definido por flujo forzado a través de un lecho compactado de alta resistencia.",
+    "desc": "El espresso no es un nivel de tueste ni un tipo de grano; es un estado termodinámico específico de extracción bajo presión.",
     "topics": [
       {
-        "t": "Definiendo el espresso",
-        "b": "Agua caliente presurizada forzada a través de un lecho compactado de café molido fino en aproximadamente 25-35 segundos — la compactación y la presión son lo que crea el régimen, no solo el tamaño de molienda.",
+        "t": "La naturaleza bifásica/trifásica del espresso",
+        "b": "El café de filtro es una solución simple. El espresso es una solución, una suspensión y una emulsión al mismo tiempo.",
+        "content": "El espresso no es solo café fuerte; su física es completamente diferente. Mientras que el café de filtro es una solución simple de sólidos en agua, el espresso es un **[Sistema trifásico](https://es.wikipedia.org/wiki/Coloide)**.\n\n1. **Solución**: Compuestos solubles en agua (ácidos, azúcares).\n2. **Emulsión**: Gotas microscópicas de aceite de café forzadas en el agua por alta presión. Esta emulsión es la principal responsable del cuerpo pesado del espresso.\n3. **Suspensión**: Micro-finos sólidos suspendidos en el líquido, añadiendo textura.\n\nAdemás, el CO2 es forzado a disolverse por la presión y luego se expande al llegar a la presión atmosférica en la taza, creando la **Crema**. Al ser una emulsión, el espresso recubre el paladar y perdura mucho más que el café de filtro.",
         "points": [
-          "Parámetros típicos: ~9 bares de presión, ~92-96°C, proporción de extracción ~1:1.5-1:2.5, ventana de extracción de 25-35s",
-          "Formación de crema: CO2 y aceites emulsionados bajo presión — un subproducto físico de la extracción presurizada, no un indicador de calidad por sí solo",
-          "Por qué el rango de rendimiento de extracción del espresso se traslapa con el filtrado (~18-22%) a pesar de mecánicas radicalmente distintas — misma zona objetivo, camino distinto para llegar ahí"
+          "Solución (sólidos disueltos), Emulsión (aceites dispersos), Suspensión (finos suspendidos) y Espuma (crema/CO2)",
+          "Por qué el espresso recubre el paladar diferente al filtrado (mecánica de la emulsión de aceites)",
+          "Definir el espresso por su presión (típicamente 7-9 bar) en lugar de solo por su fuerza"
         ],
         "refs": [
-          "Rao, S. (2014). <i>The Coffee Roaster's Companion</i> — secciones relevantes a espresso sobre el comportamiento del grano bajo extracción presurizada.",
-          "Illy, A. & Viani, R., eds. (2005). <i>Espresso Coffee: The Science of Quality</i>, 2da ed. Academic Press — referencia técnica fundacional."
+          "Illy, A. y Viani, R. (2005). <i>Espresso Coffee: The Science of Quality</i>, 2da Ed.",
+          "Navarini, L. et al. (2009). 'Espresso coffee foam: mineral composition and its physical properties.' <i>Food Biophysics</i>."
         ]
       },
       {
-        "t": "Por qué la presión cambia fundamentalmente la física de la extracción",
-        "b": "Forzar agua a través de un lecho fino y compactado bajo presión cambia el régimen de difusión y flujo comparado con la percolación por gravedad.",
+        "t": "Concentración vs. Extracción en un entorno presurizado",
+        "b": "Por qué los rendimientos del espresso suelen ser menores que los de filtro, aunque la concentración (TDS) sea mucho mayor.",
+        "content": "En un café filtrado, puedes extraer el 20% del grano de café (Rendimiento de Extracción o EY) para crear una bebida que es 1.3% café y 98.7% agua (TDS).\n\nEn el espresso, usas una cantidad ínfima de agua. Puedes crear una bebida con **8% a 12% TDS** (extremadamente fuerte). Sin embargo, al usar tan poca agua, ésta se satura de solubles rápidamente, haciendo difícil extraer el interior del grano. Un espresso tradicional a menudo solo alcanza un **17% a 19% EY**.\n\nEsta es la paradoja central del espresso: es la forma más fuerte de café, pero a menudo es la menos extraída. Pasar del 20% EY en espresso generalmente requiere molinos de muelas planas ultra-precisos y proporciones más largas.",
         "points": [
-          "La ley de Darcy para flujo a través de medios porosos como la relación física que gobierna el sistema — la tasa de flujo depende del diferencial de presión, la permeabilidad del lecho y la viscosidad",
-          "La compactación (tamping) reduce deliberadamente la permeabilidad del lecho para forzar la relación presión/flujo al rango deseado",
-          "Por qué el tamaño de molienda importa de forma más sensible en espresso que en filtrado — pequeños cambios en el tamaño de partícula cambian significativamente la permeabilidad del lecho y por lo tanto la tasa de flujo a presión fija"
+          "TDS típico de espresso (8-12%+) vs. EY típico (a menudo luchando por llegar al 18-20% en comparación con el 20-22% fácil del filtro)",
+          "El límite de solubilidad cuando el volumen de agua está severamente restringido",
+          "Por qué el 'ristretto' (ratio 1:1) está intensamente concentrado pero casi siempre técnicamente subextraído"
         ],
         "refs": [
-          "Cameron, M.I. et al. (2020). 'Systematically improving espresso: insights from mathematical modeling and experiment.' <i>Matter</i>, 3(3), 1–18 — referencia moderna principal de física del flujo en espresso.",
-          "Moroney, K.M. et al. (2016). 'Asymptotic analysis of the dominant mechanisms in the coffee extraction process.' <i>SIAM J. Applied Mathematics</i>."
+          "Cameron et al. (2020), op. cit. — modela extensivamente los límites físicos de la extracción del espresso.",
+          "Rao, S. (2008). <i>The Professional Barista's Handbook</i>."
         ]
       }
     ]

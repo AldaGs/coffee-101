@@ -1,84 +1,92 @@
 export default {
   "en": {
     "mod": "Module 5",
-    "title": "Pressure and flow profiling",
+    "title": "Temperature and pressure profiling",
     "id": "m5",
-    "desc": "Manipulating pressure or flow dynamically through the shot — the technical frontier of modern espresso machine design.",
+    "desc": "Moving beyond flat 9-bar, 93°C shots to manipulate extraction kinetics dynamically.",
     "topics": [
       {
-        "t": "Pressure profiling mechanics",
-        "b": "Varying brew pressure across stages of the shot, either via programmed steps or barista-controlled dynamic adjustment.",
+        "t": "Temperature surfing and stability",
+        "b": "Temperature dictates which compounds extract easily. Boiler design determines if you actually get the temperature you set.",
+        "content": "Just as in filter coffee, hotter water extracts more efficiently and preferentially pulls out heavier, bitter compounds. Cooler water struggles to extract and highlights acidity.\n\n- **Light Roasts (e.g., Washed Ethiopian)**: Require high heat (93-96°C) to break down dense cellular structure and extract sweetness.\n- **Dark Roasts**: Require cooler water (88-90°C) to avoid extracting harsh, ashy flavors from the heavily degraded cellulose.\n\nThe challenge in espresso is **Stability**. A cheap single-boiler machine might drop 5°C during a 30-second shot. A dual-boiler PID machine will maintain exact temperature. If your shots taste randomly sour or bitter without changing the grind, your machine's temperature instability is likely the culprit.",
         "points": [
-          "Mechanism on true pressure-profiling machines: variable-speed gear pumps adjust pump output based on a pressure sensor reading at the group head, holding a target pressure regardless of puck resistance changes",
-          "Classic application: high initial pressure, then a ramp-down toward the end of the shot to reduce late-shot channeling risk as the puck structure weakens",
-          "Lever machines as the historical origin of pressure profiling — spring tension naturally declines through a pull, producing an organic pressure curve"
+          "Heat Exchange (HX) vs. Dual Boiler vs. Thermoblock thermal dynamics",
+          "Temperature as an extraction EQ (hotter = more bitter/sweet, cooler = more acid)",
+          "The necessity of pre-heating the portafilter to prevent massive thermal shock"
         ],
         "refs": [
-          "Barista Hustle. 'Æ 6.08 Pressure Profiling.' op. cit.",
-          "Maxim's Espresso. 'A Comprehensive Treatise on Variable Pressure and Flow Profiling.' https://www.maximsespresso.com — useful practitioner-level technical breakdown of pump mechanics."
+          "Illy & Viani (2005), op. cit.",
+          "Sanz-Uribe et al. (2017), op. cit."
         ]
       },
       {
-        "t": "Flow profiling mechanics",
-        "b": "Controlling flow rate directly rather than pressure, letting pressure vary as a dependent result of puck resistance.",
+        "t": "Pre-infusion",
+        "b": "Saturating the puck at low pressure before applying 9 bars to prevent channeling and boost extraction.",
+        "content": "**Pre-infusion** involves wetting the coffee bed at a very low pressure (usually 1-3 bars) for a few seconds before ramping up to the full 9 bars.\n\nThis serves two critical physical purposes:\n1. **Swelling**: The coffee grounds absorb water and expand. This expansion naturally seals any microscopic cracks or weak spots in the puck, drastically reducing channeling when the high pressure hits.\n2. **Solubility**: It begins breaking down the coffee early, allowing for a much higher overall Extraction Yield. \n\nPre-infusion is practically mandatory for extracting dense, light-roasted specialty coffees without sourness.",
         "points": [
-          "Mechanism: flowmeters monitor actual flow and the pump output is adjusted to hold a target flow rate, with pressure free to fluctuate",
-          "Self-correcting property: when a channel opens under flow profiling, pressure drops (rather than flow spiking as it would under fixed pressure), reducing the erosion feedback loop described in Module 3",
-          "Restriction-based 'flow control' (e.g. needle valve systems) as a related but mechanically distinct approach — the barista controls an aperture, not the pressure or flow directly, and the resulting pressure/flow is a function of that aperture plus puck resistance"
-        ],
-        "refs": [
-          "Barista Hustle. 'Æ 7.08 Flow Profiling.' op. cit.",
-          "Clive Coffee. 'Flow Control Espresso: Your Questions Answered.' https://clivecoffee.com/blogs/learn/flow-control-your-questions-answered"
+          "Mechanical sealing of the puck via swelling",
+          "Line pressure vs. pump pressure pre-infusion mechanisms",
+          "How long pre-infusions (10-20 seconds) enable grinding finer than normally possible (Slayer-style shots)"
         ]
       },
       {
-        "t": "Is profiling necessary for your context",
-        "b": "An honest assessment of when profiling hardware earns its cost versus when puck-prep fundamentals deliver most of the available improvement.",
+        "t": "Flow and pressure profiling",
+        "b": "Why a flat 9-bar profile is actually sub-optimal, and how tapering pressure mimics the puck's natural degradation.",
+        "content": "As an espresso shot progresses, the puck dissolves, losing 20% of its mass. If the machine continues to force water at a flat 9 bars, the flow rate accelerates wildly at the end of the shot, pulling harsh, watery, bitter compounds.\n\n**Pressure/Flow Profiling** (found on machines like the Decent, Slayer, or flow-control E61s) solves this.\nBy intentionally dropping the pressure in the last third of the shot (from 9 bars down to 6 or 4 bars), you maintain a steady, slow flow rate even as the puck degrades. This 'declining profile' produces a significantly sweeter, more balanced, and higher-extracted espresso.",
         "points": [
-          "Profiling machines mainly add value once puck preparation is already highly consistent — profiling can't fix a badly distributed/tamped puck, it can only mitigate the channeling that results",
-          "For a wholesale-focused operation prioritizing demand validation before capital investment (consistent with your roasting-equipment decision framework), profiling-capable machines are a lower early-priority purchase than grinder quality and puck-prep discipline"
+          "The physical degradation of the puck's resistance over time",
+          "Spring lever machines as the historical origin of the declining pressure profile",
+          "Modern flow profiling (Decent Espresso paradigm) matching water delivery to puck resistance"
+        ],
+        "refs": [
+          "Rao, S. (2016). 'Espresso Extraction: Measurement and Mastery.'",
+          "Cameron et al. (2020), op. cit. — models how flow control prevents late-shot channeling."
         ]
       }
     ]
   },
   "es": {
     "mod": "Módulo 5",
-    "title": "Perfilado de presión y flujo",
+    "title": "Perfiles de temperatura y presión",
     "id": "m5",
-    "desc": "Manipular la presión o el flujo dinámicamente a lo largo del shot — la frontera técnica del diseño moderno de máquinas de espresso.",
+    "desc": "Yendo más allá de los shots planos de 9 bares y 93°C para manipular la cinética de extracción de forma dinámica.",
     "topics": [
       {
-        "t": "Mecánica del perfilado de presión",
-        "b": "Variar la presión de extracción a través de etapas del shot, ya sea mediante pasos programados o ajuste dinámico controlado por el barista.",
+        "t": "Navegación térmica y estabilidad",
+        "b": "La temperatura dicta qué compuestos se extraen fácilmente. El diseño de la caldera determina si realmente obtienes la temperatura que ajustaste.",
+        "content": "Al igual que en el café de filtro, el agua más caliente extrae de forma más eficiente y preferencialmente saca compuestos más pesados y amargos. El agua más fría batalla para extraer y resalta la acidez.\n\n- **Tuestes Claros (ej. Etíope Lavado)**: Requieren alta temperatura (93-96°C) para descomponer la densa estructura celular y extraer dulzor.\n- **Tuestes Oscuros**: Requieren agua más fría (88-90°C) para evitar extraer sabores ásperos y a ceniza de la celulosa altamente degradada.\n\nEl reto en el espresso es la **Estabilidad**. Una máquina barata de caldera simple podría caer 5°C durante un shot de 30 segundos. Si tus shots saben aleatoriamente ácidos o amargos sin cambiar la molienda, la inestabilidad térmica de tu máquina es probablemente la culpable.",
         "points": [
-          "Mecanismo en máquinas de perfilado de presión verdadero: bombas de engranajes de velocidad variable ajustan la salida de la bomba según la lectura de un sensor de presión en el grupo, manteniendo una presión objetivo sin importar los cambios en la resistencia de la pastilla",
-          "Aplicación clásica: presión inicial alta, luego una reducción gradual hacia el final del shot para reducir el riesgo de canalización tardía conforme la estructura de la pastilla se debilita",
-          "Las máquinas de palanca como origen histórico del perfilado de presión — la tensión del resorte disminuye naturalmente durante una extracción, produciendo una curva de presión orgánica"
+          "Dinámica térmica: Intercambiador de Calor (HX) vs. Doble Caldera vs. Thermoblock",
+          "La temperatura como un ecualizador de extracción (más calor = más amargo/dulce, más frío = más ácido)",
+          "La necesidad de precalentar el portafiltro para evitar choques térmicos masivos"
         ],
         "refs": [
-          "Barista Hustle. 'Æ 6.08 Pressure Profiling.' op. cit.",
-          "Maxim's Espresso. 'A Comprehensive Treatise on Variable Pressure and Flow Profiling.' https://www.maximsespresso.com — desglose técnico útil a nivel práctico de la mecánica de bombas."
+          "Illy & Viani (2005), op. cit.",
+          "Sanz-Uribe et al. (2017), op. cit."
         ]
       },
       {
-        "t": "Mecánica del perfilado de flujo",
-        "b": "Controlar la tasa de flujo directamente en lugar de la presión, dejando que la presión varíe como resultado dependiente de la resistencia de la pastilla.",
+        "t": "Pre-infusión",
+        "b": "Saturar la pastilla a baja presión antes de aplicar 9 bares para prevenir la canalización y potenciar la extracción.",
+        "content": "La **Pre-infusión** implica mojar el lecho de café a una presión muy baja (usualmente 1-3 bares) durante unos segundos antes de subir a los 9 bares completos.\n\nEsto sirve dos propósitos físicos críticos:\n1. **Hinchazón**: Los molidos absorben agua y se expanden. Esta expansión sella naturalmente cualquier grieta microscópica en la pastilla, reduciendo drásticamente la canalización cuando golpea la alta presión.\n2. **Solubilidad**: Comienza a descomponer el café temprano, permitiendo un Rendimiento de Extracción general mucho mayor.\n\nLa pre-infusión es prácticamente obligatoria para extraer cafés de especialidad densos y de tueste claro sin que queden ácidos.",
         "points": [
-          "Mecanismo: los medidores de flujo monitorean el flujo real y la salida de la bomba se ajusta para mantener una tasa de flujo objetivo, con la presión libre de fluctuar",
-          "Propiedad autocorrectiva: cuando se abre un canal bajo perfilado de flujo, la presión cae (en lugar de que el flujo se dispare como ocurriría bajo presión fija), reduciendo el ciclo de retroalimentación de erosión descrito en el Módulo 3",
-          "El 'control de flujo' basado en restricción (p. ej. sistemas de válvula de aguja) como un enfoque relacionado pero mecánicamente distinto — el barista controla una apertura, no la presión o el flujo directamente, y la presión/flujo resultante es función de esa apertura más la resistencia de la pastilla"
-        ],
-        "refs": [
-          "Barista Hustle. 'Æ 7.08 Flow Profiling.' op. cit.",
-          "Clive Coffee. 'Flow Control Espresso: Your Questions Answered.' https://clivecoffee.com/blogs/learn/flow-control-your-questions-answered"
+          "Sellado mecánico de la pastilla mediante la hinchazón",
+          "Mecanismos de pre-infusión por presión de línea vs. presión de bomba",
+          "Cómo las pre-infusiones largas (10-20 segundos) permiten moler más fino de lo normal (estilo Slayer)"
         ]
       },
       {
-        "t": "¿Es necesario el perfilado para tu contexto?",
-        "b": "Una evaluación honesta de cuándo el hardware de perfilado justifica su costo frente a cuándo los fundamentos de preparación de la pastilla entregan la mayor parte de la mejora disponible.",
+        "t": "Perfiles de flujo y presión",
+        "b": "Por qué un perfil plano de 9 bares es subóptimo, y cómo reducir la presión simula la degradación natural de la pastilla.",
+        "content": "A medida que avanza un shot de espresso, la pastilla se disuelve, perdiendo el 20% de su masa. Si la máquina sigue forzando agua a 9 bares constantes, el caudal se acelera descontroladamente al final del shot, arrastrando compuestos ásperos, acuosos y amargos.\n\nLos **Perfiles de Presión/Flujo** (en máquinas como la Decent, Slayer, o E61 con control de flujo) resuelven esto.\nAl reducir intencionalmente la presión en el último tercio del shot (de 9 bares bajando a 6 o 4 bares), mantienes un caudal lento y constante a pesar de la degradación de la pastilla. Este 'perfil decreciente' produce un espresso significativamente más dulce, equilibrado y con mayor extracción.",
         "points": [
-          "Las máquinas de perfilado principalmente agregan valor una vez que la preparación de la pastilla ya es altamente consistente — el perfilado no puede arreglar una pastilla mal distribuida/tampeada, solo puede mitigar la canalización resultante",
-          "Para una operación enfocada en mayoreo que prioriza la validación de demanda antes de la inversión de capital (consistente con tu marco de decisión para equipo de tueste), las máquinas con capacidad de perfilado son una compra de menor prioridad temprana frente a la calidad del molino y la disciplina en la preparación de la pastilla"
+          "La degradación física de la resistencia de la pastilla con el tiempo",
+          "Las máquinas de palanca (spring lever) como el origen histórico del perfil de presión decreciente",
+          "El control de flujo moderno emparejando la entrega de agua con la resistencia de la pastilla"
+        ],
+        "refs": [
+          "Rao, S. (2016). 'Espresso Extraction: Measurement and Mastery.'",
+          "Cameron et al. (2020), op. cit."
         ]
       }
     ]

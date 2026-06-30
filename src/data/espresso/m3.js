@@ -1,92 +1,90 @@
 export default {
   "en": {
     "mod": "Module 3",
-    "title": "Channeling mechanics",
+    "title": "The core variables: Dose, Yield, Time",
     "id": "m3",
-    "desc": "The dominant failure mode in espresso — understanding why it happens is more useful than memorizing fixes for it.",
+    "desc": "The three legs of the espresso recipe stool, and why fixing one locks the others.",
     "topics": [
       {
-        "t": "Why channeling happens",
-        "b": "Water always finds the path of least resistance — any local variation in bed density or particle size creates a preferential flow path that self-reinforces.",
+        "t": "Dose (In)",
+        "b": "The amount of dry coffee you put in the basket. It sets your baseline resistance and your absolute flavor potential.",
+        "content": "**Dose** is the weight of dry coffee placed in the portafilter basket (e.g., 18 grams). \n\nDose is not a flexible variable. It should be determined by the physical size of your basket. If you use a 20g basket, you should use roughly 20g of coffee. \n- **Over-dosing** crushes the coffee against the shower screen, causing immediate channeling.\n- **Under-dosing** creates too much headspace, leading to a soupy puck and weak pressure buildup.\n\nOnce you pick a dose that fits your basket, lock it in. Do not change the dose to fix flavor issues; change the yield or grind.",
         "points": [
-          "Erosion feedback loop: a slightly lower-resistance channel gets more flow, which erodes it further, which lowers resistance more",
-          "Sources of initial unevenness: poor distribution, basket wall gaps, uneven tamp, fines migration during the shot itself",
-          "Why channeling is described as a self-amplifying rather than static defect — small initial unevenness compounds over the shot duration"
+          "Basket sizing and headspace (the gap between puck and shower screen)",
+          "Why locking dose first drastically simplifies dialing in",
+          "Dose's effect on flow resistance (thicker puck = more resistance at the same grind)"
         ],
         "refs": [
-          "Barista Hustle. 'Æ 7.08 Flow Profiling.' https://www.baristahustle.com/lesson/ae-7-08-flow-profiling/",
-          "Cameron et al. (2020), op. cit."
+          "Rao (2008), op. cit., Ch. on Dose and Basket size.",
+          "SCA guidelines on espresso parameters."
         ]
       },
       {
-        "t": "Diagnosing channeling from shot behavior",
-        "b": "Visual and flow-rate signatures that distinguish channeling from other extraction issues.",
+        "t": "Yield (Out) / Brew Ratio",
+        "b": "The weight of the liquid espresso in the cup. This is your primary lever for balancing sourness vs. bitterness.",
+        "content": "**Yield** is the weight of the liquid espresso (e.g., 36 grams). The relationship between Dose and Yield is the **Brew Ratio** (e.g., 18g in, 36g out is a 1:2 ratio).\n\nYield is your primary flavor control:\n- **Short Yield (1:1.5 - Ristretto)**: Highly concentrated, heavy body, but often sour/under-extracted because the water didn't have enough time to pull out the sugars.\n- **Standard (1:2 - Normale)**: The modern specialty baseline. Balances body and extraction.\n- **Long Yield (1:2.5+ - Lungo)**: Weaker body, but much higher extraction. Excellent for pulling sweetness out of dense, lightly-roasted coffees that would otherwise taste sour.",
         "points": [
-          "Visual cues: early blonding, spurting/inconsistent stream, localized fast drips from the basket",
-          "Flow-rate signature on a pressure/flow gauge: sudden flow increase mid-shot at constant or dropping pressure",
-          "Taste signature: a confusing mix of sour (under-extracted bypass water) and bitter (over-extracted channel) notes simultaneously — this combination is close to diagnostic for channeling specifically"
-        ],
-        "refs": [
-          "Espresso Aficionados, op. cit.",
-          "Barista Hustle. 'Æ 6.08 Pressure Profiling.' https://www.baristahustle.com/lesson/ae-6-08-pressure-profiling/"
+          "Ratio as a multiplier for Extraction Yield (more water pushed through = more extraction of the same bed)",
+          "Modern specialty ratios (often 1:2 to 1:2.5) vs. traditional Italian ratios (often closer to 1:1.5-1:2 volume/mass approximations)",
+          "Why light roasts almost always require longer ratios to extract properly without sourness"
         ]
       },
       {
-        "t": "Prevention vs. mitigation strategies",
-        "b": "Distinguishing puck-preparation fixes (prevention) from machine-feature fixes (mitigation once a channel has started).",
+        "t": "Time as a symptom, not a target",
+        "b": "The biggest misconception in espresso: trying to hit exactly 25 seconds instead of tasting the coffee.",
+        "content": "For decades, the golden rule of espresso was '25 to 30 seconds.' This is deeply misleading.\n\n**Time is a symptom of your Dose, Yield, and Grind.** If you have 18g in, 36g out, and it takes 20 seconds, it will likely taste sour. You grind finer to increase resistance, which *causes* the time to extend to 28 seconds, which tastes balanced. \n\nYou did not fix the shot because it hit 28 seconds; you fixed it because grinding finer increased the extraction. A 15-second shot on a 'Turbo' profile might taste incredible, and a 40-second shot of a light roast might be perfect. **Taste the coffee, do not chase the clock.**",
         "points": [
-          "Prevention: WDT, precision baskets, consistent dose/tamp — addresses root cause before water touches the puck",
-          "Mitigation: pressure profiling or flow profiling features that respond to a developing channel mid-shot by reducing local pressure/flow to let it 'heal'",
-          "Why prevention is generally the higher-leverage investment for a small operation versus buying mitigation-capable hardware first"
+          "Time as a dependent output variable, not an independent input control",
+          "The 'Turbo Shot' paradigm (fast, coarse, low pressure, high extraction) breaking the 25-second rule",
+          "Using time purely as a consistency check (if yesterday was 28s and today is 18s at the same grind, something physically broke like channeling)"
         ],
         "refs": [
-          "Barista Hustle Æ 6.08 and 7.08, op. cit. — both lessons cover this prevention/mitigation distinction explicitly."
+          "Cameron et al. (2020), op. cit. — the paper that formalized the fast/coarse 'Turbo Shot' logic."
         ]
       }
     ]
   },
   "es": {
     "mod": "Módulo 3",
-    "title": "Mecánica de la canalización",
+    "title": "Las variables centrales: Dosis, Rendimiento, Tiempo",
     "id": "m3",
-    "desc": "El modo de falla dominante en espresso — entender por qué ocurre es más útil que memorizar soluciones.",
+    "desc": "Las tres patas del banco de la receta de espresso, y por qué fijar una bloquea las demás.",
     "topics": [
       {
-        "t": "Por qué ocurre la canalización",
-        "b": "El agua siempre encuentra el camino de menor resistencia — cualquier variación local en la densidad del lecho o el tamaño de partícula crea un camino de flujo preferencial que se autorefuerza.",
+        "t": "Dosis (Entrada)",
+        "b": "La cantidad de café seco en la canastilla. Define tu resistencia base y tu potencial de sabor absoluto.",
+        "content": "La **Dosis** es el peso del café seco colocado en la canastilla del portafiltro (p. ej., 18 gramos).\n\nLa dosis no es una variable flexible. Debe estar determinada por el tamaño físico de tu canastilla. Si usas una de 20g, debes usar aproximadamente 20g de café.\n- **Sobredosificar** aplasta el café contra la ducha, causando canalización inmediata.\n- **Subdosificar** crea demasiado espacio vacío (headspace), resultando en una pastilla aguada y una mala acumulación de presión.\n\nUna vez que elijas una dosis que se ajuste a tu canastilla, fíjala. No cambies la dosis para arreglar problemas de sabor; cambia el rendimiento o la molienda.",
         "points": [
-          "Ciclo de retroalimentación de erosión: un canal ligeramente menos resistente recibe más flujo, lo que lo erosiona más, lo que reduce más su resistencia",
-          "Fuentes de desuniformidad inicial: distribución pobre, espacios en las paredes de la canasta, tamping desparejo, migración de finos durante el shot mismo",
-          "Por qué la canalización se describe como un defecto autoamplificante en lugar de estático — una pequeña desuniformidad inicial se acumula a lo largo de la duración del shot"
+          "Tamaño de la canastilla y headspace (el espacio entre la pastilla y la ducha)",
+          "Por qué fijar la dosis primero simplifica drásticamente el calibrado",
+          "Efecto de la dosis en la resistencia al flujo (pastilla más gruesa = más resistencia con la misma molienda)"
         ],
         "refs": [
-          "Barista Hustle. 'Æ 7.08 Flow Profiling.' https://www.baristahustle.com/lesson/ae-7-08-flow-profiling/",
-          "Cameron et al. (2020), op. cit."
+          "Rao (2008), op. cit., Cap. sobre Dosis y Tamaño de canastilla.",
+          "Pautas de la SCA sobre parámetros de espresso."
         ]
       },
       {
-        "t": "Diagnosticar canalización a partir del comportamiento del shot",
-        "b": "Señales visuales y de tasa de flujo que distinguen la canalización de otros problemas de extracción.",
+        "t": "Rendimiento (Salida) / Ratio de Extracción",
+        "b": "El peso del espresso líquido en la taza. Esta es tu palanca principal para equilibrar acidez vs. amargor.",
+        "content": "El **Rendimiento (Yield)** es el peso del espresso líquido (p. ej., 36 gramos). La relación entre Dosis y Rendimiento es el **Ratio** (p. ej., 18g de entrada y 36g de salida es un ratio de 1:2).\n\nEl rendimiento es tu control principal de sabor:\n- **Corto (1:1.5 - Ristretto)**: Altamente concentrado, cuerpo pesado, pero a menudo ácido/subextraído porque el agua no tuvo tiempo de sacar los azúcares.\n- **Estándar (1:2 - Normale)**: La línea base moderna de especialidad. Equilibra cuerpo y extracción.\n- **Largo (1:2.5+ - Lungo)**: Cuerpo más débil, pero extracción mucho mayor. Excelente para sacar dulzor de cafés densos y de tueste claro que de otra forma sabrían ácidos.",
         "points": [
-          "Señales visuales: aclaramiento (blonding) temprano, chorro irregular o a chisguetes, goteo localizado rápido desde la canasta",
-          "Señal en un medidor de presión/flujo: aumento súbito del flujo a la mitad del shot con presión constante o decreciente",
-          "Señal de sabor: una mezcla confusa de notas ácidas (agua de bypass subextraída) y amargas (canal sobreextraído) simultáneamente — esta combinación es casi diagnóstica de canalización específicamente"
-        ],
-        "refs": [
-          "Espresso Aficionados, op. cit.",
-          "Barista Hustle. 'Æ 6.08 Pressure Profiling.' https://www.baristahustle.com/lesson/ae-6-08-pressure-profiling/"
+          "El ratio como multiplicador del Rendimiento de Extracción (más agua = más extracción del mismo lecho)",
+          "Ratios modernos de especialidad (a menudo 1:2 a 1:2.5) vs. tradicionales italianos (cerca de 1:1.5)",
+          "Por qué los tuestes claros casi siempre requieren ratios más largos para extraerse bien sin acidez extrema"
         ]
       },
       {
-        "t": "Estrategias de prevención vs. mitigación",
-        "b": "Distinguir las soluciones de preparación de la pastilla (prevención) de las soluciones por funciones de la máquina (mitigación una vez que un canal ya empezó).",
+        "t": "El tiempo como síntoma, no como objetivo",
+        "b": "El mayor error en espresso: tratar de alcanzar exactamente 25 segundos en lugar de probar el café.",
+        "content": "Durante décadas, la regla de oro del espresso fue '25 a 30 segundos'. Esto es profundamente engañoso.\n\n**El tiempo es un síntoma de tu Dosis, Rendimiento y Molienda.** Si tienes 18g in, 36g out, y toma 20 segundos, probablemente sabrá ácido. Mueles más fino para aumentar la resistencia, lo que *causa* que el tiempo se extienda a 28 segundos, lo que sabe equilibrado.\n\nNo arreglaste el shot porque llegó a 28 segundos; lo arreglaste porque moler más fino aumentó la extracción. Un shot de 15 segundos en un perfil 'Turbo' puede saber increíble, y un shot de 40 segundos de un tueste claro puede ser perfecto. **Prueba el café, no persigas el reloj.**",
         "points": [
-          "Prevención: WDT, canastas de precisión, dosis/tamping consistentes — aborda la causa raíz antes de que el agua toque la pastilla",
-          "Mitigación: funciones de perfilado de presión o flujo que responden a un canal en desarrollo a mitad del shot reduciendo la presión/flujo local para dejarlo 'sanar'",
-          "Por qué la prevención suele ser la inversión de mayor apalancamiento para una operación pequeña frente a comprar primero hardware con capacidad de mitigación"
+          "El tiempo como variable de salida dependiente, no como control de entrada independiente",
+          "El paradigma 'Turbo Shot' (rápido, grueso, baja presión, alta extracción) rompiendo la regla de los 25 segundos",
+          "Usar el tiempo puramente como verificación de consistencia (si ayer fue 28s y hoy 18s con la misma molienda, algo físico falló, como canalización)"
         ],
         "refs": [
-          "Barista Hustle Æ 6.08 y 7.08, op. cit. — ambas lecciones cubren explícitamente esta distinción de prevención/mitigación."
+          "Cameron et al. (2020), op. cit. — el paper que formalizó la lógica del 'Turbo Shot'."
         ]
       }
     ]

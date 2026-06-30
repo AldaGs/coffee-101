@@ -17,6 +17,11 @@ export default {
         ],
         "refs": [
           "Rao, S. (2014). <i>The Coffee Roaster's Companion</i>. Ch 3: Heat Transfer."
+        ],
+        "flashcards": [
+          { "q": "Name the three methods of heat transfer in a drum roaster.", "a": "**Conduction** (bean-to-drum contact), **Convection** (hot airflow through the bean mass), **Radiation** (electromagnetic heat from the hot machine chassis)." },
+          { "q": "How does a Loring roaster primarily transfer heat? How does a classic Probat differ?", "a": "Loring: almost entirely **Convection** (forced hot air). Classic Probat: heavily **Conduction**-driven (dense cast iron drum that stores and radiates heat into beans)." },
+          { "q": "What determines a roaster's primary thermal character?", "a": "The ratio of conduction, convection, and radiation — dictated by drum material (cast iron vs. steel), fan design, and burner placement." }
         ]
       },
       {
@@ -28,7 +33,12 @@ export default {
           "Drum material (cast iron vs. carbon steel) dictates responsiveness",
           "The necessity of predictive adjustments rather than reactive ones"
         ],
-        "simulator": "roast-curve"
+        "simulator": "roast-curve",
+        "flashcards": [
+          { "q": "What is thermal momentum in coffee roasting?", "a": "The delay between adjusting the gas/heat and the beans actually absorbing it — caused by the roaster's own metal mass acting as a heat reservoir." },
+          { "q": "Should a roaster react to what the temperature is doing now, or anticipate what it will do in 60 seconds?", "a": "Anticipate — reactive adjustments always arrive late because of thermal inertia. Roasting is predictive driving, not reactive." },
+          { "q": "Why do heavy cast-iron roasters require more skill than light steel machines?", "a": "Their massive inertia means gas changes take minutes to register at the bean. Even with gas off, a cast-iron drum will keep roasting for minutes." }
+        ]
       },
       {
         "t": "Airflow (Damper) mechanics",
@@ -41,6 +51,11 @@ export default {
         ],
         "refs": [
           "Hoos, R. (2015). <i>Modulating the Flavor Profile of Coffee</i>."
+        ],
+        "flashcards": [
+          { "q": "What are the three functions of airflow (damper) in a drum roaster?", "a": "1) Convective heat transfer into the bean mass. 2) Evacuation of moisture vapor. 3) Removal of smoke and chaff to prevent off-flavors." },
+          { "q": "What roasting defect results from too little airflow during development?", "a": "Smoke and chaff settle back onto the beans, creating a 'smoky' or 'baked' off-flavor in the cup." },
+          { "q": "What is the risk of running too much airflow?", "a": "It strips heat from the bean mass — stalling the Rate of Rise, over-drying the beans, and destroying delicate aromatic compounds." }
         ]
       }
     ]

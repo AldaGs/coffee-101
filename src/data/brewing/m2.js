@@ -17,6 +17,11 @@ export default {
         "refs": [
           "Hendon, C.H., Colonna-Dashwood, L., & Colonna-Dashwood, M. (2014). 'The role of dissolved cations in coffee extraction.' <i>J. Agric. Food Chem.</i>, 62(21), 4947-4950.",
           "Colonna-Dashwood, M. & Hendon, C.H. (2015). <i>Water for Coffee</i>."
+        ],
+        "flashcards": [
+          { "q": "What does GH (General Hardness) measure in brewing water?", "a": "The concentration of Ca²⁺ and Mg²⁺ cations — positively charged ions that act as chemical 'hooks' for coffee flavor compounds." },
+          { "q": "What happens if you brew with pure distilled or RO water (GH ≈ 0)?", "a": "The water lacks mineral hooks, so extraction is weak — the cup tastes flat, thin, and lifeless." },
+          { "q": "Which ion — Ca²⁺ or Mg²⁺ — is more effective at extracting sweeter flavor compounds?", "a": "Mg²⁺ (Magnesium) — shown by Hendon & Colonna-Dashwood (2014) to extract smaller, sweeter compounds more effectively." }
         ]
       },
       {
@@ -31,6 +36,11 @@ export default {
         "refs": [
           "Colonna-Dashwood & Hendon (2015), op. cit. — primary source for the GH/KH framework.",
           "Bell, L. et al. (2020). 'Impact of water chemistry on coffee extraction.' <i>J. Food Sci.</i>"
+        ],
+        "flashcards": [
+          { "q": "What does KH (Carbonate Hardness / Alkalinity) control in brewing?", "a": "The buffering capacity — how much of the coffee's extracted natural acidity gets neutralized in the cup." },
+          { "q": "What does high KH water do to a bright washed Ethiopian?", "a": "Mutes the acidity entirely — the cup tastes flat, chalky, and lifeless because bicarbonate neutralizes the extracted acids." },
+          { "q": "What is the typical SCA target for alkalinity (KH)?", "a": "Around 40 ppm as CaCO₃ — enough to buffer without destroying the coffee's natural brightness." }
         ]
       },
       {
@@ -46,6 +56,11 @@ export default {
         "refs": [
           "Barista Hustle. 'DIY Water Recipes.' https://www.baristahustle.com/diy-water-recipes-redux/",
           "Coffee ad Astra. 'Water for Coffee Extraction.' https://coffeeadastra.com/2018/12/16/water-for-coffee-extraction/"
+        ],
+        "flashcards": [
+          { "q": "What two common compounds are used to build custom brew water from RO?", "a": "Epsom salt (MgSO₄) adds GH (extraction hardness); baking soda (NaHCO₃) adds KH (alkalinity buffer)." },
+          { "q": "Why do specialty cafés build water from RO rather than using tap?", "a": "Municipal tap water varies unpredictably — starting from a near-zero mineral baseline allows a precise, consistent, replicable recipe." },
+          { "q": "Why is starting from RO or distilled water essential for a custom recipe?", "a": "You need a near-zero baseline to add back minerals in exact amounts. Adding minerals to unknown tap water produces uncontrolled results." }
         ]
       }
     ]

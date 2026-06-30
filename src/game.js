@@ -1,0 +1,118 @@
+// XP, levels, streaks, badges
+const KEYS = {
+  xp: 'game:xp',
+  streak: 'game:streak',
+  lastDate: 'game:lastDate',
+  badges: 'game:badges',
+};
+
+// XP thresholds for levels 0-10
+const LEVEL_XP = [0, 50, 150, 350, 700, 1200, 2000, 3000, 5000, 8000, 12000];
+
+export const XP = {
+  READ_TOPIC: 5,
+  COMPLETE_TOPIC: 10,
+  REVIEW_CARD: 5,
+  REVIEW_GOOD: 3,   // bonus on top of REVIEW_CARD
+  REVIEW_EASY: 5,  // bonus on top of REVIEW_CARD
+};
+
+export function addXP(amount) {
+  const next = getXP() + amount;
+  try { localStorage.setItem(KEYS.xp, next); } catch {}
+  checkBadges();
+  return next;
+}
+
+export function getXP() {
+  return parseInt(localStorage.getItem(KEYS.xp) || '0', 10);
+}
+
+export function getLevel() {
+  const xp = getXP();
+  let level = 0;
+  for (let i = 0; i < LEVEL_XP.length; i++) {
+    if (xp >= LEVEL_XP[i]) level = i;
+    else break;
+  }
+  const prevXP = LEVEL_XP[level];
+  const nextXP = LEVEL_XP[level + 1] ?? null;
+  const progress = nextXP ? (xp - prevXP) / (nextXP - prevXP) : 1;
+  return { level, xp, prevXP, nextXP, progress };
+}
+
+// Call once per day when the user opens the app or does a review
+export function touchStreak() {
+  const today = new Date().toDateString();
+  const last = localStorage.getItem(KEYS.lastDate);
+  if (last === today) return getStreak();
+
+  const yesterday = new Date(Date.now() - 86_400_000).toDateString();
+  const streak = last === yesterday
+    ? parseInt(localStorage.getItem(KEYS.streak) || '0', 10) + 1
+    : 1;
+
+  try {
+    localStorage.setItem(KEYS.streak, streak);
+    localStorage.setItem(KEYS.lastDate, today);
+  } catch {}
+
+  checkBadges();
+  return streak;
+}
+
+export function getStreak() {
+  const today = new Date().toDateString();
+  const yesterday = new Date(Date.now() - 86_400_000).toDateString();
+  const last = localStorage.getItem(KEYS.lastDate);
+  if (last !== today && last !== yesterday) return 0;
+  return parseInt(localStorage.getItem(KEYS.streak) || '0', 10);
+}
+
+// ── Badges ─────────────────────────────────────────────────
+export const BADGE_DEFS = [
+  { id: 'first_review', icon: '🎓', label: 'First Review', desc: 'Complete your first card review.' },
+  { id: 'streak_3',     icon: '🔥', label: '3-Day Streak',  desc: 'Review 3 days in a row.' },
+  { id: 'streak_7',     icon: '⚡', label: 'Week Streak',   desc: 'Review 7 days in a row.' },
+  { id: 'streak_30',    icon: '🌟', label: 'Month Streak',  desc: 'Review 30 days in a row.' },
+  { id: 'xp_100',       icon: '☕', label: 'Apprentice',    desc: 'Earn 100 XP.' },
+  { id: 'xp_500',       icon: '🫘', label: 'Journeyman',    desc: 'Earn 500 XP.' },
+  { id: 'xp_1000',      icon: '🏅', label: 'Expert',        desc: 'Earn 1,000 XP.' },
+  { id: 'xp_2000',      icon: '🏆', label: 'Master Barista',desc: 'Earn 2,000 XP.' },
+];
+
+export function getEarnedBadges() {
+  try { return JSON.parse(localStorage.getItem(KEYS.badges)) || []; } catch { return []; }
+}
+
+export function checkBadges() {
+  const earned = getEarnedBadges();
+  const xp = getXP();
+  const streak = getStreak();
+  const newBadges = [];
+
+  const unlock = (id) => {
+    if (!earned.includes(id)) { earned.push(id); newBadges.push(id); }
+  };
+
+  if (xp >= 100)  unlock('xp_100');
+  if (xp >= 500)  unlock('xp_500');
+  if (xp >= 1000) unlock('xp_1000');
+  if (xp >= 2000) unlock('xp_2000');
+  if (streak >= 3)  unlock('streak_3');
+  if (streak >= 7)  unlock('streak_7');
+  if (streak >= 30) unlock('streak_30');
+
+  if (newBadges.length) {
+    try { localStorage.setItem(KEYS.badges, JSON.stringify(earned)); } catch {}
+  }
+  return newBadges.map(id => BADGE_DEFS.find(b => b.id === id)).filter(Boolean);
+}
+
+export function awardBadge(id) {
+  const earned = getEarnedBadges();
+  if (!earned.includes(id)) {
+    earned.push(id);
+    try { localStorage.setItem(KEYS.badges, JSON.stringify(earned)); } catch {}
+  }
+}

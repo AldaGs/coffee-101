@@ -374,3 +374,590 @@ footer {
 .back-link:hover {
   color: var(--accent-text);
 }
+
+/* ── Wikipedia Preview Cards ──────────────────────────────── */
+.wiki-link {
+  color: var(--accent-text);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.wiki-link:hover { color: var(--accent); }
+
+.wiki-link-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  margin-left: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  font-family: var(--serif);
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.wiki-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(38, 36, 32, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+  backdrop-filter: blur(2px);
+}
+
+.wiki-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  width: 100%;
+  max-width: 520px;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.wiki-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px 10px;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.wiki-card-source {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.wiki-close {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: var(--ink-soft);
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1;
+}
+.wiki-close:hover { background: var(--bg); color: var(--ink); }
+
+.wiki-state {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 32px 20px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.wiki-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--line);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: wiki-spin .7s linear infinite;
+  flex-shrink: 0;
+}
+@keyframes wiki-spin { to { transform: rotate(360deg); } }
+
+.wiki-content {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  align-items: flex-start;
+}
+
+.wiki-thumb {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+}
+
+.wiki-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wiki-card-title {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.wiki-extract {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.wiki-read-more {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--accent-text);
+  text-decoration: none;
+  margin-top: 4px;
+}
+.wiki-read-more:hover { text-decoration: underline; }
+
+/* ── Dashboard ────────────────────────────────────────────── */
+.dashboard {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.dashboard-stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dash-stat {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dash-stat-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.dash-stat-value {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.dash-stat-label {
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin-top: 1px;
+}
+
+.dash-xp-bar {
+  width: 72px;
+  height: 4px;
+  background: var(--line);
+  border-radius: 2px;
+  margin-top: 3px;
+  overflow: hidden;
+}
+
+.dash-xp-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width .4s ease;
+}
+
+.dash-review-btn {
+  margin-left: auto;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--bg);
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+  transition: background .15s, color .15s;
+}
+
+.dash-review-btn.has-due {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.dash-review-btn:hover {
+  filter: brightness(1.06);
+}
+
+.dash-badges {
+  display: flex;
+  gap: 6px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.dash-badge {
+  font-size: 20px;
+  cursor: default;
+  line-height: 1;
+}
+
+/* ── Review Page ──────────────────────────────────────────── */
+.review-wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 12px;
+}
+
+.review-back {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+.review-back:hover { color: var(--accent-text); }
+
+.review-progress-text {
+  font-size: 13px;
+  font-family: var(--mono);
+  color: var(--ink-soft);
+}
+
+.review-progress-bar {
+  height: 4px;
+  background: var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.review-progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width .3s ease;
+}
+
+.review-course-badge {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--accent-text);
+  background: var(--accent-soft);
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 5px;
+  margin-bottom: 16px;
+}
+
+.review-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  min-height: 220px;
+  cursor: pointer;
+  perspective: 1000px;
+  user-select: none;
+  margin-bottom: 0;
+}
+
+.review-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+  transition: transform .45s ease;
+  transform-style: preserve-3d;
+}
+
+.review-card.is-flipped .review-card-inner {
+  transform: rotateY(180deg);
+  cursor: default;
+}
+
+.review-card-front,
+.review-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  padding: 28px 28px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card-back {
+  transform: rotateY(180deg);
+  background: var(--accent-soft);
+  border-radius: 13px;
+}
+
+.review-card-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+
+.review-card-back .review-card-label {
+  color: var(--accent-text);
+}
+
+.review-card-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+
+.review-card-text p { margin: 0 0 8px; }
+.review-card-text p:last-child { margin: 0; }
+
+.review-card-hint {
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin-top: 16px;
+  text-align: center;
+}
+
+.review-xp-pop {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 8px 0 0;
+  animation: xp-pop .6s ease forwards;
+}
+
+@keyframes xp-pop {
+  0%   { opacity: 0; transform: translateY(6px) scale(.9); }
+  40%  { opacity: 1; transform: translateY(-4px) scale(1.05); }
+  100% { opacity: 0; transform: translateY(-14px) scale(1); }
+}
+
+.review-ratings {
+  margin-top: 20px;
+}
+
+.review-ratings-label {
+  font-size: 12px;
+  text-align: center;
+  color: var(--ink-soft);
+  margin: 0 0 10px;
+}
+
+.review-ratings-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.review-rating-btn {
+  padding: 10px 8px;
+  border-radius: 8px;
+  border: 1.5px solid transparent;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter .1s;
+}
+.review-rating-btn:hover { filter: brightness(1.07); }
+
+.rating-again { background: #FDECEA; border-color: #F5C6C0; color: #B03A2E; }
+.rating-hard  { background: #FEF5E7; border-color: #F5CBA7; color: #9A6114; }
+.rating-good  { background: var(--accent-soft); border-color: var(--line); color: var(--accent-text); }
+.rating-easy  { background: #E8F5E9; border-color: #A5D6A7; color: #2E7D32; }
+
+/* Review summary */
+.review-summary {
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.review-summary-icon {
+  font-size: 52px;
+  margin-bottom: 12px;
+}
+
+.review-summary h2 {
+  font-family: var(--serif);
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+
+.review-summary-xp {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 24px;
+}
+
+.review-level-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.review-level-label {
+  font-size: 12px;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.review-level-bar {
+  width: 140px;
+  height: 8px;
+  background: var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.review-level-fill {
+  height: 100%;
+  background: var(--accent);
+}
+
+.review-badges {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.review-badges-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--accent-text);
+  margin: 0 0 10px;
+}
+
+.review-badge-item {
+  font-size: 14px;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.review-summary-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.review-btn-home {
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  background: var(--bg);
+  color: var(--ink-soft);
+  border: 1px solid var(--line);
+}
+
+.review-btn-again {
+  padding: 11px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+}
+
+.review-loading,
+.review-empty {
+  padding: 60px 24px;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+
+/* ── Flashcard SR upgrades ────────────────────────────────── */
+.flashcard-wrap {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.fc-mastered-badge {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--done);
+  background: var(--done-bg);
+  border: 1px solid var(--done);
+  border-radius: 4px;
+  padding: 2px 7px;
+  z-index: 1;
+}
+
+.fc-ratings {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.fc-rate-btn {
+  padding: 7px 6px;
+  font-size: 12px;
+}
+
+.fc-rated-msg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 6px;
+  min-height: 24px;
+}
+
+.fc-rated-label {
+  font-size: 12px;
+  color: var(--done);
+  font-weight: 600;
+}
+
+.fc-xp-pop {
+  position: static;
+  display: inline-block;
+  font-size: 13px;
+}

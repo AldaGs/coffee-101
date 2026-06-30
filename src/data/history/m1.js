@@ -16,6 +16,11 @@ export default {
         ],
         "refs": [
           "Pendergrast, M. (1999). <i>Uncommon Grounds: The History of Coffee and How It Transformed Our World</i>."
+        ],
+        "flashcards": [
+          { "q": "Where does all Coffea Arabica trace its botanical origin?", "a": "The ancient forests of **Kaffa, Ethiopia** — the only place on Earth where coffee still grows wild, with thousands of undocumented Heirloom varietals." },
+          { "q": "How did the earliest Ethiopian tribes consume coffee before brewing was invented?", "a": "They crushed the cherries and mixed them with animal fat to create a dense energy ration for long journeys — coffee as food, not a drink." },
+          { "q": "What makes Ethiopia's Heirloom varietals botanically important to global coffee?", "a": "They represent the full genetic reservoir of Arabica. As the species faces climate threats, Ethiopian wild varietals hold the genetic diversity needed for breeding resilient cultivars." }
         ]
       },
       {
@@ -26,6 +31,11 @@ export default {
           "Sufi monks and the invention of roasted coffee brewing",
           "The Port of Mocha as the global chokehold of the coffee trade",
           "The Ottoman strategy of sterilizing seeds to prevent agricultural espionage"
+        ],
+        "flashcards": [
+          { "q": "How did Sufi monks in Yemen transform coffee in the 15th century?", "a": "They began roasting the seeds and brewing them as a hot liquid to stay awake during long nighttime prayers — creating the beverage we recognize today." },
+          { "q": "How did the Ottoman Empire maintain Yemen's global coffee monopoly?", "a": "By forbidding the export of fertile seeds. All coffee leaving the **Port of Mocha** was boiled or roasted first, making it unplantable." },
+          { "q": "Why was the Port of Mocha (Al-Makha) historically so significant?", "a": "It was the world's only legal exit point for coffee for over a century, making Yemen the sole global supplier and 'Mocha' synonymous with coffee itself." }
         ]
       },
       {
@@ -39,6 +49,11 @@ export default {
         ],
         "refs": [
           "Ukers, W. H. (1922). <i>All About Coffee</i>."
+        ],
+        "flashcards": [
+          { "q": "Who broke the Yemeni coffee monopoly, and how?", "a": "**Baba Budan**, a Sufi pilgrim, strapped seven fertile coffee seeds to his chest in the 17th century and smuggled them out of Yemen to India." },
+          { "q": "What was the Dutch East India Company's (VOC) role in coffee history?", "a": "They acquired seeds and established colonial plantations in **Java, Indonesia**, mass-producing coffee through exploited indigenous labor — bypassing the Arab monopoly." },
+          { "q": "What is the origin of the 'Mocha-Java' blend?", "a": "The first commercial blend: Dutch merchants combined bright Yemeni coffee (Mocha) with heavy earthy Indonesian coffee (Java) — named directly for their colonial supply chain." }
         ]
       }
     ]

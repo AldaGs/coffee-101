@@ -18,7 +18,12 @@ export default {
           "Lockhart, E.E. (1957). 'The soluble solids in beverage coffee as an index to cup quality.' MIT/Pan-American Coffee Bureau — origin of the gold cup work.",
           "SCA (Specialty Coffee Association). <i>SCA Brewing Control Chart</i>. https://sca.coffee"
         ],
-        "simulator": "brew-chart"
+        "simulator": "brew-chart",
+        "flashcards": [
+          { "q": "What percentage of a coffee bean is insoluble cellulose that never dissolves?", "a": "~70%. The remaining ~30% is potentially soluble flavor compounds (acids, sugars, lipids, alkaloids)." },
+          { "q": "What is Extraction Yield (EY)?", "a": "The percentage of dry coffee mass that actually dissolves into the brew water. SCA targets 18–22%." },
+          { "q": "What happens to the cup below 18% EY?", "a": "Under-extraction — sour early-extracting acids dominate; sweetness and balance are missing." }
+        ]
       },
       {
         "t": "Selective extraction order",
@@ -33,6 +38,11 @@ export default {
         "refs": [
           "Moroney, K.M. et al. (2015). 'Modelling of coffee extraction during brewing using multiscale methods.' <i>Chemical Engineering Science</i>, 137.",
           "Cordoba, N. et al. (2020). 'Coffee extraction: A review of parameters and their influence on the physicochemical characteristics of brews.' <i>Food Research International</i>."
+        ],
+        "flashcards": [
+          { "q": "In what order do the main compound groups extract from coffee grounds?", "a": "Acids first (early, instant) → Sugars next (mid) → Bitter phenolics and tannins last (late)." },
+          { "q": "Why does under-extracted coffee taste sour?", "a": "Only early-extracting fruit acids have dissolved; the balancing sugars haven't had time to extract." },
+          { "q": "Why does over-extracted coffee taste dry and hollow?", "a": "Late-extracting phenolics and astringent structural fibers have dissolved, overpowering the cup." }
         ]
       },
       {
@@ -46,6 +56,11 @@ export default {
         ],
         "refs": [
           "Rao, S. (2010). <i>Everything but Espresso</i>. Ch. 2-3 — the clearest practitioner explanation of this distinction."
+        ],
+        "flashcards": [
+          { "q": "What does TDS measure in coffee?", "a": "Total Dissolved Solids — the concentration of coffee solubles in the water (strength), independent of how thoroughly the bean was extracted." },
+          { "q": "Can a cup be simultaneously strong and under-extracted?", "a": "Yes. A massive dose brewed very briefly gives high TDS but low EY: intensely concentrated but sourly unbalanced." },
+          { "q": "Which variables primarily control Extraction Yield (EY)?", "a": "Grind size, brew time, water temperature, and agitation — not the dose, which mainly controls strength (TDS)." }
         ]
       }
     ]

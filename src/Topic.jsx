@@ -2,6 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import KnowledgeCheck from './KnowledgeCheck';
 import Simulator from './Simulator';
+import { WikiLink } from './WikiCard';
+
+const MD_COMPONENTS = { a: WikiLink };
 
 export default function Topic({ courseId, modId, topicIdx, topicData, ui, lang, updateProgress }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,7 +76,7 @@ export default function Topic({ courseId, modId, topicIdx, topicData, ui, lang, 
         <div className="topic-body open">
           {topicData.content && (
             <div className="topic-content" style={{ marginTop: '16px', fontSize: '14.5px', lineHeight: '1.7', color: 'var(--ink)' }}>
-              <ReactMarkdown>{topicData.content}</ReactMarkdown>
+              <ReactMarkdown components={MD_COMPONENTS}>{topicData.content}</ReactMarkdown>
             </div>
           )}
           
@@ -99,7 +102,14 @@ export default function Topic({ courseId, modId, topicIdx, topicData, ui, lang, 
           
           {topicData.simulator && <Simulator type={topicData.simulator} lang={lang} />}
           
-          {topicData.flashcards && <KnowledgeCheck flashcards={topicData.flashcards} />}
+          {topicData.flashcards && (
+            <KnowledgeCheck
+              flashcards={topicData.flashcards}
+              courseId={courseId}
+              modId={modId}
+              topicIdx={topicIdx}
+            />
+          )}
           
           <div style={{ marginTop: '24px' }}>        
             <h4>{ui.notes}</h4>

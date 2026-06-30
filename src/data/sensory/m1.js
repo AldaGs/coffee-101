@@ -16,6 +16,11 @@ export default {
         ],
         "refs": [
           "SCA Sensory Foundation Curriculum."
+        ],
+        "flashcards": [
+          { "q": "How many basic tastes can your tongue detect, and what are they?", "a": "Five: **Sweet, Sour, Salty, Bitter, and Umami**. There is no 'strawberry' or 'chocolate' taste bud — complex flavors come from smell." },
+          { "q": "What is the myth of the 'tongue taste map'?", "a": "The idea that different regions of the tongue specialize in different tastes (sweet at the tip, bitter at the back). It's been debunked — all taste buds detect all five basic tastes." },
+          { "q": "In coffee, which two basic tastes dominate the extraction diagnostic?", "a": "**Sour** (under-extraction or high natural acidity) vs. **Bitter** (over-extraction or dark roast). Sweetness bridges and balances the two." }
         ]
       },
       {
@@ -26,6 +31,11 @@ export default {
           "Orthonasal (front of nose) vs. Retronasal (back of throat) olfaction",
           "Flavor as a combination of taste and smell",
           "The mechanical purpose of 'slurping' in cupping"
+        ],
+        "flashcards": [
+          { "q": "What is the difference between orthonasal and retronasal olfaction?", "a": "**Orthonasal**: smelling through the front nostrils before drinking (aroma). **Retronasal**: vapors travel up through the throat to the nasal cavity while swallowing — this creates 'flavor'." },
+          { "q": "Why does coffee taste like almost nothing when you pinch your nose while drinking?", "a": "Without retronasal olfaction you lose the aromatic identity — only crude tongue sensations (sweet/sour/bitter) remain. Flavor is ~80% smell." },
+          { "q": "Why do professional cuppers loudly slurp coffee?", "a": "Slurping aspirates the liquid into a fine mist that maximally coats the nasal cavity, dramatically increasing retronasal olfaction and flavor resolution." }
         ]
       },
       {
@@ -36,6 +46,11 @@ export default {
           "The Trigeminal nerve detecting physical weight and texture",
           "Weight (heavy vs. light) vs. Texture (smooth vs. astringent)",
           "The role of brewing method (paper filters remove body, metal filters retain it)"
+        ],
+        "flashcards": [
+          { "q": "What nerve detects body and mouthfeel during coffee evaluation?", "a": "The **trigeminal nerve** — it detects the physical weight, texture, and tactile properties of the liquid in the mouth." },
+          { "q": "Name the two dimensions used to describe body in coffee evaluation.", "a": "**Weight** (light like water vs. heavy/syrupy) and **Texture** (smooth/silky/creamy vs. astringent/gritty/drying)." },
+          { "q": "How does brewing method affect coffee body?", "a": "**Paper filters** trap oils and micro-fines → lighter body. **Metal filters** (French press, Aeropress metal) let them through → heavier, richer mouthfeel." }
         ]
       }
     ]

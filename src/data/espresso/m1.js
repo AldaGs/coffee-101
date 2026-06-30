@@ -17,6 +17,11 @@ export default {
         "refs": [
           "Illy, A. & Viani, R. (2005). <i>Espresso Coffee: The Science of Quality</i>, 2nd Ed. Academic Press — the definitive text on espresso physics.",
           "Navarini, L. et al. (2009). 'Espresso coffee foam: mineral composition and its physical properties.' <i>Food Biophysics</i>."
+        ],
+        "flashcards": [
+          { "q": "What are the three phases that make espresso a triphasic (or tetraphasic) system?", "a": "Solution (dissolved solids), Emulsion (dispersed coffee oils forced by pressure), and Suspension (solid micro-fines). Crema is a fourth foam phase (CO₂)." },
+          { "q": "What creates espresso's heavy, syrupy body?", "a": "The oil emulsion — microscopic coffee lipid droplets forced into suspension by 7–9 bar of pressure. Oils coat the palate and linger." },
+          { "q": "What is espresso crema and what physical process creates it?", "a": "A CO₂ foam: pressure forces CO₂ into solution, which rapidly expands into bubbles when the shot enters the cup at atmospheric pressure." }
         ]
       },
       {
@@ -32,7 +37,12 @@ export default {
           "Cameron et al. (2020), op. cit. — extensively models the physical limits of espresso extraction.",
           "Rao, S. (2008). <i>The Professional Barista's Handbook</i>."
         ],
-        "simulator": "espresso-flow"
+        "simulator": "espresso-flow",
+        "flashcards": [
+          { "q": "Why is espresso paradoxically the strongest yet least-extracted form of coffee?", "a": "The tiny water volume saturates with solubles quickly, limiting how deep extraction can go. Typical EY is only 17–19% vs. filter's 20–22%." },
+          { "q": "What is the typical TDS range for espresso vs. filter coffee?", "a": "Espresso: ~8–12% TDS (extremely strong). Filter coffee: ~1.2–1.5% TDS." },
+          { "q": "Why is a ristretto (1:1 ratio) almost always technically under-extracted?", "a": "Even less water is used — it saturates even faster and cuts the brew before balancing sugars and body compounds fully extract." }
+        ]
       }
     ]
   },

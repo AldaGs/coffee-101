@@ -13,6 +13,10 @@ export default {
           "Understanding the massive labor pipeline behind a single bag of coffee",
           "The barista's responsibility as the translator of the supply chain",
           "Technical execution as a form of respect for the producer"
+        ],
+        "flashcards": [
+          { "q": "Why is the barista described as 'the final link in the supply chain'?", "a": "A bag of coffee passes through farmers, pickers, processors, exporters, and roasters before reaching the bar. The barista can honor or destroy that collective work in 30 seconds." },
+          { "q": "How does technical execution function as a form of respect?", "a": "Proper extraction honors months of agricultural and roasting care upstream. A careless pull wastes the labor of everyone who grew, processed, and roasted that coffee." }
         ]
       },
       {
@@ -23,6 +27,11 @@ export default {
           "The historical toxicity of specialty coffee snobbery",
           "Meeting customers at their palate preference without judgment",
           "The definition of hospitality: making people feel welcome"
+        ],
+        "flashcards": [
+          { "q": "What is the core failure of 'Third Wave snobbery' in specialty coffee?", "a": "Prioritizing barista ego and coffee ideology over making the customer feel genuinely welcomed and well-served." },
+          { "q": "What should a barista do when a customer orders a large vanilla latte?", "a": "Make them the best vanilla latte they've ever had — with a smile. Meet the customer where they are, without judgment or unsolicited opinions." },
+          { "q": "Define hospitality for the coffee bar in one phrase.", "a": "Making people feel **seen, welcomed, and un-judged** in your space." }
         ]
       },
       {
@@ -33,6 +42,10 @@ export default {
           "Situational awareness behind the bar",
           "Tailoring communication to the customer's pace and interest level",
           "Efficiency vs. Education"
+        ],
+        "flashcards": [
+          { "q": "What is situational awareness for a barista?", "a": "Reading cues — time of day, customer demeanor, what they order — to calibrate whether they want speed, education, or warmth." },
+          { "q": "How should you serve a commuter at 7 AM differently from a Saturday afternoon enthusiast?", "a": "**Commuter**: fast, friendly, no unsolicited info. **Enthusiast**: engage with varietal, processing, and flavor notes — they've opened the door." }
         ]
       }
     ]

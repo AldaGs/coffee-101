@@ -16,6 +16,11 @@ export default {
         ],
         "refs": [
           "Wintgens, J. N. (2004). <i>Coffee: Growing, Processing, Sustainable Production</i>."
+        ],
+        "flashcards": [
+          { "q": "What family and genus does coffee belong to?", "a": "Family **Rubiaceae**, genus **Coffea**. The seeds we roast are the pit of a fruit called a coffee cherry." },
+          { "q": "What are the two commercially important Coffea species and their approximate production shares?", "a": "**Arabica** (~60%): high-altitude, complex, fragile. **Robusta/Canephora** (~40%): low-altitude, high-yield, disease-resistant, bitter." },
+          { "q": "How does Robusta differ from Arabica in caffeine content and why?", "a": "Robusta has ~double the caffeine (~2.7% vs ~1.5%). Caffeine is a natural insecticide — Robusta needs more because it grows at low-altitude where pest pressure is higher." }
         ]
       },
       {
@@ -26,6 +31,11 @@ export default {
           "Arabica as a spontaneous hybrid of Robusta and Eugenioides",
           "The genetic bottleneck of the species (lack of diversity)",
           "Vulnerability to climate change and global pandemics (like Roya)"
+        ],
+        "flashcards": [
+          { "q": "Arabica is a hybrid of which two Coffea species?", "a": "*C. Canephora* (Robusta) × *C. Eugenioides* — a natural hybridization in Ethiopian forests 10,000–50,000 years ago." },
+          { "q": "What is the genetic bottleneck of Arabica, and why does it matter?", "a": "The entire species has ~1% genetic diversity. With so little variation it can't evolve defenses against new diseases like Coffee Leaf Rust (Roya) or adapt to climate change." },
+          { "q": "What makes Ethiopian Heirloom varietals botanically unique?", "a": "Ethiopia is the only place coffee grows wild in forests — containing thousands of undocumented genetic varietals that exist nowhere else on Earth." }
         ]
       },
       {
@@ -37,6 +47,11 @@ export default {
           "Mesocarp (Mucilage/Pulp - the engine of fermentation)",
           "Endocarp (Parchment - the protective drying layer)",
           "Endosperm (The coffee bean)"
+        ],
+        "flashcards": [
+          { "q": "Name the four main layers of the coffee cherry from outside to inside.", "a": "**Exocarp** (skin) → **Mesocarp** (mucilage/pulp) → **Endocarp** (parchment) → **Endosperm** (the green coffee seed)." },
+          { "q": "Which layer of the coffee cherry drives fermentation during processing?", "a": "The **Mesocarp** (mucilage/pulp) — its sugars and yeasts initiate and sustain the controlled fermentation that shapes flavor." },
+          { "q": "What is the silverskin (epidermis) and where do you encounter it in roasting?", "a": "An ultra-thin membrane clinging to the seed. During roasting it dries and sheds as **chaff** — papery flakes that must be evacuated from the drum." }
         ]
       }
     ]

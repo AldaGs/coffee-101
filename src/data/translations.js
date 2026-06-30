@@ -7,6 +7,7 @@ export const UI_DICT = {
         brewing: { title: 'Brewing Theory', desc: 'A deep technical syllabus on filter coffee extraction.' },
         espresso: { title: 'Espresso Theory', desc: 'A deep technical syllabus on espresso extraction.' },
         roasting: { title: 'Coffee Roasting Theory', desc: 'A deep technical syllabus on heat transfer and chemistry.' },
+        roasting2: { title: 'Advanced Roasting', desc: 'Volatile chemistry, probe calibration, burner physics, acid science, green evaluation, packaging, and blending theory.' },
         history: { title: 'Coffee History & Origins', desc: 'The global spread of coffee and Mexico\'s rich heritage.' },
         agronomy: { title: 'Agronomy & Terroir', desc: 'Cultivars, processing methods, and farm-level variables.' },
         sensory: { title: 'Sensory & SCA Standards', desc: 'The science of tasting, defect identification, and cupping.' },
@@ -20,6 +21,7 @@ export const UI_DICT = {
         brewing: { title: 'Teoría de Extracción', desc: 'Un programa técnico profundo sobre extracción de café filtrado.' },
         espresso: { title: 'Teoría del Espresso', desc: 'Un programa técnico profundo sobre la extracción de espresso.' },
         roasting: { title: 'Teoría del Tueste', desc: 'Un programa técnico profundo sobre transferencia de calor y química.' },
+        roasting2: { title: 'Tueste Avanzado', desc: 'Química volátil, calibración de sondas, física de quemadores, ciencia de ácidos, evaluación de verde, empaque y teoría de mezclas.' },
         history: { title: 'Historia y Orígenes', desc: 'La expansión global del café y la rica herencia de México.' },
         agronomy: { title: 'Agronomía y Terroir', desc: 'Variedades, métodos de procesamiento y variables a nivel de finca.' },
         sensory: { title: 'Sensorial y Estándares SCA', desc: 'La ciencia de la catación, identificación de defectos y protocolos.' },
@@ -114,6 +116,36 @@ export const UI_DICT = {
       notes: "Tus notas / preguntas",
       placeholder: "Anota preguntas, observaciones de tus propios tuestes, o cosas para probar...",
       footer: "12 modules · sources: Rao (2014, 2020), Hoos (2015, 2024), Schenker (2000, 2017), Schwartzberg (2002, 2006).",
+      saved: "Guardado"
+    }
+  },
+  roasting2: {
+    en: {
+      title: "Advanced Roasting",
+      sub: "A graduate-level syllabus — volatile compound chemistry, thermocouple science, drum engineering, burner physics, organic acid quantification, green coffee grading, packaging technology, and blending theory.",
+      formatnote: "Checkbox state and notes save to this browser via localStorage. Progress persists across sessions on this device.",
+      progress: (d, t) => `${d} / ${t} complete`,
+      expand: "expand",
+      collapse: "collapse",
+      covers: "Covers",
+      refs: "References",
+      notes: "Your notes / questions",
+      placeholder: "Jot observations from your own roasts, or things to test on your machine...",
+      footer: "8 modules · sources: Flament (2002), Illy & Viani (2005), Schwartzberg (2002, 2006), Farah & Donangelo (2006), Cameron et al. (2020), SCA Green Coffee Standards, NFPA 86.",
+      saved: "Saved"
+    },
+    es: {
+      title: "Tueste Avanzado",
+      sub: "Un programa de nivel avanzado — química de compuestos volátiles, ciencia de termopares, ingeniería de tambores, física de quemadores, cuantificación de ácidos orgánicos, clasificación de café verde, tecnología de empaque y teoría de mezclas.",
+      formatnote: "El estado de las casillas y notas se guardan en el navegador mediante localStorage, el progreso persiste entre sesiones.",
+      progress: (d, t) => `${d} / ${t} completados`,
+      expand: "expandir",
+      collapse: "colapsar",
+      covers: "Incluye",
+      refs: "Referencias",
+      notes: "Tus notas / preguntas",
+      placeholder: "Anota observaciones de tus propios tuestes o cosas para probar en tu máquina...",
+      footer: "8 módulos · fuentes: Flament (2002), Illy & Viani (2005), Schwartzberg (2002, 2006), Farah & Donangelo (2006), Cameron et al. (2020), Estándares de Café Verde SCA, NFPA 86.",
       saved: "Guardado"
     }
   },

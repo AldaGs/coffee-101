@@ -1,19 +1,21 @@
-import { brewingData }  from './data/brewing/index.js';
-import { espressoData } from './data/espresso/index.js';
-import { roastingData } from './data/roasting/index.js';
-import { historyData }  from './data/history/index.js';
-import { agronomyData } from './data/agronomy/index.js';
-import { sensoryData }  from './data/sensory/index.js';
-import { baristaData }  from './data/barista/index.js';
+import { brewingData }   from './data/brewing/index.js';
+import { espressoData }  from './data/espresso/index.js';
+import { roastingData }  from './data/roasting/index.js';
+import { roasting2Data } from './data/roasting2/index.js';
+import { historyData }   from './data/history/index.js';
+import { agronomyData }  from './data/agronomy/index.js';
+import { sensoryData }   from './data/sensory/index.js';
+import { baristaData }   from './data/barista/index.js';
 
 const DATA_MAP = {
-  brewing:  brewingData,
-  espresso: espressoData,
-  roasting: roastingData,
-  history:  historyData,
-  agronomy: agronomyData,
-  sensory:  sensoryData,
-  barista:  baristaData,
+  brewing:   brewingData,
+  espresso:  espressoData,
+  roasting:  roastingData,
+  roasting2: roasting2Data,
+  history:   historyData,
+  agronomy:  agronomyData,
+  sensory:   sensoryData,
+  barista:   baristaData,
 };
 
 // Stable ID: "${courseId}:${modId}:${topicIdx}:${cardIdx}"

@@ -101,6 +101,23 @@ function Home() {
       <Dashboard />
 
       <main style={{ padding: 0, maxWidth: '100%' }}>
+        <Link to="/simulators" className="course-card" style={{ borderLeft: '3px solid var(--accent)', marginBottom: 24 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 6 }}>
+            <span style={{ fontSize: 20 }}>🧪</span>
+            <h2 style={{ margin: 0 }}>{lang === 'es' ? 'Simuladores' : 'Simulators'}</h2>
+            <span style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', background: 'var(--accent-soft)', color: 'var(--accent-text)', padding: '2px 8px', borderRadius: 4 }}>
+              {lang === 'es' ? 'Interactivo' : 'Interactive'}
+            </span>
+          </div>
+          <p>{lang === 'es'
+            ? 'Herramientas interactivas: simulador de tueste con análisis de grano verde, control de temperatura, gas por fase y más.'
+            : 'Interactive tools: roasting simulator with green bean analysis, charge temp, per-phase gas controls, RoR curves and more.'}</p>
+        </Link>
+
+        <div style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ink-soft)', marginBottom: 12 }}>
+          {lang === 'es' ? 'Cursos' : 'Courses'}
+        </div>
+
         {COURSE_ORDER.map(id => {
           const c = ui.courses[id];
           return (

@@ -961,3 +961,10 @@ footer {
   display: inline-block;
   font-size: 13px;
 }
+
+/* ── Roasting Lab Simulator ───────────────────────────────── */
+@media (max-width: 680px) {
+  .roast-lab-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

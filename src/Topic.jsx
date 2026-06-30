@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
+import KnowledgeCheck from './KnowledgeCheck';
 
 export default function Topic({ courseId, modId, topicIdx, topicData, ui, updateProgress }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,25 +88,27 @@ export default function Topic({ courseId, modId, topicIdx, topicData, ui, update
           )}
           
           {topicData.refs && topicData.refs.length > 0 && (
-            <>
+            <div className="refs">
               <h4>{ui.refs}</h4>
-              <ul className="refs">
-                {topicData.refs.map((r, i) => (
-                  <li key={i} dangerouslySetInnerHTML={{ __html: r }}></li>
-                ))}
+              <ul>
+                {topicData.refs.map((r, i) => <li key={i} dangerouslySetInnerHTML={{ __html: r }}></li>)}
               </ul>
-            </>
+            </div>
           )}
           
-          <h4>{ui.notes}</h4>
-          <textarea 
-            className="note" 
-            placeholder={ui.placeholder}
-            value={note}
-            onChange={handleNoteChange}
-          ></textarea>
-          <div className="save-hint">
-            {showHint ? ui.saved : ''}
+          {topicData.flashcards && <KnowledgeCheck flashcards={topicData.flashcards} />}
+          
+          <div style={{ marginTop: '24px' }}>        
+            <h4>{ui.notes}</h4>
+            <textarea 
+              className="note" 
+              placeholder={ui.placeholder}
+              value={note}
+              onChange={handleNoteChange}
+            ></textarea>
+            <div className="save-hint">
+              {showHint ? ui.saved : ''}
+            </div>
           </div>
         </div>
       )}

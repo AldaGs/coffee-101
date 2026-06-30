@@ -17,6 +17,16 @@ export default {
         ],
         "refs": [
           "Rao, S. (2014). <i>The Coffee Roaster's Companion</i>. Ch 3: Heat Transfer."
+        ],
+        "flashcards": [
+          {
+            "q": "What is the primary heat vector in older, thick-walled cast-iron roasters?",
+            "a": "**Conduction**. Heat transfers via direct contact between the hot drum surface and the bean."
+          },
+          {
+            "q": "How does a Loring or modern fluid-bed roaster primarily transfer heat?",
+            "a": "**Convection**. Heat is transferred via moving hot air passing through the tumbling bean mass."
+          }
         ]
       },
       {
@@ -62,6 +72,16 @@ export default {
         ],
         "refs": [
           "Rao, S. (2014). <i>The Coffee Roaster's Companion</i>. Cap 3: Heat Transfer."
+        ],
+        "flashcards": [
+          {
+            "q": "¿Cuál es el vector de calor principal en tostadores antiguos de hierro fundido de pared gruesa?",
+            "a": "**Conducción**. El calor se transfiere a través del contacto directo entre la superficie caliente del tambor y el grano."
+          },
+          {
+            "q": "¿Cómo transfiere calor principalmente un Loring o un tostador de lecho fluido moderno?",
+            "a": "**Convección**. El calor se transfiere a través del aire caliente en movimiento que pasa por la masa de granos."
+          }
         ]
       },
       {

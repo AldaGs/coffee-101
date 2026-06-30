@@ -83,6 +83,11 @@ export default {
         "refs": [
           "Hendon, C.H., Colonna-Dashwood, L., & Colonna-Dashwood, M. (2014). 'The role of dissolved cations in coffee extraction.' <i>J. Agric. Food Chem.</i>, 62(21), 4947-4950.",
           "Colonna-Dashwood, M. & Hendon, C.H. (2015). <i>Water for Coffee</i>."
+        ],
+        "flashcards": [
+          { "q": "¿Qué mide la Dureza General (GH) del agua de extracción?", "a": "La concentración de cationes Ca²⁺ y Mg²⁺ — iones con carga positiva que actúan como 'ganchos' para los compuestos de sabor del café." },
+          { "q": "¿Qué pasa si preparas café con agua destilada pura o de ósmosis inversa (GH ≈ 0)?", "a": "El agua carece de ganchos minerales; la extracción es débil — la taza sabe plana, delgada y sin vida." },
+          { "q": "¿Qué ion — Ca²⁺ o Mg²⁺ — es más efectivo extrayendo compuestos de sabor dulces?", "a": "El Mg²⁺ (Magnesio) — demostrado por Hendon & Colonna-Dashwood (2014) para extraer compuestos más pequeños y dulces con mayor eficacia." }
         ]
       },
       {
@@ -97,6 +102,11 @@ export default {
         "refs": [
           "Colonna-Dashwood y Hendon (2015), op. cit. — fuente principal del marco GH/KH.",
           "Bell, L. et al. (2020). 'Impact of water chemistry on coffee extraction.' <i>J. Food Sci.</i>"
+        ],
+        "flashcards": [
+          { "q": "¿Qué controla la Dureza de Carbonatos (KH / Alcalinidad) en la preparación?", "a": "La capacidad de amortiguación — cuánta de la acidez natural extraída del café se neutraliza en la taza." },
+          { "q": "¿Qué le hace el agua con KH alto a un etíope lavado y brillante?", "a": "Silencia toda la acidez — la taza sabe plana, a tiza y sin vida porque el bicarbonato neutraliza los ácidos extraídos." },
+          { "q": "¿Cuál es el objetivo típico de alcalinidad (KH) según la SCA?", "a": "Alrededor de 40 ppm como CaCO₃ — suficiente para amortiguar sin destruir la vivacidad natural del café." }
         ]
       },
       {
@@ -108,6 +118,11 @@ export default {
           "Sales comunes: sal de Epsom (MgSO4) para GH, bicarbonato de sodio (NaHCO3) o bicarbonato de potasio para KH",
           "Herramientas calculadoras para construir recetas con precisión",
           "Por qué esto te importa específicamente: el agua municipal de Puebla tendrá un contenido mineral distinto"
+        ],
+        "flashcards": [
+          { "q": "¿Qué dos compuestos comunes se usan para construir agua personalizada a partir de OI?", "a": "Sal de Epsom (MgSO₄) agrega GH (dureza para extracción); bicarbonato de sodio (NaHCO₃) agrega KH (amortiguador de acidez)." },
+          { "q": "¿Por qué las cafeterías de especialidad construyen agua desde OI en lugar de usar el grifo?", "a": "El agua municipal varía de forma impredecible — partir de una base mineral casi nula permite una receta precisa, consistente y replicable." },
+          { "q": "¿Por qué es esencial partir de agua OI o destilada para una receta personalizada?", "a": "Necesitas una base casi nula para agregar minerales en cantidades exactas. Agregar minerales a agua de grifo desconocida produce resultados incontrolables." }
         ],
         "refs": [
           "Barista Hustle. 'DIY Water Recipes.' https://www.baristahustle.com/diy-water-recipes-redux/",

@@ -75,6 +75,11 @@ export default {
         ],
         "refs": [
           "Pendergrast, M. (1999). <i>Uncommon Grounds: The History of Coffee and How It Transformed Our World</i>."
+        ],
+        "flashcards": [
+          { "q": "¿Dónde rastrea su origen botánico todo el Coffea Arabica?", "a": "Los bosques ancestrales de **Kaffa, Etiopía** — el único lugar en la Tierra donde el café aún crece silvestre, con miles de variedades Heirloom únicas." },
+          { "q": "¿Cómo consumían el café las primeras tribus etíopes antes de inventar la bebida?", "a": "Aplastaban las cerezas y las mezclaban con grasa animal para crear una ración energética densa para viajes largos — café como alimento, no bebida." },
+          { "q": "¿Por qué las variedades Heirloom etíopes son botánicamente importantes para el café mundial?", "a": "Representan el reservorio genético completo del Arábica. Ante amenazas climáticas, estas variedades silvestres contienen la diversidad genética necesaria para criar cultivares resistentes." }
         ]
       },
       {
@@ -85,6 +90,11 @@ export default {
           "Los monjes sufíes y la invención del café tostado",
           "El Puerto de Mocha como embudo global del comercio de café",
           "La estrategia otomana de esterilizar semillas para evitar espionaje agrícola"
+        ],
+        "flashcards": [
+          { "q": "¿Cómo transformaron los monjes sufíes en Yemen el café en el siglo XV?", "a": "Comenzaron a tostar las semillas y a prepararlas como bebida caliente para mantenerse despiertos durante largas oraciones nocturnas — creando la bebida que reconocemos hoy." },
+          { "q": "¿Cómo mantuvo el Imperio Otomano el monopolio global del café de Yemen?", "a": "Prohibiendo la exportación de semillas fértiles. Todo el café que salía del **Puerto de Mocha** se hervía o tostaba primero para que no pudiera plantarse." },
+          { "q": "¿Por qué fue históricamente tan significativo el Puerto de Mocha (Al-Makha)?", "a": "Fue el único punto de salida legal del café durante más de un siglo, convirtiendo a Yemen en el único proveedor mundial y 'Mocha' en sinónimo de café." }
         ]
       },
       {
@@ -98,6 +108,11 @@ export default {
         ],
         "refs": [
           "Ukers, W. H. (1922). <i>All About Coffee</i>."
+        ],
+        "flashcards": [
+          { "q": "¿Quién rompió el monopolio cafetalero yemení y cómo?", "a": "**Baba Budan**, un peregrino sufí, ató siete semillas fértiles a su pecho en el siglo XVII y las contrabandeó fuera de Yemen hacia India." },
+          { "q": "¿Cuál fue el papel de la Compañía Holandesa de las Indias Orientales (VOC) en la historia del café?", "a": "Obtuvieron semillas y establecieron plantaciones coloniales en **Java, Indonesia**, produciendo café masivamente mediante trabajo indígena explotado — eludiendo el monopolio árabe." },
+          { "q": "¿Cuál es el origen de la mezcla 'Mocha-Java'?", "a": "La primera mezcla comercial: los mercaderes holandeses combinaron café yemení brillante (Mocha) con café indonesio terroso (Java) — nombrada directamente por su cadena de suministro colonial." }
         ]
       }
     ]

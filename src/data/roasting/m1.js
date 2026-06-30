@@ -78,6 +78,11 @@ export default {
         ],
         "refs": [
           "Rao, S. (2014). <i>The Coffee Roaster's Companion</i>. Cap 3: Heat Transfer."
+        ],
+        "flashcards": [
+          { "q": "Nombra los tres métodos de transferencia de calor en un tostador de tambor.", "a": "**Conducción** (contacto grano-tambor), **Convección** (flujo de aire caliente) y **Radiación** (calor electromagnético del chasis caliente de la máquina)." },
+          { "q": "¿Cómo transfiere calor una Loring? ¿Cómo difiere una Probat clásica?", "a": "Loring: casi totalmente por **Convección** (aire forzado). Probat clásica: principalmente por **Conducción** (tambor de hierro fundido denso que almacena y transfiere calor)." },
+          { "q": "¿Qué determina el carácter térmico principal de un tostador?", "a": "La proporción de conducción, convección y radiación — determinada por el material del tambor, el diseño del ventilador y la ubicación del quemador." }
         ]
       },
       {
@@ -89,7 +94,12 @@ export default {
           "El material del tambor dicta la capacidad de respuesta",
           "La necesidad de ajustes predictivos en lugar de reactivos"
         ],
-        "simulator": "roast-curve"
+        "simulator": "roast-curve",
+        "flashcards": [
+          { "q": "¿Qué es el momento térmico en el tueste de café?", "a": "El retraso entre ajustar el gas y que los granos absorban ese calor — causado por la masa metálica del tostador que actúa como reservorio térmico." },
+          { "q": "¿Debe un tostador reaccionar a lo que ocurre ahora, o anticipar lo que sucederá en 60 segundos?", "a": "Anticipar — los ajustes reactivos siempre llegan tarde por la inercia térmica. Tostar es una conducción predictiva, no reactiva." },
+          { "q": "¿Por qué los tostadores de hierro fundido pesado requieren más habilidad predictiva?", "a": "Su enorme inercia significa que los cambios de gas tardan minutos en afectar la temperatura del grano — el tambor sigue tostando incluso con el gas apagado." }
+        ]
       },
       {
         "t": "Mecánica del flujo de aire (Damper)",
@@ -102,6 +112,11 @@ export default {
         ],
         "refs": [
           "Hoos, R. (2015). <i>Modulating the Flavor Profile of Coffee</i>."
+        ],
+        "flashcards": [
+          { "q": "¿Cuáles son las tres funciones del flujo de aire (damper) en un tostador de tambor?", "a": "1) Transferencia de calor convectiva. 2) Evacuación del vapor de humedad. 3) Remoción de humo y tamo para prevenir sabores defectuosos." },
+          { "q": "¿Qué defecto de tueste resulta de muy poco flujo de aire durante el desarrollo?", "a": "El humo y el tamo se asientan de vuelta en los granos, creando un sabor defectuoso 'ahumado' o 'baked' en la taza." },
+          { "q": "¿Cuál es el riesgo de usar demasiado flujo de aire?", "a": "Despoja el calor de la masa de granos — estancando la Tasa de Ascenso, secando los granos en exceso y destruyendo compuestos aromáticos delicados." }
         ]
       }
     ]

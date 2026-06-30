@@ -72,6 +72,11 @@ export default {
         ],
         "refs": [
           "SCA Sensory Foundation Curriculum."
+        ],
+        "flashcards": [
+          { "q": "¿Cuántos sabores básicos puede detectar tu lengua y cuáles son?", "a": "Cinco: **Dulce, Ácido, Salado, Amargo y Umami**. No existe papila gustativa de 'fresa' o 'chocolate' — los sabores complejos vienen del olfato." },
+          { "q": "¿Cuál es el mito del 'mapa de la lengua'?", "a": "La idea de que distintas zonas de la lengua se especializan en distintos sabores (dulce en la punta, amargo en la parte trasera). Ha sido refutado — todas las papilas detectan los cinco sabores básicos." },
+          { "q": "En el café, ¿cuáles dos sabores básicos dominan el diagnóstico de extracción?", "a": "**Ácido** (subextracción o alta acidez natural) vs. **Amargo** (sobreextracción o tueste oscuro). El dulzor actúa como puente entre ambos." }
         ]
       },
       {
@@ -82,6 +87,11 @@ export default {
           "Olfato ortonasal (frente de la nariz) vs. retronasal (parte posterior de la garganta)",
           "El sabor como una combinación de gusto y olfato",
           "El propósito mecánico de 'sorber' en la catación"
+        ],
+        "flashcards": [
+          { "q": "¿Cuál es la diferencia entre olfato ortonasal y retronasal?", "a": "**Ortonasal**: oler por las fosas nasales antes de beber (aroma). **Retronasal**: vapores que suben por la garganta hacia la cavidad nasal al tragar — esto crea el 'sabor' (flavor)." },
+          { "q": "¿Por qué el café casi no sabe a nada cuando te tapas la nariz al beberlo?", "a": "Sin olfato retronasal pierdes la identidad aromática — solo quedan las sensaciones básicas de la lengua (dulce/ácido/amargo). El sabor es ~80% olfato." },
+          { "q": "¿Por qué los catadores profesionales sorben el café ruidosamente?", "a": "El sorbo aspira el líquido en una fina niebla que recubre la cavidad nasal, maximizando el olfato retronasal y la resolución del sabor." }
         ]
       },
       {
@@ -92,6 +102,11 @@ export default {
           "El nervio trigémino detectando peso físico y textura",
           "Peso (pesado vs. ligero) vs. Textura (suave vs. astringente)",
           "El rol del método de extracción (filtros de papel quitan cuerpo, metal lo retienen)"
+        ],
+        "flashcards": [
+          { "q": "¿Qué nervio detecta el cuerpo y la textura en boca durante la evaluación del café?", "a": "El **nervio trigémino** — detecta el peso físico, la textura y las propiedades táctiles del líquido en la boca." },
+          { "q": "Nombra las dos dimensiones del cuerpo en la evaluación de café.", "a": "**Peso** (ligero como agua vs. pesado/almibarado) y **Textura** (suave/sedoso/cremoso vs. astringente/arenoso/secante)." },
+          { "q": "¿Cómo afecta el método de preparación al cuerpo del café?", "a": "**Filtros de papel** atrapan aceites y micro-finos → cuerpo ligero. **Filtros de metal** (prensa francesa, Aeropress metal) los dejan pasar → cuerpo más pesado y rico." }
         ]
       }
     ]

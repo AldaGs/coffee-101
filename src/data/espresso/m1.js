@@ -64,6 +64,11 @@ export default {
         "refs": [
           "Illy, A. y Viani, R. (2005). <i>Espresso Coffee: The Science of Quality</i>, 2da Ed.",
           "Navarini, L. et al. (2009). 'Espresso coffee foam: mineral composition and its physical properties.' <i>Food Biophysics</i>."
+        ],
+        "flashcards": [
+          { "q": "¿Cuáles son las tres fases que hacen del espresso un sistema trifásico?", "a": "**Solución** (sólidos disueltos), **Emulsión** (aceites dispersos por presión) y **Suspensión** (micro-finos sólidos). La crema es una cuarta fase de espuma (CO₂)." },
+          { "q": "¿Qué crea el cuerpo pesado y almibarado del espresso?", "a": "La emulsión de aceites — gotitas microscópicas de lípidos de café forzadas en suspensión por 7–9 bar de presión. Los aceites recubren el paladar y persisten." },
+          { "q": "¿Qué es la crema del espresso y qué proceso físico la crea?", "a": "Una espuma de CO₂: la presión fuerza el CO₂ a disolverse; cuando el shot entra a la taza a presión atmosférica, se expande rápidamente formando burbujas." }
         ]
       },
       {
@@ -79,7 +84,12 @@ export default {
           "Cameron et al. (2020), op. cit. — modela extensivamente los límites físicos de la extracción del espresso.",
           "Rao, S. (2008). <i>The Professional Barista's Handbook</i>."
         ],
-        "simulator": "espresso-flow"
+        "simulator": "espresso-flow",
+        "flashcards": [
+          { "q": "¿Por qué el espresso es paradójicamente la forma más fuerte pero menos extraída del café?", "a": "El pequeño volumen de agua se satura de solubles rápidamente, limitando la profundidad de extracción. El EY típico es solo 17–19% vs. el 20–22% del filtrado." },
+          { "q": "¿Cuál es el rango típico de TDS del espresso vs. el café de filtro?", "a": "Espresso: ~8–12% TDS (extremadamente fuerte). Café de filtro: ~1.2–1.5% TDS." },
+          { "q": "¿Por qué un ristretto (ratio 1:1) casi siempre está técnicamente subextraído?", "a": "Se usa aún menos agua — se satura incluso más rápido y corta la extracción antes de que los azúcares y compuestos de cuerpo se extraigan completamente." }
+        ]
       }
     ]
   }

@@ -64,6 +64,10 @@ export default {
           "Entender la cadena de trabajo masivo detrás de una bolsa de café",
           "La responsabilidad del barista como traductor de la cadena",
           "La ejecución técnica como forma de respeto al productor"
+        ],
+        "flashcards": [
+          { "q": "¿Por qué se describe al barista como 'el eslabón final de la cadena de suministro'?", "a": "Una bolsa de café pasa por productores, recolectores, beneficiadoras, exportadores y tostadores antes de llegar a la barra. El barista puede honrar o destruir ese trabajo colectivo en 30 segundos." },
+          { "q": "¿Cómo funciona la ejecución técnica como forma de respeto?", "a": "Una extracción correcta honra meses de cuidado agrícola y de tueste. Un shot descuidado desperdicia el trabajo de todos los que cultivaron, procesaron y tostaron ese café." }
         ]
       },
       {
@@ -74,6 +78,11 @@ export default {
           "La toxicidad histórica del esnobismo en el café de especialidad",
           "Atender al cliente en su preferencia de paladar sin juzgar",
           "La definición de hospitalidad: hacer que las personas se sientan bienvenidas"
+        ],
+        "flashcards": [
+          { "q": "¿Cuál es el fracaso central del 'esnobismo de la Tercera Ola' en el café de especialidad?", "a": "Priorizar el ego del barista y la ideología cafetera sobre hacer que el cliente se sienta genuinamente bienvenido y bien atendido." },
+          { "q": "¿Qué debe hacer un barista cuando un cliente pide un latte grande de vainilla?", "a": "Hacerle el mejor latte de vainilla que haya probado — con una sonrisa. Atender al cliente donde está, sin juzgar ni dar opiniones no solicitadas." },
+          { "q": "Define hospitalidad en la barra de café en una frase.", "a": "Hacer que las personas se sientan **vistas, bienvenidas y no juzgadas** en tu espacio." }
         ]
       },
       {
@@ -84,6 +93,10 @@ export default {
           "Conciencia situacional detrás de la barra",
           "Adaptar la comunicación al ritmo e interés del cliente",
           "Eficiencia vs. Educación"
+        ],
+        "flashcards": [
+          { "q": "¿Qué es la conciencia situacional para un barista?", "a": "Leer señales — hora del día, actitud del cliente, qué pide — para calibrar si quiere rapidez, educación o calidez social." },
+          { "q": "¿Cómo debes atender a un oficinista a las 7 AM distinto de un entusiasta un sábado por la tarde?", "a": "**Oficinista**: rápido, amable, sin información no solicitada. **Entusiasta**: profundiza en variedades, proceso y notas de sabor — ellos abrieron la puerta." }
         ]
       }
     ]

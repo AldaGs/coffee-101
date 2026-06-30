@@ -84,7 +84,12 @@ export default {
           "Lockhart, E.E. (1957). 'The soluble solids in beverage coffee as an index to cup quality.' MIT/Pan-American Coffee Bureau — origen del trabajo de gold cup.",
           "SCA (Specialty Coffee Association). <i>SCA Brewing Control Chart</i>. https://sca.coffee"
         ],
-        "simulator": "brew-chart"
+        "simulator": "brew-chart",
+        "flashcards": [
+          { "q": "¿Qué porcentaje del grano de café es celulosa insoluble que nunca se disuelve?", "a": "~70%. El 30% restante son compuestos de sabor potencialmente solubles (ácidos, azúcares, lípidos, alcaloides)." },
+          { "q": "¿Qué es el Rendimiento de Extracción (EY)?", "a": "El porcentaje de la masa seca del café que realmente se disuelve en el agua. La SCA apunta a 18–22%." },
+          { "q": "¿Qué le pasa a la taza cuando el EY cae por debajo del 18%?", "a": "Subextracción — los ácidos de extracción temprana dominan; el dulzor y el equilibrio están ausentes." }
+        ]
       },
       {
         "t": "Orden de extracción selectiva",
@@ -99,6 +104,11 @@ export default {
         "refs": [
           "Moroney, K.M. et al. (2015). 'Modelling of coffee extraction during brewing using multiscale methods.' <i>Chemical Engineering Science</i>, 137.",
           "Cordoba, N. et al. (2020). 'Coffee extraction: A review of parameters and their influence on the physicochemical characteristics of brews.' <i>Food Research International</i>."
+        ],
+        "flashcards": [
+          { "q": "¿En qué orden se extraen los principales grupos de compuestos del café?", "a": "Ácidos primero (extracción temprana, casi instantánea) → Azúcares (medio) → Fenólicos amargos y taninos al final (tardía)." },
+          { "q": "¿Por qué el café subextraído sabe ácido?", "a": "Solo los ácidos frutales de extracción temprana se han disuelto; los azúcares que equilibran la acidez aún no han tenido tiempo de extraerse." },
+          { "q": "¿Por qué el café sobreextraído sabe seco y hueco?", "a": "Los fenólicos de extracción tardía y las fibras estructurales astringentes se han disuelto, dominando y arruinando la taza." }
         ]
       },
       {
@@ -112,6 +122,11 @@ export default {
         ],
         "refs": [
           "Rao, S. (2010). <i>Everything but Espresso</i>. Cap. 2-3 — la explicación práctica más clara de esta distinción."
+        ],
+        "flashcards": [
+          { "q": "¿Qué mide el TDS en el café?", "a": "Sólidos Disueltos Totales — la concentración de solubles de café en el agua (fuerza), independiente de qué tan bien se extrajo el grano." },
+          { "q": "¿Puede una taza ser simultáneamente fuerte y subextraída?", "a": "Sí. Una dosis enorme extraída muy brevemente da TDS alto pero EY bajo: intensamente concentrada pero con acidez desequilibrada." },
+          { "q": "¿Qué variables controlan principalmente el Rendimiento de Extracción (EY)?", "a": "Molienda, tiempo de extracción, temperatura del agua y agitación — no la dosis, que principalmente controla la fuerza (TDS)." }
         ]
       }
     ]

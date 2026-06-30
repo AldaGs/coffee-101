@@ -73,6 +73,11 @@ export default {
         ],
         "refs": [
           "Wintgens, J. N. (2004). <i>Coffee: Growing, Processing, Sustainable Production</i>."
+        ],
+        "flashcards": [
+          { "q": "¿A qué familia y género pertenece el café?", "a": "Familia **Rubiaceae**, género **Coffea**. Las semillas que tostamos son el hueso de una fruta llamada cereza de café." },
+          { "q": "¿Cuáles son las dos especies de Coffea comercialmente importantes y sus cuotas de producción?", "a": "**Arábica** (~60%): alta altitud, complejo, frágil. **Robusta/Canephora** (~40%): baja altitud, alto rendimiento, resistente, amargo." },
+          { "q": "¿Cómo difiere la Robusta de la Arábica en cafeína y por qué?", "a": "La Robusta tiene ~el doble de cafeína (~2.7% vs ~1.5%). La cafeína es un insecticida natural — Robusta necesita más porque crece a baja altitud con mayor presión de plagas." }
         ]
       },
       {
@@ -83,6 +88,11 @@ export default {
           "Arábica como híbrido espontáneo de Robusta y Eugenioides",
           "El cuello de botella genético de la especie",
           "Vulnerabilidad al cambio climático y pandemias (como la Roya)"
+        ],
+        "flashcards": [
+          { "q": "El Arábica es un híbrido de ¿cuáles dos especies de Coffea?", "a": "*C. Canephora* (Robusta) × *C. Eugenioides* — una hibridación natural en los bosques etíopes hace 10,000–50,000 años." },
+          { "q": "¿Qué es el cuello de botella genético del Arábica y por qué importa?", "a": "Toda la especie tiene ~1% de diversidad genética. Sin variación, no puede evolucionar defensas contra nuevas enfermedades como la Roya ni adaptarse al cambio climático." },
+          { "q": "¿Qué hace únicas a las variedades Heirloom etíopes?", "a": "Etiopía es el único lugar donde el café crece silvestre en bosques — con miles de variedades genéticas únicas e indocumentadas que no existen en ningún otro lugar." }
         ]
       },
       {
@@ -94,6 +104,11 @@ export default {
           "Mesocarpio (Mucílago/Pulpa - el motor de la fermentación)",
           "Endocarpio (Pergamino - la capa protectora de secado)",
           "Endospermo (El grano de café)"
+        ],
+        "flashcards": [
+          { "q": "Nombra las cuatro capas principales de la cereza de café de afuera hacia adentro.", "a": "**Exocarpio** (piel) → **Mesocarpio** (mucílago/pulpa) → **Endocarpio** (pergamino) → **Endospermo** (la semilla de café verde)." },
+          { "q": "¿Qué capa de la cereza impulsa la fermentación durante el procesamiento?", "a": "El **Mesocarpio** (mucílago/pulpa) — sus azúcares y levaduras inician y sostienen la fermentación controlada que moldea el sabor." },
+          { "q": "¿Qué es la película plateada (epidermis) y dónde la encuentras en el tueste?", "a": "Una membrana ultra fina adherida a la semilla. Durante el tueste se seca y se desprende como **tamo** — escamas papelosas que deben evacuarse del tambor." }
         ]
       }
     ]

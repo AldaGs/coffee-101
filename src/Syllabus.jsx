@@ -22,7 +22,12 @@ const DATA_MAP = {
 
 export default function Syllabus() {
   const { courseId } = useParams();
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState(() => localStorage.getItem('coffee101-lang') || 'en');
+
+  const switchLang = (l) => {
+    setLang(l);
+    localStorage.setItem('coffee101-lang', l);
+  };
   const [progress, setProgress] = useState({ done: 0, total: 0 });
 
   // Update theme on body to support course-specific styles (like roasting)
@@ -74,8 +79,8 @@ export default function Syllabus() {
         
         {hasEs && (
           <div className="lang-switch">
-            <button className={`lang-btn ${lang === 'en' ? 'active' : ''}`} onClick={() => setLang('en')}>EN</button>
-            <button className={`lang-btn ${lang === 'es' ? 'active' : ''}`} onClick={() => setLang('es')}>ES</button>
+            <button className={`lang-btn ${lang === 'en' ? 'active' : ''}`} onClick={() => switchLang('en')}>EN</button>
+            <button className={`lang-btn ${lang === 'es' ? 'active' : ''}`} onClick={() => switchLang('es')}>ES</button>
           </div>
         )}
         

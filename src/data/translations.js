@@ -1,4 +1,32 @@
 export const UI_DICT = {
+  home: {
+    en: {
+      title: "Coffee 101",
+      sub: "Technical coffee knowledge hubs, saved directly on your device.",
+      courses: {
+        brewing: { title: 'Brewing Theory', desc: 'A deep technical syllabus on filter coffee extraction.' },
+        espresso: { title: 'Espresso Theory', desc: 'A deep technical syllabus on espresso extraction.' },
+        roasting: { title: 'Coffee Roasting Theory', desc: 'A deep technical syllabus on heat transfer and chemistry.' },
+        history: { title: 'Coffee History & Origins', desc: 'The global spread of coffee and Mexico\'s rich heritage.' },
+        agronomy: { title: 'Agronomy & Terroir', desc: 'Cultivars, processing methods, and farm-level variables.' },
+        sensory: { title: 'Sensory & SCA Standards', desc: 'The science of tasting, defect identification, and cupping.' },
+        barista: { title: 'Barista 101', desc: 'Hospitality, workflow, and foundational drink execution.' }
+      }
+    },
+    es: {
+      title: "Coffee 101",
+      sub: "Centros de conocimiento técnico sobre café, guardados directamente en tu dispositivo.",
+      courses: {
+        brewing: { title: 'Teoría de Extracción', desc: 'Un programa técnico profundo sobre extracción de café filtrado.' },
+        espresso: { title: 'Teoría del Espresso', desc: 'Un programa técnico profundo sobre la extracción de espresso.' },
+        roasting: { title: 'Teoría del Tueste', desc: 'Un programa técnico profundo sobre transferencia de calor y química.' },
+        history: { title: 'Historia y Orígenes', desc: 'La expansión global del café y la rica herencia de México.' },
+        agronomy: { title: 'Agronomía y Terroir', desc: 'Variedades, métodos de procesamiento y variables a nivel de finca.' },
+        sensory: { title: 'Sensorial y Estándares SCA', desc: 'La ciencia de la catación, identificación de defectos y protocolos.' },
+        barista: { title: 'Barista 101', desc: 'Hospitalidad, flujo de trabajo y ejecución de bebidas fundamentales.' }
+      }
+    }
+  },
   brewing: {
     en: {
       title: "Brewing theory",

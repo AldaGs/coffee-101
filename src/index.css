@@ -1,0 +1,341 @@
+:root {
+  --bg: #F4F2EC; 
+  --paper: #FFFFFF; 
+  --ink: #262420; 
+  --ink-soft: #6B6258;
+  --line: #E2DDD0; 
+  --accent: #3E6E5C; 
+  --accent-soft: #DCEAE3; 
+  --accent-text: #1F4536;
+  --done: #5C7A52; 
+  --done-bg: #E7EEE3; 
+  --mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  --serif: 'Source Serif 4', 'Georgia', serif; 
+  --sans: -apple-system, 'Inter', Helvetica, Arial, sans-serif;
+}
+
+/* Roasting Theme overrides */
+.theme-roasting {
+  --bg: #F7F4EE;
+  --accent: #A85A2E;
+  --accent-soft: #F1E2D3;
+  --accent-text: #7A3F1C;
+  --line: #E4DDD0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0; 
+  background: var(--bg); 
+  color: var(--ink); 
+  font-family: var(--sans); 
+  line-height: 1.6; 
+  padding: 0 0 80px;
+}
+
+header {
+  padding: 48px 24px 20px; 
+  max-width: 880px; 
+  margin: 0 auto; 
+  border-bottom: 1px solid var(--line);
+}
+
+.lang-switch {
+  display: flex; 
+  gap: 6px; 
+  margin-bottom: 18px;
+}
+
+.lang-btn {
+  font-size: 12px; 
+  font-weight: 700; 
+  padding: 5px 12px; 
+  border-radius: 6px; 
+  border: 1px solid var(--line); 
+  background: var(--paper); 
+  color: var(--ink-soft); 
+  cursor: pointer;
+}
+
+.lang-btn.active {
+  background: var(--accent); 
+  color: #fff; 
+  border-color: var(--accent);
+}
+
+header h1 {
+  font-family: var(--serif); 
+  font-weight: 600; 
+  font-size: 34px; 
+  margin: 0 0 6px; 
+  letter-spacing: -0.01em;
+}
+
+header p.sub {
+  color: var(--ink-soft); 
+  font-size: 15px; 
+  margin: 0 0 18px; 
+  max-width: 640px;
+}
+
+.progress-wrap {
+  display: flex; 
+  align-items: center; 
+  gap: 14px; 
+  max-width: 480px;
+}
+
+.progress-bar {
+  flex: 1; 
+  height: 6px; 
+  background: var(--line); 
+  border-radius: 3px; 
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%; 
+  background: var(--accent); 
+  transition: width .3s ease;
+}
+
+.progress-label {
+  font-size: 13px; 
+  color: var(--ink-soft); 
+  white-space: nowrap; 
+  font-variant-numeric: tabular-nums;
+}
+
+nav.toc {
+  max-width: 880px; 
+  margin: 28px auto 0; 
+  padding: 0 24px; 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 8px;
+}
+
+nav.toc a {
+  font-size: 12.5px; 
+  color: var(--accent-text); 
+  background: var(--accent-soft); 
+  padding: 5px 10px; 
+  border-radius: 6px; 
+  text-decoration: none; 
+  font-weight: 600; 
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+nav.toc a:hover {
+  border-color: var(--accent);
+}
+
+main {
+  max-width: 880px; 
+  margin: 0 auto; 
+  padding: 24px 24px 0;
+}
+
+.module { margin: 44px 0 0; }
+
+.module-head {
+  display: flex; 
+  align-items: baseline; 
+  gap: 12px; 
+  margin-bottom: 4px;
+}
+
+.module-num {
+  font-family: var(--mono); 
+  font-size: 13px; 
+  color: var(--accent-text); 
+  font-weight: 700;
+}
+
+.module-title {
+  font-family: var(--serif); 
+  font-size: 23px; 
+  font-weight: 600; 
+  margin: 0;
+}
+
+.module-desc {
+  color: var(--ink-soft); 
+  font-size: 14.5px; 
+  margin: 4px 0 18px; 
+  max-width: 680px;
+}
+
+.topic {
+  background: var(--paper); 
+  border: 1px solid var(--line); 
+  border-radius: 10px; 
+  margin-bottom: 12px; 
+  overflow: hidden;
+  transition: border-color .15s;
+}
+
+.topic.done { border-color: var(--done); }
+
+.topic-row {
+  display: flex; 
+  align-items: flex-start; 
+  gap: 12px; 
+  padding: 14px 16px; 
+  cursor: pointer;
+}
+
+.topic-row input[type=checkbox] {
+  margin-top: 3px; 
+  width: 17px; 
+  height: 17px; 
+  accent-color: var(--done); 
+  cursor: pointer; 
+  flex-shrink: 0;
+}
+
+.topic-main { flex: 1; min-width: 0; }
+
+.topic-title {
+  font-weight: 600; 
+  font-size: 15px; 
+  margin: 0 0 3px;
+}
+
+.topic.done .topic-title { color: var(--done); }
+
+.topic-blurb {
+  font-size: 13.5px; 
+  color: var(--ink-soft); 
+  margin: 0;
+}
+
+.topic-toggle {
+  font-size: 11px; 
+  color: var(--ink-soft); 
+  border: 1px solid var(--line); 
+  border-radius: 5px; 
+  padding: 3px 8px; 
+  background: var(--bg); 
+  white-space: nowrap; 
+  align-self: center; 
+  flex-shrink: 0;
+}
+
+.topic-body {
+  padding: 0 16px 16px 45px; 
+  border-top: 1px solid var(--line);
+}
+
+.topic-body h4 {
+  font-size: 12px; 
+  text-transform: uppercase; 
+  letter-spacing: .04em; 
+  color: var(--accent-text); 
+  margin: 14px 0 6px;
+}
+
+.topic-body ul {
+  margin: 0; 
+  padding-left: 18px; 
+  font-size: 14px;
+}
+
+.topic-body li { margin-bottom: 4px; }
+
+.refs {
+  font-size: 13px; 
+  color: var(--ink-soft);
+}
+
+.refs li { margin-bottom: 3px; }
+
+textarea.note {
+  width: 100%; 
+  min-height: 64px; 
+  margin-top: 6px; 
+  padding: 9px 11px; 
+  border: 1px solid var(--line); 
+  border-radius: 6px; 
+  font-family: var(--sans); 
+  font-size: 13.5px; 
+  resize: vertical; 
+  background: var(--bg); 
+  color: var(--ink);
+}
+
+textarea.note::placeholder { color: #A6A096; }
+
+.save-hint {
+  font-size: 11px; 
+  color: #A6A096; 
+  margin-top: 4px; 
+  height: 14px;
+}
+
+footer {
+  max-width: 880px; 
+  margin: 60px auto 0; 
+  padding: 0 24px; 
+  font-size: 12.5px; 
+  color: var(--ink-soft);
+}
+
+.format-note {
+  background: var(--accent-soft); 
+  border: 1px solid #BFD8CB; 
+  border-radius: 10px; 
+  padding: 14px 18px; 
+  font-size: 13.5px; 
+  color: var(--accent-text); 
+  margin: 18px 24px 0; 
+  max-width: 832px;
+}
+.theme-roasting .format-note {
+  border-color: #E0C3A4;
+}
+
+/* Home Page specific styles */
+.home-container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+.course-card {
+  display: block;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.course-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border-color: var(--accent);
+}
+.course-card h2 {
+  font-family: var(--serif);
+  margin: 0 0 8px 0;
+  color: var(--accent-text);
+}
+.course-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-weight: 600;
+}
+.back-link:hover {
+  color: var(--accent-text);
+}

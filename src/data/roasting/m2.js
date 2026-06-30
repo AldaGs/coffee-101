@@ -16,6 +16,11 @@ export default {
         ],
         "refs": [
           "Schenker, S. (2000). <i>Investigations on the Hot Air Roasting of Coffee Beans</i>. ETH Zurich."
+        ],
+        "flashcards": [
+          { "q": "What are the primary flavor precursors stored inside a green coffee bean?", "a": "**Sucrose** (for caramelization), **amino acids** (for Maillard reaction), and **chlorogenic, citric, and malic acids** — all locked inside rigid cellulose walls awaiting thermal activation." },
+          { "q": "What is the moisture content of green coffee, and why does it matter for roasting?", "a": "Typically **10–12%** by weight. This moisture must be evaporated in the drying phase — it also mediates heat transfer into the bean, which is why that phase is endothermic." },
+          { "q": "Why can't you just apply maximum heat to develop flavor faster?", "a": "Uncontrolled heat burns precursors to carbon before they complete their reactions. The roaster must pace heat input to allow Maillard and caramelization to develop without destroying what's been built." }
         ]
       },
       {
@@ -26,6 +31,11 @@ export default {
           "Charge Temp: The baseline heat energy of the system",
           "Turning Point (TP): The moment the thermocouple equalizes with the bean surface temperature",
           "Matching charge temp to bean density (dense beans need more initial heat)"
+        ],
+        "flashcards": [
+          { "q": "What is the Charge Temperature in roasting?", "a": "The temperature of the empty drum when green coffee is loaded. It sets the initial thermal momentum of the roast — too hot scorches the bean exterior; too cool leads to a 'baked', lifeless profile." },
+          { "q": "What is the Turning Point (TP) in a roast curve?", "a": "The moment the thermocouple reading bottoms out and begins rising again — when the cool beans have absorbed enough heat to start warming up. TP marks the true start of the bean's heat absorption phase." },
+          { "q": "Why must denser beans receive a higher charge temperature?", "a": "Dense beans resist heat penetration — they need more initial thermal energy to warm their core at the same rate. Under-energizing a dense bean risks a raw, underdeveloped interior." }
         ]
       },
       {
@@ -39,6 +49,11 @@ export default {
         ],
         "refs": [
           "Rao (2014), op. cit."
+        ],
+        "flashcards": [
+          { "q": "What is the drying phase, and what is its primary chemical activity?", "a": "From Turning Point to pale yellow (~150°C). The beans are endothermic — absorbing heat to evaporate free surface water. Flavor chemistry is minimal; the phase prepares the bean matrix for Maillard and caramelization." },
+          { "q": "What defect occurs if you rush through the drying phase too quickly?", "a": "The bean exterior dries prematurely while the core stays wet and raw — producing **grassy, astringent** flavors in the cup." },
+          { "q": "What sensory cues signal the end of the drying phase?", "a": "The beans transition from green to **pale yellow** in color, and the roasting environment smells of wet hay or bread dough — signs that surface water has mostly evaporated." }
         ]
       }
     ]
@@ -60,6 +75,11 @@ export default {
         ],
         "refs": [
           "Schenker, S. (2000). <i>Investigations on the Hot Air Roasting of Coffee Beans</i>. ETH Zurich."
+        ],
+        "flashcards": [
+          { "q": "¿Cuáles son los principales precursores de sabor almacenados dentro de un grano de café verde?", "a": "**Sacarosa** (para caramelización), **aminoácidos** (para reacción de Maillard) y **ácidos clorogénico, cítrico y málico** — todos encerrados en paredes de celulosa rígida esperando activación térmica." },
+          { "q": "¿Cuál es el contenido de humedad del café verde y por qué importa para el tueste?", "a": "Típicamente **10–12%** en peso. Esta humedad debe evaporarse en la fase de secado — también media la transferencia de calor al grano, lo que hace que esa fase sea endotérmica." },
+          { "q": "¿Por qué no puedes simplemente aplicar calor máximo para desarrollar el sabor más rápido?", "a": "El calor sin control quema los precursores antes de que completen sus reacciones. El tostador debe dosificar el calor para que Maillard y la caramelización se desarrollen sin destruir lo que ya se construyó." }
         ]
       },
       {
@@ -70,6 +90,11 @@ export default {
           "Temp. de Carga: La energía térmica base del sistema",
           "Turning Point (TP): El momento en que el termopar se iguala con la temperatura de la superficie del grano",
           "Ajustar la carga a la densidad del grano (granos densos necesitan más calor)"
+        ],
+        "flashcards": [
+          { "q": "¿Qué es la Temperatura de Carga en el tueste?", "a": "La temperatura del tambor vacío cuando se carga el café verde. Fija el impulso térmico inicial del tueste — demasiado caliente quema el exterior; demasiado frío produce un perfil 'horneado' (baked) sin vida." },
+          { "q": "¿Qué es el Turning Point (TP) en una curva de tueste?", "a": "El momento en que la lectura del termopar toca fondo y comienza a subir de nuevo — cuando los granos fríos han absorbido suficiente calor para comenzar a calentarse. El TP marca el inicio real de la absorción de calor del grano." },
+          { "q": "¿Por qué los granos más densos necesitan una mayor temperatura de carga?", "a": "Los granos densos resisten la penetración del calor — necesitan más energía térmica inicial para calentar su núcleo al mismo ritmo. Bajo-energizar un grano denso arriesga un interior crudo y subdesarrollado." }
         ]
       },
       {
@@ -83,6 +108,11 @@ export default {
         ],
         "refs": [
           "Rao (2014), op. cit."
+        ],
+        "flashcards": [
+          { "q": "¿Qué es la fase de secado y cuál es su actividad química principal?", "a": "Del Turning Point al amarillo pálido (~150°C). Los granos son endotérmicos — absorben calor para evaporar el agua libre superficial. La química de sabor es mínima; la fase prepara la matriz del grano para Maillard y caramelización." },
+          { "q": "¿Qué defecto ocurre si aceleras demasiado la fase de secado?", "a": "El exterior del grano se seca prematuramente mientras el núcleo permanece crudo y húmedo — produciendo sabores **herbáceos y astringentes** en la taza." },
+          { "q": "¿Qué señales sensoriales indican el fin de la fase de secado?", "a": "Los granos pasan de verde a **amarillo pálido** en color, y el entorno de tueste huele a heno mojado o masa de pan — señales de que el agua superficial se ha evaporado en su mayor parte." }
         ]
       }
     ]

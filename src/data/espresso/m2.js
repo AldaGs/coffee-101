@@ -17,6 +17,11 @@ export default {
         "refs": [
           "Fasano, A. & Talamucci, F. (2013). 'Modelling the espresso coffee brewing process.' <i>Applied Mathematical Modelling</i>.",
           "Cameron et al. (2020), op. cit."
+        ],
+        "flashcards": [
+          { "q": "How does espresso grind size function differently from pour-over grind size?", "a": "In espresso, grind size doesn't just control surface area — it **physically acts as a valve**, setting the flow resistance the 9-bar pump must overcome. A tiny grind change can choke or gush a shot entirely." },
+          { "q": "What is Darcy's Law's role in understanding espresso flow rate?", "a": "Flow rate is directly proportional to pressure and inversely proportional to puck resistance. The grinder sets resistance; the pump sets pressure — these two determine the shot's flow rate." },
+          { "q": "Why do micro-adjustments matter far more on an espresso grinder than a filter grinder?", "a": "9-bar pressure amplifies small resistance changes enormously. A grind shift that causes a 5-second timing difference in pour-over can fully choke or blow out an espresso shot." }
         ]
       },
       {
@@ -31,6 +36,11 @@ export default {
         "refs": [
           "Navarini, L. et al. (2009), op. cit.",
           "Rao (2008), op. cit."
+        ],
+        "flashcards": [
+          { "q": "Why do espresso shots start as slow dark drips and finish as a faster blond stream?", "a": "Early on, fines migrate down and partially blind the basket holes, creating high resistance. As the shot extracts, the puck loses ~20% mass, resistance drops, and flow accelerates." },
+          { "q": "What physical phenomenon occurs inside the espresso puck under 9 bars?", "a": "The structure compresses and collapses downward. Microscopic fines are washed toward the basket floor, clogging its holes — creating maximum resistance in the early seconds of the shot." },
+          { "q": "Why do pressure-profiling machines reduce pressure toward the end of a shot?", "a": "To counteract the puck's degrading resistance — as it loses mass and opens up, maintaining constant high pressure would cause the shot to race and over-dilute in the final seconds." }
         ]
       }
     ]
@@ -53,6 +63,11 @@ export default {
         "refs": [
           "Fasano, A. & Talamucci, F. (2013). 'Modelling the espresso coffee brewing process.' <i>Applied Mathematical Modelling</i>.",
           "Cameron et al. (2020), op. cit."
+        ],
+        "flashcards": [
+          { "q": "¿Cómo funciona el tamaño de molienda en espresso diferente al del filtrado?", "a": "En espresso, la molienda no solo controla el área superficial — **actúa físicamente como una válvula**, fijando la resistencia que la bomba de 9 bares debe vencer. Un micro-ajuste puede ahogar o disparar el shot." },
+          { "q": "¿Qué papel juega la Ley de Darcy en el caudal del espresso?", "a": "El caudal es proporcional a la presión e inversamente proporcional a la resistencia de la pastilla. El molino fija la resistencia; la bomba fija la presión — estos dos determinan el caudal del shot." },
+          { "q": "¿Por qué los micro-ajustes importan mucho más en un molino de espresso que en uno de filtrado?", "a": "Los 9 bares de presión amplifican enormemente los pequeños cambios de resistencia. Un ajuste que en filtrado cambia 5 segundos puede ahogar completamente un shot de espresso." }
         ]
       },
       {
@@ -67,6 +82,11 @@ export default {
         "refs": [
           "Navarini, L. et al. (2009), op. cit.",
           "Rao (2008), op. cit."
+        ],
+        "flashcards": [
+          { "q": "¿Por qué los shots de espresso comienzan como gotas lentas y oscuras y terminan como un flujo rápido y rubio?", "a": "Al inicio, los finos migran y ciegan los orificios de la canastilla, creando alta resistencia. A medida que el shot extrae, la pastilla pierde ~20% de masa, la resistencia baja y el flujo se acelera." },
+          { "q": "¿Qué fenómeno físico ocurre dentro de la pastilla de espresso bajo 9 bares?", "a": "La estructura se comprime y colapsa hacia abajo. Los finos microscópicos son arrastrados hacia el fondo de la canastilla, obstruyendo sus orificios — creando la máxima resistencia en los primeros segundos." },
+          { "q": "¿Por qué las máquinas de perfil de presión reducen la presión al final del shot?", "a": "Para contrarrestar la resistencia decreciente de la pastilla — al perder masa y abrirse, mantener alta presión constante haría que el shot se disparara y sobreextrajera en los últimos segundos." }
         ]
       }
     ]

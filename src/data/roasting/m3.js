@@ -16,6 +16,11 @@ export default {
         ],
         "refs": [
           "Farah, A. (2012). <i>Coffee: Emerging Health Effects and Disease Prevention</i> (contains detailed chapters on Maillard chemistry in coffee)."
+        ],
+        "flashcards": [
+          { "q": "What chemical reaction creates the toasted, malty, and savory complexity of roasted coffee?", "a": "The **Maillard Reaction** — between amino acids and reducing sugars (150–200°C). It creates hundreds of new aromatic compounds called melanoidins, responsible for brown color, body, and roasted notes." },
+          { "q": "What happens to coffee flavor if the Maillard phase is too short vs. too long?", "a": "Too short → **thin, purely acidic** cup (underdeveloped). Too long → **flat, muted, 'baked'** cup (delicate acids destroyed by prolonged heat)." },
+          { "q": "What do melanoidins contribute to coffee beyond aroma?", "a": "**Body (mouthfeel)** and dark color — they are large brown polymers that give roasted coffee its physical weight in the mouth and antioxidant properties." }
         ]
       },
       {
@@ -26,6 +31,11 @@ export default {
           "Pyrolysis of sucrose under high heat",
           "The bell curve of sweetness: increasing early on, then plummeting as sugars turn to carbon/bitter compounds",
           "How caramelization differs chemically from Maillard (sugars only, no proteins required)"
+        ],
+        "flashcards": [
+          { "q": "What substance does caramelization target in the coffee bean?", "a": "**Sucrose** (table sugar) — heat breaks it apart into intensely sweet and fruity compounds early on, then into dark, bitter, astringent compounds as roasting continues." },
+          { "q": "Describe the 'sweetness bell curve' of caramelization in roasting.", "a": "Early caramelization (~170–190°C) yields intensely sweet caramel and fruit notes. Continued heat destroys those sweet compounds into bitter carbon — sweetness peaks, then plummets." },
+          { "q": "What is the key chemical distinction between the Maillard reaction and caramelization?", "a": "Maillard requires amino acids + reducing sugars. Caramelization is a **pyrolysis of sugars only** — no proteins involved. They run concurrently but are chemically independent processes." }
         ]
       },
       {
@@ -36,6 +46,11 @@ export default {
           "Chlorogenic acid breakdown (reduces raw sourness/bitterness)",
           "Citric and malic acid preservation vs. degradation",
           "The trade-off between bright acidity (light roast) and rich sweetness/body (medium roast)"
+        ],
+        "flashcards": [
+          { "q": "What is Chlorogenic Acid (CGA) and how does roasting transform it?", "a": "A bitter/sour compound making up ~8% of green coffee. During Maillard, heat breaks it down into quinic and caffeic acids — reducing raw harshness and contributing to roasted bitterness." },
+          { "q": "How does roast level control the brightness of a coffee's acidity?", "a": "Light/fast roast preserves citric and malic acids → bright, juicy cup. Darker/slower roast degrades them → smooth, chocolaty, low-acid cup. Roasting is the act of deciding how much acid survives." },
+          { "q": "Why do Nordic-style roasters use very fast, light roast profiles?", "a": "To preserve the maximum citric and malic acids responsible for bright, juicy character — associated with high-altitude Ethiopian and Kenyan origins that are dulled by darker roasting." }
         ]
       }
     ]
@@ -57,6 +72,11 @@ export default {
         ],
         "refs": [
           "Farah, A. (2012). <i>Coffee: Emerging Health Effects and Disease Prevention</i>."
+        ],
+        "flashcards": [
+          { "q": "¿Qué reacción química crea la complejidad tostada, maltosa y salada del café tostado?", "a": "La **Reacción de Maillard** — entre aminoácidos y azúcares reductores (150–200°C). Crea cientos de nuevos compuestos aromáticos llamados melanoidinas, responsables del color marrón, el cuerpo y las notas tostadas." },
+          { "q": "¿Qué ocurre con el sabor del café si la fase de Maillard es muy corta vs. muy larga?", "a": "Muy corta → taza **delgada y puramente ácida** (subdesarrollada). Muy larga → taza **plana, apagada y 'horneada'** (ácidos delicados destruidos por el calor prolongado)." },
+          { "q": "¿Qué aportan las melanoidinas al café más allá del aroma?", "a": "**Cuerpo (mouthfeel)** y color oscuro — son grandes polímeros marrones que dan al café tostado su peso físico en boca y sus propiedades antioxidantes." }
         ]
       },
       {
@@ -67,6 +87,11 @@ export default {
           "Pirólisis de sacarosa bajo alto calor",
           "La curva de campana del dulzor: aumenta al principio, luego cae en picada",
           "Cómo la caramelización difiere de Maillard (solo azúcares, no requiere proteínas)"
+        ],
+        "flashcards": [
+          { "q": "¿Qué sustancia ataca la caramelización en el grano de café?", "a": "La **sacarosa** (azúcar de mesa) — el calor la descompone en compuestos intensamente dulces y frutales al principio, y luego en compuestos oscuros, amargos y astringentes conforme avanza el tueste." },
+          { "q": "Describe la 'curva de campana del dulzor' de la caramelización en el tueste.", "a": "La caramelización temprana (~170–190°C) produce notas dulces a caramelo y fruta. El calor continuo destruye esos compuestos en carbono amargo — el dulzor llega a su pico y luego cae en picada." },
+          { "q": "¿Cuál es la diferencia química clave entre la reacción de Maillard y la caramelización?", "a": "Maillard requiere aminoácidos + azúcares reductores. La caramelización es una **pirólisis solo de azúcares** — sin proteínas. Se ejecutan simultáneamente pero son procesos químicamente independientes." }
         ]
       },
       {
@@ -77,6 +102,11 @@ export default {
           "Descomposición del ácido clorogénico (reduce la acidez cruda/amargor)",
           "Preservación vs. degradación del ácido cítrico y málico",
           "El compromiso entre acidez brillante (tueste claro) y rico dulzor/cuerpo (tueste medio)"
+        ],
+        "flashcards": [
+          { "q": "¿Qué es el Ácido Clorogénico (CGA) y cómo lo transforma el tueste?", "a": "Un compuesto amargo/ácido que constituye ~8% del café verde. Durante el Maillard, el calor lo descompone en ácidos quínico y cafeico — reduciendo la aspereza cruda y contribuyendo al amargor tostado." },
+          { "q": "¿Cómo controla el nivel de tueste la brillantez de la acidez del café?", "a": "Tueste claro/rápido preserva ácidos cítricos y málicos → taza brillante y jugosa. Tueste oscuro/lento los degrada → taza suave, achocolatada, baja en acidez. Tostar es decidir cuánto ácido sobrevive." },
+          { "q": "¿Por qué los tostadores nórdicos usan perfiles de tueste muy rápidos y claros?", "a": "Para preservar el máximo de ácidos cítricos y málicos responsables del carácter brillante y jugoso — asociado con orígenes de gran altitud etíopes y kenianos que se amortiguan con tuestes oscuros." }
         ]
       }
     ]

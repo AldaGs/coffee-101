@@ -17,6 +17,11 @@ export default {
         "refs": [
           "Cordoba et al. (2020), op. cit.",
           "Sanz-Uribe, J.R. et al. (2017). 'The effect of brewing parameters on coffee quality.' In <i>The Craft and Science of Coffee</i>, Elsevier."
+        ],
+        "flashcards": [
+          { "q": "What is the SCA-recommended specialty brew temperature range?", "a": "**90–96°C (194–205°F)**. Below this, complex sugars can't dissolve efficiently; above it, you risk rapidly extracting harsh tannins and phenolics." },
+          { "q": "Why must you pre-heat your brewing equipment?", "a": "Temperature drops the moment water hits a cold brewer and filter. Pre-heating maintains thermal stability across the entire brew, preventing early pours from extracting at a lower temperature than intended." },
+          { "q": "What happens to extraction if you use water just off the boil (100°C) for a dark roast?", "a": "You provide so much kinetic energy that heavy bitter compounds — tannins and phenolics — extract rapidly, making the cup harsh and astringent." }
         ]
       },
       {
@@ -31,6 +36,11 @@ export default {
         "refs": [
           "Cordoba et al. (2020), op. cit.",
           "Severini, C. et al. (2017). 'How the artisanal roasting process could influence the sensory quality of espresso coffee.' <i>Foods</i>."
+        ],
+        "flashcards": [
+          { "q": "Why is brew temperature described as an 'EQ' rather than just a volume knob?", "a": "Different compounds have different solubility thresholds. Lowering temp selectively suppresses bitter/heavy compounds while fruit acids and florals remain soluble — shifting the flavor profile, not just the strength." },
+          { "q": "If a coffee tastes excessively bright and acidic, what temperature adjustment could help?", "a": "Raise the brew temperature — higher heat dissolves more complex sugars and mutes perceived sharpness by increasing overall extraction sweetness." },
+          { "q": "Why adjust grind and temperature together rather than independently?", "a": "They interact: a coarser grind reduces contact time and resistance, which temperature alone can't compensate for. Balanced flavor profiles usually require coordinated adjustments to both." }
         ]
       }
     ]
@@ -53,6 +63,11 @@ export default {
         "refs": [
           "Cordoba et al. (2020), op. cit.",
           "Sanz-Uribe, J.R. et al. (2017). 'The effect of brewing parameters on coffee quality.' En <i>The Craft and Science of Coffee</i>, Elsevier."
+        ],
+        "flashcards": [
+          { "q": "¿Cuál es el rango de temperatura de extracción recomendado por la SCA para especialidad?", "a": "**90–96°C (194–205°F)**. Por debajo, los azúcares complejos no se disuelven bien; por encima, se extraen rápidamente taninos y fenoles duros y amargos." },
+          { "q": "¿Por qué debes precalentar tu equipo de extracción?", "a": "La temperatura cae en cuanto el agua toca un extractor frío. El precalentado mantiene la estabilidad térmica durante toda la extracción, evitando que los primeros vertidos operen a temperatura inferior a la deseada." },
+          { "q": "¿Qué ocurre si usas agua recién hervida (100°C) para un tueste oscuro?", "a": "Aportas tanta energía cinética que los compuestos amargos pesados — taninos y fenoles — se extraen rápidamente, haciendo la taza áspera y astringente." }
         ]
       },
       {
@@ -67,6 +82,11 @@ export default {
         "refs": [
           "Cordoba et al. (2020), op. cit.",
           "Severini, C. et al. (2017). 'How the artisanal roasting process could influence the sensory quality of espresso coffee.' <i>Foods</i>."
+        ],
+        "flashcards": [
+          { "q": "¿Por qué la temperatura de extracción se describe como un 'ecualizador' más que un control de volumen?", "a": "Cada compuesto tiene diferente umbral de solubilidad. Bajar la temperatura suprime selectivamente amargos/pesados mientras los ácidos frutales y florales siguen siendo solubles — cambia el perfil, no solo la intensidad." },
+          { "q": "Si un café sabe excesivamente brillante y ácido, ¿qué ajuste de temperatura puede ayudar?", "a": "Subir la temperatura — más calor disuelve más azúcares complejos y reduce la percepción de acidez aumentando el dulzor de la extracción total." },
+          { "q": "¿Por qué ajustar temperatura y molienda juntos, no de forma independiente?", "a": "Interactúan: una molienda más gruesa reduce el tiempo de contacto, algo que la temperatura sola no puede compensar. Los perfiles de sabor equilibrados requieren ajustes coordinados de ambas variables." }
         ]
       }
     ]

@@ -13,6 +13,11 @@ export default {
           "Altitude as a proxy for diurnal temperature shifts (warm days, cold nights)",
           "Slow maturation increasing seed density and organic acid concentration",
           "The 'Strictly High Grown' (SHG) classification"
+        ],
+        "flashcards": [
+          { "q": "Why is high altitude the most important proxy for coffee quality?", "a": "Altitude lowers ambient temperature (−0.6°C per 100m). Cooler nights slow cherry maturation, giving the seed more time to accumulate complex sugars and organic acids — producing denser, more flavorful beans." },
+          { "q": "What is 'Strictly High Grown' (SHG) and why does it command a premium?", "a": "An industry classification for coffee grown above ~1,200–1,500m. Slow maturation at these altitudes produces beans with higher density, more complex sugars, and vibrant acidity — hallmarks of specialty quality." },
+          { "q": "What is the diurnal temperature shift and why does it drive coffee quality?", "a": "The daily cycle of warm days (photosynthesis active) + cold nights (metabolism slows). This stress causes the cherry to mature slowly, packing the seed with more dense, complex flavor compounds." }
         ]
       },
       {
@@ -23,6 +28,11 @@ export default {
           "The necessity of excellent water drainage (slopes and porous soil)",
           "Andisols (volcanic ash soils) as the ideal medium",
           "The impact of micronutrients (boron, zinc) on cherry development"
+        ],
+        "flashcards": [
+          { "q": "What soil type is considered ideal for specialty coffee cultivation?", "a": "**Andisols (volcanic ash soils)** — rich in potassium and phosphorus, highly porous for drainage, and acidic (pH 5.0–6.0). The porous structure prevents root rot while retaining just enough moisture." },
+          { "q": "Why do coffee roots rot in poorly draining soil?", "a": "Coffee roots need oxygen. Waterlogged soil displaces oxygen around the roots, creating anaerobic conditions that promote fungal infection and kill the root system." },
+          { "q": "How do micronutrient deficiencies in soil affect coffee flavor?", "a": "Potassium deficiency → poor fruit/cherry development. Boron deficiency → irregular, deformed cherries. These deficiencies directly affect sugar and acid accumulation in the seed." }
         ]
       },
       {
@@ -33,6 +43,11 @@ export default {
           "Simulating high-altitude temperature drops via canopy shade",
           "Natural pest control via avian biodiversity",
           "Long-term soil sustainability vs. short-term monoculture yields"
+        ],
+        "flashcards": [
+          { "q": "Name three benefits of shade-grown (agroforestry) coffee systems.", "a": "1) **Temperature buffer** (canopy mimics high altitude). 2) **Soil health** (leaf litter creates natural compost). 3) **Pest control** (birds eat Coffee Berry Borer / Broca)." },
+          { "q": "How does shade slow cherry maturation, and what does that do to flavor?", "a": "The canopy lowers ambient temperature, mimicking high altitude conditions. Slower maturation gives sugars and acids more time to concentrate in the seed — producing a more complex, sweeter flavor profile." },
+          { "q": "What is the long-term cost of sun-grown monoculture coffee?", "a": "Higher short-term yield, but rapid soil nutrient depletion, heavy chemical fertilizer dependence, loss of biodiversity, and increased vulnerability to disease and climate shifts." }
         ]
       }
     ]
@@ -51,6 +66,11 @@ export default {
           "Altitud como proxy de cambios térmicos diurnos (días cálidos, noches frías)",
           "Maduración lenta aumentando densidad y concentración de ácidos",
           "La clasificación 'Strictly High Grown' (SHG)"
+        ],
+        "flashcards": [
+          { "q": "¿Por qué la gran altitud es el indicador más importante de calidad del café?", "a": "La altitud baja la temperatura ambiente (−0.6°C por 100m). Las noches frías ralentizan la maduración, dando a la semilla más tiempo para acumular azúcares complejos y ácidos orgánicos — produciendo granos más densos y sabrosos." },
+          { "q": "¿Qué es 'Strictly High Grown' (SHG) y por qué tiene premio de precio?", "a": "Clasificación de la industria para café cultivado sobre ~1,200–1,500m. La maduración lenta produce granos más densos, con azúcares más complejos y acidez vibrante — características de la calidad de especialidad." },
+          { "q": "¿Qué es el cambio de temperatura diurno y por qué impulsa la calidad del café?", "a": "El ciclo diario de días cálidos (fotosíntesis activa) + noches frías (metabolismo lento). Este estrés hace que la cereza madure despacio, empacando la semilla con compuestos de sabor más densos y complejos." }
         ]
       },
       {
@@ -61,6 +81,11 @@ export default {
           "La necesidad de excelente drenaje (laderas y suelo poroso)",
           "Andisoles (suelos de ceniza volcánica) como el medio ideal",
           "El impacto de micronutrientes en el desarrollo de la cereza"
+        ],
+        "flashcards": [
+          { "q": "¿Qué tipo de suelo se considera ideal para el cultivo de café de especialidad?", "a": "**Andisoles (suelos de ceniza volcánica)** — ricos en potasio y fósforo, muy porosos para el drenaje, y ácidos (pH 5.0–6.0). La estructura porosa previene la pudrición radicular mientras retiene la humedad justa." },
+          { "q": "¿Por qué se pudren las raíces del café en suelos de drenaje deficiente?", "a": "Las raíces necesitan oxígeno. El suelo encharcado desplaza el oxígeno, creando condiciones anaeróbicas que promueven infecciones fúngicas y destruyen el sistema radicular." },
+          { "q": "¿Cómo afectan las deficiencias de micronutrientes en el suelo al sabor del café?", "a": "Deficiencia de potasio → mal desarrollo del fruto/cereza. Deficiencia de boro → cerezas irregulares y deformes. Estas deficiencias afectan directamente la acumulación de azúcares y ácidos en la semilla." }
         ]
       },
       {
@@ -71,6 +96,11 @@ export default {
           "Simular descensos de temperatura de gran altitud vía sombra",
           "Control natural de plagas vía biodiversidad aviar",
           "Sostenibilidad del suelo a largo plazo vs. rendimientos del monocultivo"
+        ],
+        "flashcards": [
+          { "q": "Nombra tres beneficios de los sistemas de café cultivado a la sombra (agroforestería).", "a": "1) **Amortiguador térmico** (el dosel imita la alta altitud). 2) **Salud del suelo** (hojarasca crea composta natural). 3) **Control de plagas** (aves comen la Broca del café)." },
+          { "q": "¿Cómo ralentiza la sombra la maduración de la cereza y qué hace eso al sabor?", "a": "El dosel baja la temperatura ambiente imitando condiciones de alta altitud. La maduración lenta da más tiempo a los azúcares y ácidos para concentrarse en la semilla — perfil más complejo y dulce." },
+          { "q": "¿Cuál es el costo a largo plazo del monocultivo de café al sol?", "a": "Mayor rendimiento a corto plazo, pero agota rápidamente los nutrientes del suelo, requiere fertilizantes químicos intensivos, elimina la biodiversidad y aumenta la vulnerabilidad a enfermedades y cambio climático." }
         ]
       }
     ]

@@ -17,6 +17,11 @@ export default {
         "refs": [
           "Moroney et al. (2015), op. cit.",
           "Cameron, M.I. et al. (2020). 'Systematically improving espresso: insights from mathematical modeling and experiment.' <i>Matter</i>, 3(3)."
+        ],
+        "flashcards": [
+          { "q": "What happens to a coffee particle's surface area when you halve its diameter?", "a": "It roughly **quadruples** — surface area scales geometrically, not linearly. This is why even small grind adjustments cause dramatic shifts in extraction speed." },
+          { "q": "What physical law governs how coffee solubles move from a particle into water?", "a": "**Fick's Law of Diffusion** — solubles migrate from high concentration inside the particle to low concentration in the surrounding water. More exposed surface area = faster diffusion rate." },
+          { "q": "Why is grind adjustment a more predictable lever than changing pour timing?", "a": "Grind directly controls exposed surface area, which directly governs diffusion rate — it's the highest-leverage, most upstream variable in the extraction chain." }
         ]
       },
       {
@@ -31,6 +36,11 @@ export default {
         "refs": [
           "Cameron et al. (2020), op. cit.",
           "Uman, E. et al. (2016). 'The effect of bean origin and temperature on grinding roasted coffee.' <i>Scientific Reports</i>, 6."
+        ],
+        "flashcards": [
+          { "q": "What is PSD and why does it matter more than average grind size alone?", "a": "Particle Size Distribution — the full spread of all particle sizes produced. A wide PSD means fines over-extract and boulders under-extract simultaneously in the same brew." },
+          { "q": "How do fines cause problems in pour-over brewing?", "a": "They extract almost instantly (contributing bitter notes) and physically clog paper filters — slowing or stalling the brew flow." },
+          { "q": "What distinguishes a high-quality grinder from a cheap one in terms of PSD?", "a": "Better burr geometry produces a **tighter bell curve** — fewer ultra-fine dust particles and fewer oversized boulders — enabling more even extraction across all particles." }
         ]
       },
       {
@@ -45,6 +55,11 @@ export default {
         "refs": [
           "Moroney et al. (2015), op. cit.",
           "Melrose, J. et al. (2021). 'Toward a multiscale model of the brewing process.' <i>AIChE Journal</i>."
+        ],
+        "flashcards": [
+          { "q": "What is channeling, and why is it the primary enemy of even extraction?", "a": "When the coffee bed is uneven, water carves a path of least resistance. That channel over-extracts surrounding coffee while dry islands under-extract — producing bitter AND sour flavors simultaneously." },
+          { "q": "How does pour technique prevent channeling in pour-over brewing?", "a": "Circular, controlled pours agitate and redistribute the coffee bed, maintaining homogeneous particle density so all zones offer equal resistance to the water." },
+          { "q": "Why do different pour-over designs (V60 vs. Kalita Wave) have different channeling risks?", "a": "Bed geometry affects water distribution. A flat bed (Kalita) distributes flow laterally; a conical bed (V60) concentrates flow toward the center, requiring better pour technique to compensate." }
         ]
       }
     ]
@@ -67,6 +82,11 @@ export default {
         "refs": [
           "Moroney et al. (2015), op. cit.",
           "Cameron, M.I. et al. (2020). 'Systematically improving espresso: insights from mathematical modeling and experiment.' <i>Matter</i>, 3(3)."
+        ],
+        "flashcards": [
+          { "q": "¿Qué le pasa al área superficial de una partícula de café cuando reduces su diámetro a la mitad?", "a": "Se **cuadruplica** aproximadamente — el área superficial escala de forma geométrica, no lineal. Por eso incluso ajustes pequeños de molienda producen cambios drásticos en la velocidad de extracción." },
+          { "q": "¿Qué ley física rige cómo los solubles del café pasan de la partícula al agua?", "a": "La **Ley de Fick de Difusión** — los solubles migran de alta concentración (interior de la partícula) a baja (el agua). Más área superficial expuesta = mayor tasa de difusión." },
+          { "q": "¿Por qué ajustar la molienda es más predecible que cambiar el tiempo de vertido?", "a": "La molienda controla directamente el área superficial expuesta, que controla directamente la tasa de difusión — es la variable más upstream y de mayor apalancamiento en la cadena de extracción." }
         ]
       },
       {
@@ -81,6 +101,11 @@ export default {
         "refs": [
           "Cameron et al. (2020), op. cit.",
           "Uman, E. et al. (2016). 'The effect of bean origin and temperature on grinding roasted coffee.' <i>Scientific Reports</i>, 6."
+        ],
+        "flashcards": [
+          { "q": "¿Qué es el PSD y por qué importa más que el tamaño de molienda promedio solo?", "a": "Distribución de Tamaño de Partícula — la dispersión completa de todos los tamaños producidos. Un PSD amplio significa que los finos sobreextraen y las rocas subextraen al mismo tiempo." },
+          { "q": "¿Cómo causan problemas los finos en la extracción por vertido (pour-over)?", "a": "Se extraen casi al instante (añadiendo notas amargas) y obstruyen físicamente los filtros de papel — ralentizando o atascando el flujo de extracción." },
+          { "q": "¿Qué distingue a un molino de alta calidad de uno barato en términos de PSD?", "a": "Mejor geometría de muelas produce una **curva de campana más estrecha** — menos polvo ultra-fino y menos partículas demasiado grandes — permitiendo una extracción más uniforme." }
         ]
       },
       {
@@ -95,6 +120,11 @@ export default {
         "refs": [
           "Moroney et al. (2015), op. cit.",
           "Melrose, J. et al. (2021). 'Toward a multiscale model of the brewing process.' <i>AIChE Journal</i>."
+        ],
+        "flashcards": [
+          { "q": "¿Qué es la canalización y por qué es el principal enemigo de la extracción uniforme?", "a": "Cuando el lecho de café es desigual, el agua cava un canal de menor resistencia. Ese canal sobreextrae el café adyacente mientras zonas secas quedan subextraídas — produciendo sabores amargos Y ácidos al mismo tiempo." },
+          { "q": "¿Cómo previene la técnica de vertido la canalización en el pour-over?", "a": "Los vertidos circulares y controlados agitan y redistribuyen el lecho, manteniendo una densidad de partículas homogénea para que el agua fluya con igual resistencia por todas partes." },
+          { "q": "¿Por qué diferentes diseños de pour-over (V60 vs. Kalita Wave) tienen distintos riesgos de canalización?", "a": "La geometría del lecho afecta la distribución del agua. El lecho plano (Kalita) distribuye el flujo lateralmente; el lecho cónico (V60) concentra el flujo al centro, exigiendo mejor técnica de vertido." }
         ]
       }
     ]

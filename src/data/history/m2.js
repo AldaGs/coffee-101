@@ -13,6 +13,11 @@ export default {
           "Mass production and the rise of vacuum packaging",
           "Instant coffee's role in military rations",
           "Treatment of coffee as a cheap, generic commodity"
+        ],
+        "flashcards": [
+          { "q": "What was the defining goal of First Wave coffee?", "a": "Make coffee **ubiquitous and cheap** — a mass commodity distributed to soldiers (WWI/WWII) and households via vacuum packaging and instant coffee. Origin and quality were irrelevant." },
+          { "q": "What innovations enabled First Wave coffee's mass distribution?", "a": "**Vacuum packaging** (Chase & Sanborn) and **instant coffee** (Nescafé) — enabling long shelf life and convenient preparation for military rations and home kitchens." },
+          { "q": "Why was dark roasting the standard in First Wave coffee?", "a": "Low-quality Robusta blends had many defects. Dark roasting masked those defects behind uniform, intense roasted bitterness." }
         ]
       },
       {
@@ -23,6 +28,11 @@ export default {
           "The rise of the espresso bar and cafe culture in the US",
           "Marketing countries of origin rather than just generic blends",
           "The dominance of dark roasts and flavored milk beverages"
+        ],
+        "flashcards": [
+          { "q": "What consumer shift defined the Second Wave of coffee?", "a": "A rejection of generic diner coffee — consumers sought the **experience** of an Italian-style espresso bar and coffee from known origins (Colombia, Sumatra), not just a caffeine delivery system." },
+          { "q": "What role did Starbucks play in the Second Wave?", "a": "It scaled the espresso-bar experience globally and popularized origin-labeled coffee — but defined the era with standardized **dark roasts** and high-margin milk beverages like Frappuccinos." },
+          { "q": "What were the main quality limits of Second Wave coffee?", "a": "Very dark, uniform roasts (needed for consistency across thousands of stores) and reliance on milk-and-sugar drinks that masked mediocre coffee — origin was marketing, not quality differentiation." }
         ]
       },
       {
@@ -33,6 +43,11 @@ export default {
           "Micro-lot traceability (knowing the exact farmer and elevation)",
           "Light roasts designed to highlight terroir, acidity, and fruit notes",
           "The scientific approach to brewing (extraction yields, water chemistry)"
+        ],
+        "flashcards": [
+          { "q": "What fundamental paradigm shift defines Third Wave coffee?", "a": "Coffee treated as an **artisanal product like wine** — with micro-lot traceability (specific farm, altitude, processing method), light roasts to highlight terroir, and scientific precision brewing." },
+          { "q": "What is 'direct trade' and why did Third Wave cafes adopt it?", "a": "Buying directly from farmers at premium prices, bypassing commodity importers — ensuring quality control and paying producers fairly instead of exploiting the commodity price system." },
+          { "q": "What technical tools did Third Wave coffee introduce to brewing?", "a": "**Precision scales, gooseneck kettles, datalogging, TDS refractometers** — treating extraction as a repeatable scientific process rather than an artisanal guess." }
         ]
       }
     ]
@@ -51,6 +66,11 @@ export default {
           "Producción en masa y el auge del empaque al vacío",
           "El papel del café instantáneo en las raciones militares",
           "Tratamiento del café como un commodity barato y genérico"
+        ],
+        "flashcards": [
+          { "q": "¿Cuál fue el objetivo definitorio del café de la Primera Ola?", "a": "Hacer el café **ubicuo y barato** — un commodity masivo distribuido a soldados (Primera y Segunda Guerra Mundial) y hogares mediante empaque al vacío y café instantáneo. El origen y la calidad eran irrelevantes." },
+          { "q": "¿Qué innovaciones permitieron la distribución masiva del café de la Primera Ola?", "a": "El **empaque al vacío** (Chase & Sanborn) y el **café instantáneo** (Nescafé) — permitiendo larga vida útil y preparación fácil para raciones militares y cocinas domésticas." },
+          { "q": "¿Por qué el tueste oscuro era el estándar en el café de la Primera Ola?", "a": "Las mezclas de Robusta de baja calidad tenían muchos defectos. El tueste oscuro los enmascaraba con un amargor tostado uniforme e intenso." }
         ]
       },
       {
@@ -61,6 +81,11 @@ export default {
           "El auge de la barra de espresso y la cultura de cafetería",
           "Promocionar países de origen en lugar de mezclas genéricas",
           "El dominio de los tuestes oscuros y bebidas saborizadas"
+        ],
+        "flashcards": [
+          { "q": "¿Qué cambio de consumidor definió la Segunda Ola del café?", "a": "Un rechazo al café genérico de restaurante — los consumidores buscaron la **experiencia** de una barra de espresso al estilo italiano y café de orígenes conocidos (Colombia, Sumatra), no solo cafeína." },
+          { "q": "¿Qué papel jugó Starbucks en la Segunda Ola?", "a": "Escaló la experiencia de barra de espresso globalmente y popularizó el café etiquetado por origen — pero definió la era con **tuestes oscuros** estandarizados y bebidas de alto margen como Frappuccinos." },
+          { "q": "¿Cuáles fueron los principales límites de calidad del café de la Segunda Ola?", "a": "Tuestes muy oscuros y uniformes (necesarios para consistencia en miles de tiendas) y dependencia de bebidas con leche y azúcar que enmascaraban café mediocre — el origen era marketing, no diferenciación de calidad." }
         ]
       },
       {
@@ -71,6 +96,11 @@ export default {
           "Trazabilidad de micro-lotes (conocer al productor exacto y su altitud)",
           "Tuestes claros diseñados para resaltar el terroir y la acidez",
           "El enfoque científico a la extracción (rendimientos, química del agua)"
+        ],
+        "flashcards": [
+          { "q": "¿Qué cambio de paradigma fundamental define al café de la Tercera Ola?", "a": "El café tratado como un **producto artesanal como el vino** — con trazabilidad de micro-lotes (finca, altitud, método de proceso específicos), tuestes claros para resaltar el terroir, y extracción con precisión científica." },
+          { "q": "¿Qué es el 'trato directo' (direct trade) y por qué lo adoptaron los cafés de la Tercera Ola?", "a": "Comprar directamente a los productores a precios premium, evitando los importadores del mercado de commodities — garantizando control de calidad y pagando al productor justamente." },
+          { "q": "¿Qué herramientas técnicas introdujo la Tercera Ola a la preparación del café?", "a": "**Básculas de precisión, hervidores cuello de cisne, registro de datos, refractómetros TDS** — tratando la extracción como un proceso científico repetible en lugar de una suposición artesanal." }
         ]
       }
     ]

@@ -8,7 +8,7 @@ export default {
       {
         "t": "The necessity of data in roasting",
         "b": "Human memory is flawed. Datalogging is objective.",
-        "content": "Before the 2010s, roasting was considered a 'dark art.' Roasters relied on sight, sound, and smell, guarding their 'secrets.' The reality was that cup consistency was terrible.\n\nThe adoption of thermocouple probes linked to software like **Artisan** (open-source) or **Cropster** (commercial) revolutionized the industry. These programs plot Environmental Temperature (ET), Bean Temperature (BT), and RoR in real-time.\n\nIf a batch of your Ethiopian washed tastes incredible, you do not have to guess what you did. You open the software, load the profile as a background curve, and trace it exactly for the next batch.",
+        "content": "Before the 2010s, roasting was considered a 'dark art.' Roasters relied on sight, sound, and smell, guarding their 'secrets.' The reality was that cup consistency was terrible.\n\nThe adoption of [thermocouple](https://en.wikipedia.org/wiki/Thermocouple) probes linked to software like **Artisan** (open-source) or **Cropster** (commercial) revolutionized the industry. These programs plot Environmental Temperature (ET), Bean Temperature (BT), and RoR in real-time.\n\nIf a batch of your Ethiopian washed tastes incredible, you do not have to guess what you did. You open the software, load the profile as a background curve, and trace it exactly for the next batch.",
         "points": [
           "The shift from sensory-based roasting to data-driven roasting",
           "Thermocouple placement and reading delay (why probes lie to you early in the roast)",
@@ -46,7 +46,7 @@ export default {
       {
         "t": "La necesidad de datos en el tueste",
         "b": "La memoria humana falla. El registro de datos es objetivo.",
-        "content": "Antes de la década de 2010, el tueste se consideraba un 'arte oscuro'. Los tostadores dependían de la vista, el sonido y el olfato. La realidad era que la consistencia era terrible.\n\nLa adopción de termopares conectados a software como **Artisan** o **Cropster** revolucionó la industria. Estos programas grafican la Temperatura Ambiental (ET), la Temperatura del Grano (BT) y el RoR en tiempo real.\n\nSi un lote de tu lavado etíope sabe increíble, no tienes que adivinar qué hiciste. Abres el software, cargas el perfil como curva de fondo y lo calcas exactamente para el siguiente lote.",
+        "content": "Antes de la década de 2010, el tueste se consideraba un 'arte oscuro'. Los tostadores dependían de la vista, el sonido y el olfato. La realidad era que la consistencia era terrible.\n\nLa adopción de [termopares](https://es.wikipedia.org/wiki/Termopar) conectados a software como **Artisan** o **Cropster** revolucionó la industria. Estos programas grafican la Temperatura Ambiental (ET), la Temperatura del Grano (BT) y el RoR en tiempo real.\n\nSi un lote de tu lavado etíope sabe increíble, no tienes que adivinar qué hiciste. Abres el software, cargas el perfil como curva de fondo y lo calcas exactamente para el siguiente lote.",
         "points": [
           "El cambio de tueste sensorial a tueste basado en datos",
           "Ubicación de termopares y retraso de lectura (por qué las sondas te mienten al inicio)",

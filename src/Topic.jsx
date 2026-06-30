@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import KnowledgeCheck from './KnowledgeCheck';
+import Simulator from './Simulator';
 
-export default function Topic({ courseId, modId, topicIdx, topicData, ui, updateProgress }) {
+export default function Topic({ courseId, modId, topicIdx, topicData, ui, lang, updateProgress }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isDone, setIsDone] = useState(false);
   const [note, setNote] = useState('');
@@ -95,6 +96,8 @@ export default function Topic({ courseId, modId, topicIdx, topicData, ui, update
               </ul>
             </div>
           )}
+          
+          {topicData.simulator && <Simulator type={topicData.simulator} lang={lang} />}
           
           {topicData.flashcards && <KnowledgeCheck flashcards={topicData.flashcards} />}
           

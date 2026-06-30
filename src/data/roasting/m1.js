@@ -37,7 +37,8 @@ export default {
           "The delay between adjusting the burner and the beans absorbing the heat",
           "Drum material (cast iron vs. carbon steel) dictates responsiveness",
           "The necessity of predictive adjustments rather than reactive ones"
-        ]
+        ],
+        "simulator": "roast-curve"
       },
       {
         "t": "Airflow (Damper) mechanics",
@@ -92,7 +93,8 @@ export default {
           "El retraso entre ajustar el quemador y que los granos absorban el calor",
           "El material del tambor dicta la capacidad de respuesta",
           "La necesidad de ajustes predictivos en lugar de reactivos"
-        ]
+        ],
+        "simulator": "roast-curve"
       },
       {
         "t": "Mecánica del flujo de aire (Damper)",

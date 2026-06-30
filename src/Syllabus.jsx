@@ -123,6 +123,7 @@ export default function Syllabus() {
                 topicIdx={tIdx}
                 topicData={top}
                 ui={ui}
+                lang={currentLang}
                 updateProgress={updateProgress}
               />
             ))}

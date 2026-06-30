@@ -17,7 +17,8 @@ export default {
         "refs": [
           "Lockhart, E.E. (1957). 'The soluble solids in beverage coffee as an index to cup quality.' MIT/Pan-American Coffee Bureau — origin of the gold cup work.",
           "SCA (Specialty Coffee Association). <i>SCA Brewing Control Chart</i>. https://sca.coffee"
-        ]
+        ],
+        "simulator": "brew-chart"
       },
       {
         "t": "Selective extraction order",
@@ -67,7 +68,8 @@ export default {
         "refs": [
           "Lockhart, E.E. (1957). 'The soluble solids in beverage coffee as an index to cup quality.' MIT/Pan-American Coffee Bureau — origen del trabajo de gold cup.",
           "SCA (Specialty Coffee Association). <i>SCA Brewing Control Chart</i>. https://sca.coffee"
-        ]
+        ],
+        "simulator": "brew-chart"
       },
       {
         "t": "Orden de extracción selectiva",

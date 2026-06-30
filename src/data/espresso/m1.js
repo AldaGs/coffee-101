@@ -31,7 +31,8 @@ export default {
         "refs": [
           "Cameron et al. (2020), op. cit. — extensively models the physical limits of espresso extraction.",
           "Rao, S. (2008). <i>The Professional Barista's Handbook</i>."
-        ]
+        ],
+        "simulator": "espresso-flow"
       }
     ]
   },
@@ -67,7 +68,8 @@ export default {
         "refs": [
           "Cameron et al. (2020), op. cit. — modela extensivamente los límites físicos de la extracción del espresso.",
           "Rao, S. (2008). <i>The Professional Barista's Handbook</i>."
-        ]
+        ],
+        "simulator": "espresso-flow"
       }
     ]
   }

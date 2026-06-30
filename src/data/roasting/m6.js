@@ -1,49 +1,78 @@
 export default {
-  "mod": "Module 6",
-  "title": "Development phase (post-first-crack)",
-  "id": "m6",
-  "desc": "The most consequential and most argued-over phase: drop temperature, development time ratio, and what they actually control.",
-  "topics": [
-    {
-      "t": "Development time ratio (DTR) — origin and limits",
-      "b": "The %-of-total-time-after-FC metric — useful heuristic, frequently over-applied.",
-      "content": "The **Development Time Ratio (DTR)** is the percentage of total roast time that occurs *after* First Crack. For example, if a roast takes 10 minutes total, and First Crack happens at minute 8, the development time is 2 minutes (a 20% DTR).\n\nDTR was popularized by Scott Rao as a heuristic for consistency. A DTR between 15% and 25% is widely considered the \"sweet spot\" for specialty coffee to ensure the inner core of the bean is cooked without roasting the exterior too dark.\n\nHowever, DTR is just a ratio. A 20% DTR on a flat-lining RoR tastes entirely different than a 20% DTR on a steadily declining RoR. It is a useful shorthand, but it cannot replace tracking the actual curve shape and drop temperature.",
-      "points": [
-        "Definition and typical specialty-roasting ranges (commonly cited ~15–25%, highly profile-dependent)",
-        "Why DTR alone, without RoR shape and charge/FC temp context, is an incomplete predictor of cup outcome",
-        "Critiques: DTR conflates very different RoR shapes that happen to share a duration ratio"
-      ],
-      "refs": [
-        "Rao, S. (2020), op. cit. — Rao is explicitly critical of DTR-as-sole-metric while acknowledging its diagnostic use.",
-        "Hoos (2015), op. cit."
-      ]
-    },
-    {
-      "t": "Drop temperature and caramelization/pyrolysis balance",
-      "b": "Hoos's framing: drop temp is your dial for the caramelization-to-pyrolysis ratio in the cup.",
-      "content": "Your **Drop Temperature** (the final temperature when you eject the beans into the cooling tray) is the ultimate arbiter of roast degree.\n\nRob Hoos presents a highly practical framing: the drop temperature controls the ratio of **Caramelization** to **Pyrolysis**. \n- Lower drop temperatures preserve sweetness (caramelization) and acidity but risk tasting underdeveloped or grassy.\n- Higher drop temperatures introduce more pyrolysis, adding bittersweet, roasty, and chocolatey notes, but diminishing acidity and floral complexity.\n\nFine-tuning your drop temperature by even 1°C can radically shift this balance, especially for high-density, high-altitude coffees.",
-      "points": [
-        "Caramelization continues building sweetness/brown-sugar notes through this zone",
-        "Excess pyrolysis at higher drop temps → roastiness, bitterness, reduced complexity",
-        "Under-development (dropping too early/cool) → vegetal, grassy, underdeveloped acid notes"
-      ],
-      "refs": [
-        "Hoos (2015), op. cit., Ch. 6 — primary source for this exact framing."
-      ]
-    },
-    {
-      "t": "Avoiding common development-phase defects",
-      "b": "Diagnosing the three classic post-FC failure modes by their RoR and flavor signatures.",
-      "content": "The development phase is a tightrope walk. The three most common failures are:\n\n1. **Underdevelopment**: Dropping the roast too early or with too little momentum. The core of the bean remains raw. The cup tastes sour (not acidic, but sharp/vinegary), grassy, or like green peas.\n2. **Over-development (Over-roasting)**: Pushing the drop temp too high or dragging the time too long. Pyrolysis dominates, resulting in ashy, carbon, or flat bitterness.\n3. **Baked**: As discussed in Module 3, if the RoR crashes flat during development, the coffee loses all its vibrant top notes and tastes like cardboard or baked bread, regardless of the final drop color.",
-      "points": [
-        "Underdevelopment: grassy/vegetal, sour-sharp, thin body — usually too-short or too-cool development",
-        "Over-roasting: ashy/burnt/flat — usually excess pyrolysis from prolonged high heat post-FC",
-        "Tipping/scorching: localized over-heating from excess drum-surface conduction or poor bean circulation, distinct from whole-bean over-roasting"
-      ],
-      "refs": [
-        "Giacalone et al. (2019), op. cit.",
-        "Yang, N. et al. (2016). 'Determination of volatile marker compounds of common coffee roast defects.' <i>Food Chemistry</i>, 211, 206–214."
-      ]
-    }
-  ]
+  "en": {
+    "mod": "Module 6",
+    "title": "Software and datalogging",
+    "id": "m6",
+    "desc": "If you are not logging your roasts, you are not roasting—you are just cooking. How to read Artisan or Cropster.",
+    "topics": [
+      {
+        "t": "The necessity of data in roasting",
+        "b": "Human memory is flawed. Datalogging is objective.",
+        "content": "Before the 2010s, roasting was considered a 'dark art.' Roasters relied on sight, sound, and smell, guarding their 'secrets.' The reality was that cup consistency was terrible.\n\nThe adoption of thermocouple probes linked to software like **Artisan** (open-source) or **Cropster** (commercial) revolutionized the industry. These programs plot Environmental Temperature (ET), Bean Temperature (BT), and RoR in real-time.\n\nIf a batch of your Ethiopian washed tastes incredible, you do not have to guess what you did. You open the software, load the profile as a background curve, and trace it exactly for the next batch.",
+        "points": [
+          "The shift from sensory-based roasting to data-driven roasting",
+          "Thermocouple placement and reading delay (why probes lie to you early in the roast)",
+          "Using background curves to achieve consistency across batches"
+        ]
+      },
+      {
+        "t": "Understanding the graph",
+        "b": "Anatomy of a standard roast profile curve.",
+        "content": "When you look at a Cropster/Artisan graph, you see three main lines:\n\n1. **ET (Environmental Temperature)**: A probe placed in the airflow, measuring the heat *available* to the beans. It starts high, drops slightly at charge, and stays high.\n2. **BT (Bean Temperature)**: A probe submerged in the tumbling bean mass. It forms a 'check mark' shape—dropping to the Turning Point, then rising steadily.\n3. **RoR (Rate of Rise)**: The derivative of the BT curve. It spikes massively after the Turning Point, then (ideally) slides down at a steady 45-degree angle until the drop.\n\nLearning to read the relationship between ET (the heat you provide) and BT (how the bean reacts) is the core skill of profile roasting.",
+        "points": [
+          "ET as a proxy for convective heat application",
+          "BT as a proxy for internal bean development",
+          "Noise filtering and smoothing settings for RoR curves"
+        ]
+      },
+      {
+        "t": "Gas and Airflow markers",
+        "b": "Logging your physical actions to understand their delayed effects.",
+        "content": "A beautiful curve is useless if you don't know how you created it.\n\nModern software allows you to log the exact moment you change the Gas or the Airflow. Because of thermal momentum, a gas change at minute 4 might not show its effect on the RoR curve until minute 5.\n\nBy rigorously logging your gas changes (e.g., Gas 80% at Charge, Gas 60% at 150°C, Gas 40% at 180°C), you create a 'recipe' of physical actions. Over time, you learn exactly how many seconds it takes for your specific machine to react to a gas cut.",
+        "points": [
+          "Event logging (Gas, Airflow, Color changes, Cracks)",
+          "Correlating physical inputs to delayed thermal outputs",
+          "Building a repeatable 'Gas Plan' for a given coffee"
+        ]
+      }
+    ]
+  },
+  "es": {
+    "mod": "Módulo 6",
+    "title": "Software y registro de datos (Datalogging)",
+    "id": "m6",
+    "desc": "Si no estás registrando tus tuestes, no estás tostando—solo estás cocinando. Cómo leer Artisan o Cropster.",
+    "topics": [
+      {
+        "t": "La necesidad de datos en el tueste",
+        "b": "La memoria humana falla. El registro de datos es objetivo.",
+        "content": "Antes de la década de 2010, el tueste se consideraba un 'arte oscuro'. Los tostadores dependían de la vista, el sonido y el olfato. La realidad era que la consistencia era terrible.\n\nLa adopción de termopares conectados a software como **Artisan** o **Cropster** revolucionó la industria. Estos programas grafican la Temperatura Ambiental (ET), la Temperatura del Grano (BT) y el RoR en tiempo real.\n\nSi un lote de tu lavado etíope sabe increíble, no tienes que adivinar qué hiciste. Abres el software, cargas el perfil como curva de fondo y lo calcas exactamente para el siguiente lote.",
+        "points": [
+          "El cambio de tueste sensorial a tueste basado en datos",
+          "Ubicación de termopares y retraso de lectura (por qué las sondas te mienten al inicio)",
+          "Uso de curvas de fondo (background curves) para lograr consistencia"
+        ]
+      },
+      {
+        "t": "Entendiendo la gráfica",
+        "b": "Anatomía de una curva de perfil de tueste estándar.",
+        "content": "Al mirar una gráfica de Cropster/Artisan, ves tres líneas principales:\n\n1. **ET (Temperatura Ambiental)**: Una sonda en el flujo de aire, midiendo el calor *disponible*. Empieza alta, baja un poco en la carga y se mantiene alta.\n2. **BT (Temperatura del Grano)**: Una sonda sumergida en la masa de granos. Forma un 'símbolo de visto bueno' (check mark)—cayendo al Turning Point y luego subiendo constantemente.\n3. **RoR (Tasa de Ascenso)**: La derivada de la curva BT. Se dispara masivamente después del Turning Point, luego (idealmente) se desliza hacia abajo en un ángulo constante hasta la salida.\n\nAprender a leer la relación entre ET (el calor que provees) y BT (cómo reacciona el grano) es la habilidad central del tueste.",
+        "points": [
+          "ET como proxy para la aplicación de calor convectivo",
+          "BT como proxy para el desarrollo interno del grano",
+          "Configuraciones de filtrado de ruido y suavizado para curvas RoR"
+        ]
+      },
+      {
+        "t": "Marcadores de Gas y Flujo de Aire",
+        "b": "Registrar tus acciones físicas para entender sus efectos retardados.",
+        "content": "Una curva hermosa es inútil si no sabes cómo la creaste.\n\nEl software moderno permite registrar el momento exacto en que cambias el Gas o el Flujo. Debido al momento térmico, un cambio de gas en el minuto 4 podría no mostrar su efecto en el RoR hasta el minuto 5.\n\nAl registrar rigurosamente tus cambios de gas, creas una 'receta' de acciones físicas. Con el tiempo, aprendes exactamente cuántos segundos tarda tu máquina específica en reaccionar a un corte de gas.",
+        "points": [
+          "Registro de eventos (Gas, Aire, Cambios de color, Cracks)",
+          "Correlacionar inputs físicos con outputs térmicos retardados",
+          "Construir un 'Plan de Gas' repetible para un café dado"
+        ]
+      }
+    ]
+  }
 };

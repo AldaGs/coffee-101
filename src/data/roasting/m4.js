@@ -1,50 +1,84 @@
 export default {
-  "mod": "Module 4",
-  "title": "Maillard reaction phase",
-  "id": "m4",
-  "desc": "From ~150°C to first crack — the browning chemistry that builds the bulk of body, sweetness precursors, and brown-flavor complexity.",
-  "topics": [
-    {
-      "t": "Maillard reaction fundamentals in coffee",
-      "b": "Reducing sugars + amino acids/proteins → melanoidins and hundreds of volatile/non-volatile flavor compounds.",
-      "content": "As the beans cross ~150°C, they enter the browning phase, dominated by the **[Maillard reaction](https://en.wikipedia.org/wiki/Maillard_reaction)**.\n\nThis is a form of non-enzymatic browning where reducing sugars react with amino acids under heat. In coffee, this reaction cascades into hundreds of volatile flavor compounds (giving coffee its distinct aroma) and non-volatile polymers called *melanoidins*. Melanoidins are responsible for the brown color of the roasted bean and significantly contribute to the beverage's body and mouthfeel. \n\nThis is distinctly different from **[Caramelization](https://en.wikipedia.org/wiki/Caramelization)**, which occurs at higher temperatures later in the roast and involves the pyrolysis of sugars in the absence of amino acids.",
-      "points": [
-        "Why Maillard is temperature- and time-dependent in a non-linear way (Arrhenius-type kinetics)",
-        "Melanoidins' contribution to body/mouthfeel, not just color",
-        "Distinct from caramelization — overlapping temperature range but different substrates and mechanism"
-      ],
-      "refs": [
-        "Nunes, F.M. & Coimbra, M.A. (2010). 'Role of hydroxycinnamates in coffee melanoidin formation.' <i>Phytochemistry Reviews</i>.",
-        "Hofmann, T. et al. (2002). 'Studies on the chemical structure of coffee melanoidins.' <i>J. Agric. Food Chem.</i>"
-      ]
-    },
-    {
-      "t": "Modulating body via Maillard duration",
-      "b": "Hoos's central practical claim: stretching or compressing time in this zone is your primary body/mouthfeel lever.",
-      "content": "The duration of the Maillard phase is your primary lever for modulating **body and mouthfeel**.\n\nBecause the Maillard reaction produces melanoidins (the structural polymers that create viscosity in the cup), extending the time spent in this temperature zone (roughly 150°C to First Crack) will generally yield a heavier, fuller-bodied coffee. \n\nHowever, this is a trade-off. Extending the Maillard phase too much will flatten the cup, muting delicate floral top notes and degrading the bright acids that specialty coffee is known for. Managing this duration based on the bean's density and cultivar is a critical profile design decision.",
-      "points": [
-        "Longer Maillard window generally → more melanoidins → heavier body",
-        "Risk of over-extending: dulled acidity, muted top notes, 'flat' cup",
-        "Interaction with bean density — denser beans often want a longer Maillard window to develop fully"
-      ],
-      "refs": [
-        "Hoos, R. (2015), op. cit., Ch. 5 — explicit framework for this.",
-        "Hoos, R. (2024). <i>Cultivar: A Practical Guide for Coffee Roasters</i> — extends this by varietal."
-      ]
-    },
-    {
-      "t": "Organic acid degradation and acidity modulation",
-      "b": "Why total roast time/energy through this zone is your acidity dial, separate from the body dial above.",
-      "content": "While the Maillard phase builds body, the total time and energy applied here also acts as an **acidity dial**.\n\nCoffee contains several key organic acids. **[Chlorogenic Acids (CGAs)](https://en.wikipedia.org/wiki/Chlorogenic_acid)** are abundant in green coffee and break down linearly as heat is applied. Citric and malic acids (responsible for bright, fruity notes) also degrade the longer the roast progresses.\n\nIf you push through the Maillard phase rapidly, you preserve more of these native acids, resulting in a bright, punchy cup. If you drag the phase out, the acids degrade, creating a rounder but potentially duller profile. The tension between preserving acidity (speed) and developing body/sweetness (time) is the central challenge of roast profiling.",
-      "points": [
-        "Chlorogenic, citric, malic, quinic acid degradation kinetics differ by acid type",
-        "Faster roasts through this zone generally preserve more perceived acidity",
-        "Trade-off space between acidity preservation and adequate Maillard development — this is the core profiling tension"
-      ],
-      "refs": [
-        "Rao, S. (2020), op. cit. — covers acid/body trade-off framework extensively.",
-        "Moon, J.K. & Shibamoto, T. (2009). 'Role of roasting conditions in the profile of volatile compounds in coffee.' <i>J. Agric. Food Chem.</i>"
-      ]
-    }
-  ]
+  "en": {
+    "mod": "Module 4",
+    "title": "First Crack and development",
+    "id": "m4",
+    "desc": "The critical threshold where internal pressure breaches the bean's structure, signaling the start of the final flavor development.",
+    "topics": [
+      {
+        "t": "The physics of First Crack",
+        "b": "Steam pressure physically fracturing the cellulose structure.",
+        "content": "Throughout the roast, water inside the bean turns to steam. Because the bean's cellular walls are incredibly dense, this steam gets trapped, building immense internal pressure.\n\nAround 195°C to 205°C (385°F to 400°F), the pressure exceeds the structural integrity of the cellulose. The bean physically fractures, releasing a loud, popcorn-like popping sound. This is **First Crack**.\n\nThis is a violent, exothermic event. The sudden release of steam rapidly cools the immediate environment around the beans (the 'First Crack crash'), forcing the roaster to carefully manage the gas application to keep the roast from stalling.",
+        "points": [
+          "Steam pressure exceeding cellulose tensile strength",
+          "The 'First Crack crash' (sudden evaporative cooling effect)",
+          "Why anticipating First Crack and managing gas energy prior to it is the hallmark of a skilled roaster"
+        ]
+      },
+      {
+        "t": "Development Time Ratio (DTR)",
+        "b": "The percentage of the total roast time spent after First Crack.",
+        "content": "The time from the start of First Crack until you drop the coffee into the cooling tray is called the **Development Phase**.\n\nThe **Development Time Ratio (DTR)** is a metric popularized by Scott Rao. It is the development time divided by the total roast time. For example, if a roast takes 10 minutes, and 2 minutes are spent after First Crack, the DTR is 20%.\n\nRao and others argue that for filter coffee, a DTR between 15% and 20% ensures that the core of the bean is fully cooked (eliminating grassy, raw flavors) without roasting so dark that you destroy the origin character. Espresso roasts often push into the 20% to 25% DTR range to maximize solubility and reduce acidity.",
+        "points": [
+          "Defining Development Phase (Start of FC to Drop)",
+          "Calculating DTR (Development Time / Total Time)",
+          "Using DTR as a benchmark for interior bean doneness vs. exterior color"
+        ],
+        "refs": [
+          "Rao (2014), op. cit. — primary popularizer of the DTR metric."
+        ]
+      },
+      {
+        "t": "Second Crack and dark roasts",
+        "b": "When cellular structure completely degrades and oils migrate to the surface.",
+        "content": "If you leave the beans in the roaster past development, they will eventually undergo a **Second Crack** (around 225°C / 435°F).\n\nUnlike First Crack (which is driven by steam), Second Crack is driven by the combustion of the bean's woody matrix and the rapid release of CO2. The beans become extremely brittle, and the internal coffee oils (lipids) migrate to the surface, giving dark roasts their shiny, greasy appearance.\n\nAt this stage, almost all origin character (fruit, floral notes) is completely burned away. The coffee will taste solely of the roasting process itself—smoky, ashy, and intensely bitter (classic 'French Roast' or 'Italian Roast'). Specialty coffee almost never ventures into Second Crack.",
+        "points": [
+          "Second crack as CO2/matrix combustion, not steam release",
+          "Lipid migration to the bean surface",
+          "The complete destruction of origin character in favor of 'roast character'"
+        ]
+      }
+    ]
+  },
+  "es": {
+    "mod": "Módulo 4",
+    "title": "El Primer Crack y el desarrollo",
+    "id": "m4",
+    "desc": "El umbral crítico donde la presión interna rompe la estructura del grano, marcando el inicio del desarrollo final del sabor.",
+    "topics": [
+      {
+        "t": "La física del Primer Crack",
+        "b": "Presión de vapor fracturando físicamente la estructura de celulosa.",
+        "content": "A lo largo del tueste, el agua dentro del grano se convierte en vapor. Debido a que las paredes celulares son increíblemente densas, este vapor queda atrapado, construyendo una inmensa presión interna.\n\nAlrededor de 195°C a 205°C (385°F a 400°F), la presión supera la integridad estructural de la celulosa. El grano se fractura físicamente, emitiendo un sonido fuerte similar al de las palomitas de maíz. Este es el **Primer Crack (First Crack)**.\n\nEste es un evento violento y exotérmico. La repentina liberación de vapor enfría rápidamente el entorno inmediato alrededor de los granos (el 'crash del Primer Crack'), obligando al tostador a manejar cuidadosamente el gas para evitar que el tueste se estanque.",
+        "points": [
+          "Presión de vapor superando la resistencia a la tracción de la celulosa",
+          "El 'crash' del Primer Crack (efecto repentino de enfriamiento evaporativo)",
+          "Por qué anticipar el Primer Crack y manejar la energía es la marca de un tostador hábil"
+        ]
+      },
+      {
+        "t": "Ratio de Tiempo de Desarrollo (DTR)",
+        "b": "El porcentaje del tiempo total de tueste transcurrido después del Primer Crack.",
+        "content": "El tiempo desde el inicio del Primer Crack hasta que sacas el café se llama la **Fase de Desarrollo**.\n\nEl **Ratio de Tiempo de Desarrollo (DTR)** es una métrica popularizada por Scott Rao. Es el tiempo de desarrollo dividido por el tiempo total de tueste. Por ejemplo, si un tueste dura 10 minutos y 2 minutos transcurren tras el Primer Crack, el DTR es del 20%.\n\nRao y otros argumentan que para café filtrado, un DTR entre 15% y 20% asegura que el núcleo del grano esté completamente cocido (eliminando sabores crudos y a hierba) sin tostar tan oscuro que destruyas el carácter de origen. Los tuestes para espresso a menudo entran en el rango de 20% a 25% para maximizar la solubilidad.",
+        "points": [
+          "Definición de Fase de Desarrollo (Inicio de FC a Salida)",
+          "Cálculo de DTR (Tiempo de Desarrollo / Tiempo Total)",
+          "Uso del DTR como punto de referencia para la cocción interior del grano vs. color exterior"
+        ],
+        "refs": [
+          "Rao (2014), op. cit. — principal popularizador de la métrica DTR."
+        ]
+      },
+      {
+        "t": "Segundo Crack y tuestes oscuros",
+        "b": "Cuando la estructura celular se degrada por completo y los aceites migran a la superficie.",
+        "content": "Si dejas los granos en el tostador más allá del desarrollo, eventualmente sufrirán un **Segundo Crack** (alrededor de 225°C).\n\nA diferencia del Primer Crack (impulsado por vapor), el Segundo Crack es impulsado por la combustión de la matriz leñosa del grano y la rápida liberación de CO2. Los granos se vuelven extremadamente quebradizos y los aceites internos (lípidos) migran a la superficie, dando a los tuestes oscuros su apariencia brillante y grasosa.\n\nEn esta etapa, casi todo el carácter de origen (fruta, notas florales) se quema por completo. El café sabrá únicamente al proceso de tueste en sí—ahumado, a ceniza e intensamente amargo. El café de especialidad casi nunca llega al Segundo Crack.",
+        "points": [
+          "El segundo crack como combustión de matriz/CO2, no liberación de vapor",
+          "Migración de lípidos a la superficie del grano",
+          "La destrucción completa del carácter de origen a favor del 'carácter de tueste'"
+        ]
+      }
+    ]
+  }
 };

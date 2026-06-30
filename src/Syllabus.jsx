@@ -4,12 +4,20 @@ import { UI_DICT } from './data/translations';
 import { brewingData } from './data/brewing/index.js';
 import { espressoData } from './data/espresso/index.js';
 import { roastingData } from './data/roasting/index.js';
+import { historyData } from './data/history/index.js';
+import { agronomyData } from './data/agronomy/index.js';
+import { sensoryData } from './data/sensory/index.js';
+import { baristaData } from './data/barista/index.js';
 import Topic from './Topic';
 
 const DATA_MAP = {
   brewing: brewingData,
   espresso: espressoData,
-  roasting: roastingData
+  roasting: roastingData,
+  history: historyData,
+  agronomy: agronomyData,
+  sensory: sensoryData,
+  barista: baristaData
 };
 
 export default function Syllabus() {

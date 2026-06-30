@@ -1,49 +1,58 @@
 export default {
-  "mod": "Module 10",
-  "title": "Profile design and repeatability",
-  "id": "m10",
-  "desc": "Moving from one good roast to a repeatable, scalable profile — essential before wholesale production.",
-  "topics": [
-    {
-      "t": "Designing a target RoR curve before roasting",
-      "b": "Working backward from desired cup outcome to a planned curve shape, rather than improvising live.",
-      "content": "Professional roasting is not improvisational; it is pre-planned execution. \n\nBefore turning on the machine, you should define your goals based on your sensory evaluation of the green bean:\n1. **Acidity**: Do I want this bright or rounded? (Dictates the length of the drying/Maillard phases).\n2. **Body**: Do I want this tea-like or syrupy? (Dictates the extension of the Maillard phase).\n3. **Sweetness/Roast**: Do I want vibrant fruit or chocolate/caramel? (Dictates the Development Time Ratio and final Drop Temperature).\n\nOnce you establish these parameters, you draw your \"target\" Rate of Rise curve, and use the burner and airflow to steer the physical machine to match the mathematical curve.",
-      "points": [
-        "Setting target Maillard duration based on desired body",
-        "Setting target development time/drop temp based on desired sweetness/roastiness balance",
-        "Building in tolerance bands rather than single-point targets, since green moisture varies batch to batch"
-      ],
-      "refs": [
-        "Rao, S. (2020), op. cit. — this is the book's central methodology."
-      ]
-    },
-    {
-      "t": "Batch-to-batch consistency and drift sources",
-      "b": "What actually causes a profile to drift on you over weeks of production, separate from operator error.",
-      "content": "You roasted the perfect batch on Tuesday. On Friday, following the exact same gas and airflow changes, the coffee tastes completely different. Why? **Thermal Drift**.\n\nA roasting machine stores massive amounts of heat. Your first batch of the day (even after a warm-up) will act sluggish because the drum is still absorbing energy. By batch #5, the drum is fully saturated with heat, and the exact same burner settings will drive the roast much faster. \n\nTo maintain consistency, you must employ a strict **Between Batch Protocol (BBP)**—a repeatable routine of cooling the drum to a specific ET before dropping the next charge—to ensure the starting thermal state is identical every time.",
-      "points": [
-        "Drum/machine thermal seasoning over a roasting session (back-to-back batches run hotter without compensation)",
-        "Ambient temperature/humidity drift across a day or season",
-        "Green coffee aging between purchase and roast affecting moisture and density"
-      ],
-      "refs": [
-        "Schenker (2000), op. cit.",
-        "Folmer (2017), op. cit."
-      ]
-    },
-    {
-      "t": "Logging and software (Artisan, Cropster) as the feedback loop",
-      "b": "Why profile logging isn't bookkeeping — it's the only way to actually iterate scientifically rather than by feel.",
-      "content": "Human memory is notoriously unreliable, especially when balancing heat, airflow, and time across a 12-minute roast. \n\nRoast logging software (like [Artisan](https://artisan-scope.org/) or [Cropster](https://www.cropster.com/)) connects to the thermocouples in your machine and graphs the BT, ET, and RoR in real-time. This is not just bookkeeping; it is the fundamental feedback loop of roasting.\n\nBy overlaying the graph of an excellent roast on top of a new batch, you can see exactly where the RoR deviated and caused a defect. Without data logging, roasting is guesswork. With it, roasting is iteration.",
-      "points": [
-        "Minimum viable logging setup for a small operation (this is relevant to your R1/M10 decision since logging integration differs between them)",
-        "Overlaying roasts to compare RoR shape directly rather than relying on memory",
-        "Tagging cup notes to specific profile features to build your own evidence base over time"
-      ],
-      "refs": [
-        "Artisan-scope documentation: https://artisan-scope.org",
-        "Cropster documentation: https://www.cropster.com"
-      ]
-    }
-  ]
+  "en": {
+    "mod": "Module 10",
+    "title": "Cooling and stopping the roast",
+    "id": "m10",
+    "desc": "The roast isn't over when it leaves the drum. Managing the cooling tray.",
+    "topics": [
+      {
+        "t": "Stopping the thermal momentum",
+        "b": "Coffee continues to roast itself in the cooling tray if not aggressively managed.",
+        "content": "When you open the drum door and drop the coffee, it is 200°C+ and fiercely exothermic. If you just leave it in a pile, the beans in the center will continue to roast, bake, and eventually catch fire.\n\nThe **Cooling Tray** is equipped with a massive suction fan. Its job is to halt the chemical reactions instantly. A specialty standard is that the coffee must return to room temperature within **3 to 4 minutes**.\n\nIf your cooling tray is clogged with chaff or the fan is broken, and the coffee takes 8 minutes to cool, you will lose all the delicate acidity you worked so hard to preserve, and the coffee will taste baked.",
+        "points": [
+          "Exothermic momentum post-drop",
+          "The 4-minute cooling rule to preserve acidity and halt Maillard/Caramelization",
+          "The danger of 'baked' flavors from slow cooling"
+        ]
+      },
+      {
+        "t": "Quenching (Water injection)",
+        "b": "A controversial commercial technique for stopping roasts instantly.",
+        "content": "In massive commercial operations (like Folgers or Starbucks), they cannot wait 4 minutes for coffee to cool. They use a technique called **Quenching**.\n\nSeconds before dropping the coffee, water is sprayed directly into the hot roasting drum. The water flashes to steam, instantly halting the roast and cooling the beans. \n\nWhile efficient, this introduces moisture back into the roasted coffee, drastically reducing shelf life and dulling the flavor. It also makes the coffee weigh more (water weight), which increases profits. Specialty coffee strictly forbids quenching, relying entirely on air cooling.",
+        "points": [
+          "The physics of evaporative cooling via quenching",
+          "The negative impact on shelf life, flavor clarity, and staling rates",
+          "Economic vs. Quality trade-offs in commercial roasting"
+        ]
+      }
+    ]
+  },
+  "es": {
+    "mod": "Módulo 10",
+    "title": "Enfriamiento y detención del tueste",
+    "id": "m10",
+    "desc": "El tueste no termina cuando sale del tambor. Manejo de la bandeja de enfriamiento.",
+    "topics": [
+      {
+        "t": "Detener el momento térmico",
+        "b": "El café continúa tostándose a sí mismo en la bandeja de enfriamiento si no se maneja agresivamente.",
+        "content": "Cuando abres la puerta del tambor y sacas el café, está a más de 200°C y es ferozmente exotérmico. Si solo lo dejas en una pila, los granos en el centro continuarán tostándose, horneándose y eventualmente se incendiarán.\n\nLa **Bandeja de Enfriamiento (Cooling Tray)** está equipada con un ventilador de succión masivo. Su trabajo es detener las reacciones químicas al instante. Un estándar de especialidad es que el café debe volver a temperatura ambiente en **3 a 4 minutos**.\n\nSi tu bandeja está obstruida con tamo o el ventilador está roto, y el café tarda 8 minutos en enfriarse, perderás toda la acidez delicada que tanto te costó preservar, y el café sabrá 'horneado' (baked).",
+        "points": [
+          "Momento exotérmico post-salida",
+          "La regla de los 4 minutos de enfriamiento para preservar acidez y detener Maillard",
+          "El peligro de sabores 'baked' por enfriamiento lento"
+        ]
+      },
+      {
+        "t": "Quenching (Inyección de agua)",
+        "b": "Una técnica comercial controvertida para detener tuestes al instante.",
+        "content": "En operaciones comerciales masivas, no pueden esperar 4 minutos a que el café se enfríe. Usan una técnica llamada **Quenching**.\n\nSegundos antes de sacar el café, se rocía agua directamente dentro del tambor caliente. El agua se convierte instantáneamente en vapor, deteniendo el tueste y enfriando los granos.\n\nAunque es eficiente, esto reintroduce humedad en el café tostado, reduciendo drásticamente su vida útil y apagando el sabor. También hace que el café pese más (peso de agua), lo que aumenta las ganancias. El café de especialidad prohíbe estrictamente el quenching, dependiendo enteramente del enfriamiento por aire.",
+        "points": [
+          "La física del enfriamiento evaporativo vía quenching",
+          "El impacto negativo en la vida útil, claridad de sabor y tasas de envejecimiento",
+          "Compromisos económicos vs. de calidad en el tueste comercial"
+        ]
+      }
+    ]
+  }
 };

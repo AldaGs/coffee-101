@@ -4,7 +4,11 @@ function Home() {
   const courses = [
     { id: 'brewing', title: 'Brewing Theory', desc: 'A deep technical syllabus on filter coffee extraction.' },
     { id: 'espresso', title: 'Espresso Theory', desc: 'A deep technical syllabus on espresso extraction.' },
-    { id: 'roasting', title: 'Coffee Roasting Theory', desc: 'A deep technical syllabus on heat transfer and chemistry.' }
+    { id: 'roasting', title: 'Coffee Roasting Theory', desc: 'A deep technical syllabus on heat transfer and chemistry.' },
+    { id: 'history', title: 'Coffee History & Origins', desc: 'The global spread of coffee and Mexico\'s rich heritage.' },
+    { id: 'agronomy', title: 'Agronomy & Terroir', desc: 'Cultivars, processing methods, and farm-level variables.' },
+    { id: 'sensory', title: 'Sensory & SCA Standards', desc: 'The science of tasting, defect identification, and cupping.' },
+    { id: 'barista', title: 'Barista 101', desc: 'Hospitality, workflow, and foundational drink execution.' }
   ];
 
   return (

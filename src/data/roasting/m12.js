@@ -1,46 +1,64 @@
 export default {
-  "mod": "Module 12",
-  "title": "Sensory validation: closing the loop",
-  "id": "m12",
-  "desc": "Roasting theory is only useful insofar as it predicts what lands in the cup — cupping as the feedback mechanism.",
-  "topics": [
-    {
-      "t": "Cupping protocol as profile feedback",
-      "b": "Standardized cupping isn't bureaucracy — it's the control group for your profiling experiments.",
-      "content": "You cannot improve a roast profile using a V60 or an Espresso machine. Brewing introduces too many external variables (grind size, water chemistry, bypass) that obscure the roast itself.\n\n**[Coffee Cupping](https://en.wikipedia.org/wiki/Coffee_tasting)** is an immersion brewing method designed to remove variables. By standardizing the ratio (usually 8.25g per 150ml), grind, and water temperature, you isolate the roast quality. If a coffee tastes underdeveloped on the cupping table, you know definitively it is a roasting defect, not a brewing error. Cupping is the scientific control group for your roasting experiments.",
-      "points": [
-        "SCA cupping protocol basics: dry fragrance, wet aroma, break, flavor, body, finish",
-        "Calibrating your own palate against a reference flight before trusting single-roast judgments",
-        "Connecting specific cup defects (Module 6) back to specific RoR/profile features"
-      ],
-      "refs": [
-        "SCA (Specialty Coffee Association). <i>SCA Cupping Protocols</i>. https://sca.coffee",
-        "Lingle, T. (2011). <i>The Coffee Cupper's Handbook</i>, 4th ed. SCAA."
-      ]
-    },
-    {
-      "t": "Volatile compound classes and their sensory signatures",
-      "b": "The chemistry-to-cup-language bridge — naming what you're tasting in terms of what produced it.",
-      "content": "Developing a professional palate requires linking sensory experiences to chemical realities.\n\n- **Furans and Furanones**: Formed via caramelization and Maillard reactions. These present as sweet, caramel, and burnt-sugar aromas. If your cup lacks these, your Maillard/development phases were too short.\n- **Pyrazines**: Formed later in the Maillard reaction. These contribute to nutty, roasted, and sometimes earthy/bell-pepper notes.\n- **Phenolic Compounds**: Driven by high-heat pyrolysis (dark roasting). These taste smoky, medicinal, or spicy, and indicate heavy structural degradation of the bean.",
-      "points": [
-        "Furans/furanones: caramel, sweet notes from Maillard/caramelization",
-        "Pyrazines: roasty, nutty, sometimes green-bell-pepper notes depending on type",
-        "Phenolics: smoky, medicinal notes, often associated with over-roasting or certain processing defects"
-      ],
-      "refs": [
-        "Moon & Shibamoto (2009), op. cit.",
-        "Yeretzian, C. et al. (2002). 'Composition of the headspace above roasted coffee.' <i>European Food Research and Technology</i>."
-      ]
-    },
-    {
-      "t": "Building a tasting-to-profile feedback log",
-      "b": "Operationalizing everything above into a repeatable personal practice for Jardín Oculto.",
-      "content": "The final step to mastering coffee roasting is the Feedback Loop. \n\nAfter cupping a batch, you must return to the Artisan/Cropster profile graph and tag the sensory defects to physical events. Did it taste baked? Look at the RoR between minutes 4 and 6. Was it too acidic? Look at the development time ratio. \n\nBy building a systematic log tying specific sensory notes to specific RoR anomalies, you move from roasting by guesswork to roasting by intent. This log becomes the proprietary intellectual property of your roastery.",
-      "points": [
-        "Standard template: profile parameters logged alongside structured cupping notes per batch",
-        "Pattern-matching across batches over time rather than single-roast conclusions",
-        "Using this log as the actual evidence base when pitching wholesale clients on consistency"
-      ]
-    }
-  ]
+  "en": {
+    "mod": "Module 12",
+    "title": "Cupping and quality control",
+    "id": "m12",
+    "desc": "How to blind-taste your roasts objectively to close the feedback loop.",
+    "topics": [
+      {
+        "t": "The SCA Cupping Protocol",
+        "b": "Why we cup instead of brewing V60s to evaluate roasts.",
+        "content": "If you evaluate your roasts by brewing a V60, you are introducing dozens of variables (pour technique, grind size, channeling). If the coffee tastes bad, you don't know if the roast was bad or the barista was bad.\n\n**Cupping** is full-immersion brewing (coffee steeping in bowls). It removes barista technique from the equation, providing an objective, standardized baseline.\n\nThe protocol requires a specific ratio (8.25g of coffee per 150ml of water), water poured directly off the boil, and a crust 'break' at exactly 4 minutes. This standardization allows you to isolate the roast profile as the only variable.",
+        "points": [
+          "Isolation of variables: Removing brewing technique from evaluation",
+          "Standardized ratio and timeline (4-minute break)",
+          "Evaluating fragrance (dry), aroma (wet), flavor, acidity, and body systematically"
+        ],
+        "refs": [
+          "Specialty Coffee Association. <i>Cupping Protocols</i>. https://sca.coffee"
+        ]
+      },
+      {
+        "t": "Triangulation and blind tasting",
+        "b": "Defeating your own cognitive bias.",
+        "content": "If you know you are tasting the 'expensive Geisha,' your brain will convince you it tastes better. If you know you are tasting the batch where you messed up the RoR curve, your brain will convince you it tastes baked.\n\nQuality control must be **Blind**. You must assign numbers to cups and hide the roast profiles.\n\n**Triangulation** is a specific test: You place three cups on the table. Two are the exact same roast, and one is a slightly different roast. Your job is simply to identify the odd cup out. This proves whether a minor change you made to the roasting curve actually made a perceivable difference in the cup, or if you are just chasing ghosts on a graph.",
+        "points": [
+          "Cognitive bias in sensory evaluation",
+          "The Triangulation method (2 identical, 1 different)",
+          "Using blind tasting to validate profile adjustments"
+        ]
+      }
+    ]
+  },
+  "es": {
+    "mod": "Módulo 12",
+    "title": "Catación y control de calidad",
+    "id": "m12",
+    "desc": "Cómo catar a ciegas tus tuestes objetivamente para cerrar el ciclo de retroalimentación.",
+    "topics": [
+      {
+        "t": "El Protocolo de Catación de la SCA",
+        "b": "Por qué catamos en lugar de preparar V60s para evaluar tuestes.",
+        "content": "Si evalúas tus tuestes preparando un V60, introduces docenas de variables (técnica de vertido, molienda, canalización). Si el café sabe mal, no sabes si el tueste fue malo o el barista fue malo.\n\nLa **Catación (Cupping)** es una infusión de inmersión total (café reposando en tazones). Elimina la técnica del barista de la ecuación, proporcionando una línea base objetiva y estandarizada.\n\nEl protocolo exige una proporción específica (8.25g de café por 150ml de agua), agua vertida directamente tras hervir, y romper la costra ('break') a los 4 minutos exactos. Esta estandarización permite aislar el perfil de tueste como la única variable.",
+        "points": [
+          "Aislamiento de variables: Eliminar la técnica de extracción de la evaluación",
+          "Proporción y línea de tiempo estandarizadas (romper costra a los 4 min)",
+          "Evaluar fragancia (seco), aroma (húmedo), sabor, acidez y cuerpo sistemáticamente"
+        ],
+        "refs": [
+          "Specialty Coffee Association. <i>Cupping Protocols</i>. https://sca.coffee"
+        ]
+      },
+      {
+        "t": "Triangulación y cata a ciegas",
+        "b": "Derrotando tu propio sesgo cognitivo.",
+        "content": "Si sabes que estás probando el 'Geisha caro', tu cerebro te convencerá de que sabe mejor. Si sabes que estás probando el lote donde arruinaste la curva de RoR, tu cerebro te convencerá de que sabe horneado (baked).\n\nEl control de calidad debe ser **A Ciegas**. Debes asignar números a las tazas y ocultar los perfiles de tueste.\n\nLa **Triangulación** es una prueba específica: Colocas tres tazas en la mesa. Dos son el mismo tueste exacto, y una es un tueste ligeramente distinto. Tu trabajo es simplemente identificar la taza diferente. Esto prueba si un cambio menor que hiciste en la curva de tueste realmente hizo una diferencia perceptible, o si solo estás persiguiendo fantasmas en una gráfica.",
+        "points": [
+          "Sesgo cognitivo en la evaluación sensorial",
+          "El método de Triangulación (2 idénticos, 1 diferente)",
+          "Usar catas a ciegas para validar ajustes de perfiles"
+        ]
+      }
+    ]
+  }
 };

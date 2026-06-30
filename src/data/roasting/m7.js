@@ -1,49 +1,64 @@
 export default {
-  "mod": "Module 7",
-  "title": "Roast color, density, and physical change",
-  "id": "m7",
-  "desc": "What's measurably happening to the bean — useful for QC consistency once you're running wholesale volume.",
-  "topics": [
-    {
-      "t": "Color development and Agtron/photometric measurement",
-      "b": "Color as an imperfect but practical proxy for roast degree.",
-      "content": "Roast color is the most obvious visual indicator of development, but human eyes are highly subjective. Commercial roasteries use **[Spectrophotometers](https://en.wikipedia.org/wiki/Spectrophotometry)** (like the Agtron scale) to measure light reflectance.\n\nAn Agtron meter reads the color of whole beans and the color of ground coffee. A significant gap between the whole bean color (darker) and ground color (lighter) indicates uneven development—the outside roasted faster than the inside. \n\nWhile color is an excellent QC tool for consistency, it is not an absolute flavor predictor. A coffee roasted fast to Agtron 65 will taste radically different than the same coffee roasted slowly to Agtron 65.",
-      "points": [
-        "Agtron scale basics and why whole-bean vs. ground readings differ",
-        "Color's relationship to (not equivalence with) flavor development — same color can mean different cups depending on path taken",
-        "Practical low-cost alternatives for a small operation without an Agtron unit"
-      ],
-      "refs": [
-        "Geiger, R. et al. (2005). 'Effect of roasting parameters on coffee colour.' <i>J. Sci. Food Agric.</i>, 85(14)."
-      ]
-    },
-    {
-      "t": "Volume expansion and density loss",
-      "b": "Bean physically grows ~50–80%+ in volume while losing 12–20% mass — the structural side of roasting.",
-      "content": "Roasting physically transforms the bean's structure. As internal steam and CO2 build pressure (triggering First Crack), the cellulose matrix expands. \n\nBy the end of the roast, the bean has grown in volume by 50% to 100%, but it has lost 12% to 20% of its mass (primarily water and gases). This means the **density** of the coffee drops dramatically. \n\nThis has major implications for brewing: less dense (darker roasted) coffee is more porous and extracts much faster than dense, light-roasted coffee. It also impacts wholesale operations, as a 1kg batch of green coffee will only yield ~850g of roasted product.",
-      "points": [
-        "Cell wall expansion mechanics tied to internal gas pressure (links back to Module 5)",
-        "Density loss as a yield/costing variable relevant to your wholesale pricing model",
-        "Bulk density consistency as a batch-to-batch QC signal"
-      ],
-      "refs": [
-        "Schenker et al. (2000), op. cit.",
-        "Bustos-Vanegas, J.D. et al. (2018). 'Modelling biophysical parameters during coffee roasting.' <i>J. Food Eng.</i>"
-      ]
-    },
-    {
-      "t": "Weight loss (roast loss %) as a control variable",
-      "b": "Combining moisture loss and pyrolysis gas loss into a single trackable percentage.",
-      "content": "Tracking your **Roast Loss %** (Weight In - Weight Out / Weight In) is one of the easiest and most powerful Quality Control metrics available without expensive equipment.\n\nFor light to medium specialty roasts, expect a weight loss between 12.5% and 15%. Dark roasts can lose up to 20%. If you roast the same profile ten times, and batch #8 shows a 14.5% loss instead of the usual 13%, you instantly know something went wrong—likely a drift in green bean moisture or a massive RoR crash during development.",
-      "points": [
-        "Typical specialty roast loss ranges by roast level",
-        "Using roast loss % as a consistency check across batches of the same bean/profile",
-        "Distinguishing roast loss issues caused by green moisture variance vs. profile drift"
-      ],
-      "refs": [
-        "Rao (2014), op. cit., Ch. on QC.",
-        "Folmer, B., ed. (2017). <i>The Craft and Science of Coffee</i>. Academic Press."
-      ]
-    }
-  ]
+  "en": {
+    "mod": "Module 7",
+    "title": "Water Activity (aw) and moisture dynamics",
+    "id": "m7",
+    "desc": "Not all moisture is equal. How bound water protects the bean during roasting.",
+    "topics": [
+      {
+        "t": "Total Moisture vs. Water Activity (aw)",
+        "b": "Just because a bean has water doesn't mean the water is doing anything.",
+        "content": "When evaluating green coffee, roasters look at two distinct metrics:\n\n1. **Total Moisture Content (MC)**: The total percentage of the bean's mass that is water (ideally 10-12%).\n2. **[Water Activity (aw)](https://en.wikipedia.org/wiki/Water_activity)**: A measurement of how tightly that water is chemically bound to the bean's cellulose matrix. It is measured on a scale from 0.0 to 1.0. Specialty coffee should be around 0.55 to 0.60 aw.\n\nTotal Moisture tells you how much water is there. Water Activity tells you how much of that water is 'free' to react. High aw means the water is loose—the beans will fade in flavor quickly on the shelf and are susceptible to mold. Low aw means the water is tightly bound, making the bean highly stable.",
+        "points": [
+          "Difference between absolute moisture content and aw",
+          "Safe aw ranges for green coffee storage and shipping (below 0.60 to prevent microbial growth)",
+          "How high aw leads to rapid loss of organic acids (fading) before roasting"
+        ],
+        "refs": [
+          "López-Galilea, I. et al. (2006). 'Influence of roasting on the physical and chemical properties of coffee.' <i>J. Agric. Food Chem.</i>"
+        ]
+      },
+      {
+        "t": "Moisture as a heat conductor",
+        "b": "Water conducts heat better than cellulose. Wet beans roast differently than dry beans.",
+        "content": "Water is an excellent conductor of heat. The moisture inside a green coffee bean acts as the vehicle that carries the heat from the surface of the bean into the core.\n\n- **High Moisture Beans (12%+)**: Require a massive amount of energy to push through the drying phase (because water requires immense energy to vaporize). However, once heated, they conduct heat beautifully to the core, roasting very evenly.\n- **Low Moisture Beans (<9%)**: Require very gentle heat. Because they lack water, the surface of the bean heats up wildly fast, while the core remains cold. These beans are highly susceptible to scorching and tipping.",
+        "points": [
+          "The high specific heat capacity of water acting as a thermal buffer",
+          "Why older, dried-out 'past crop' coffees roast so fast and taste papery",
+          "Adapting charge temp and early gas application based on moisture readings"
+        ]
+      }
+    ]
+  },
+  "es": {
+    "mod": "Módulo 7",
+    "title": "Actividad de Agua (aw) y dinámica de la humedad",
+    "id": "m7",
+    "desc": "No toda la humedad es igual. Cómo el agua unida protege al grano durante el tueste.",
+    "topics": [
+      {
+        "t": "Humedad Total vs. Actividad de Agua (aw)",
+        "b": "Que un grano tenga agua no significa que el agua esté participando en reacciones.",
+        "content": "Al evaluar el café verde, los tostadores miran dos métricas distintas:\n\n1. **Contenido de Humedad Total (MC)**: El porcentaje total de la masa del grano que es agua (idealmente 10-12%).\n2. **[Actividad de Agua (aw)](https://es.wikipedia.org/wiki/Actividad_acuosa)**: Una medida de qué tan fuertemente unida químicamente está esa agua a la matriz de celulosa. Se mide en una escala de 0.0 a 1.0. El café de especialidad debe estar alrededor de 0.55 a 0.60 aw.\n\nLa Humedad Total te dice cuánta agua hay. La Actividad de Agua te dice cuánta de esa agua está 'libre' para reaccionar. Un aw alto significa que el agua está suelta—los granos perderán su sabor rápido en el almacén y son susceptibles al moho. Un aw bajo significa que el agua está fuertemente unida, haciendo que el grano sea muy estable.",
+        "points": [
+          "Diferencia entre contenido absoluto de humedad y aw",
+          "Rangos seguros de aw para almacenamiento y transporte (por debajo de 0.60 para prevenir moho)",
+          "Cómo un aw alto lleva a una rápida pérdida de ácidos orgánicos antes del tueste"
+        ],
+        "refs": [
+          "López-Galilea, I. et al. (2006). 'Influence of roasting on the physical and chemical properties of coffee.' <i>J. Agric. Food Chem.</i>"
+        ]
+      },
+      {
+        "t": "La humedad como conductor de calor",
+        "b": "El agua conduce el calor mejor que la celulosa. Los granos húmedos se tuestan distinto a los secos.",
+        "content": "El agua es un excelente conductor térmico. La humedad dentro de un grano actúa como el vehículo que transporta el calor desde la superficie del grano hacia el núcleo.\n\n- **Granos de alta humedad (12%+)**: Requieren una cantidad masiva de energía para pasar la fase de secado. Sin embargo, una vez calientes, conducen el calor hermosamente hacia el núcleo, tostándose muy uniformemente.\n- **Granos de baja humedad (<9%)**: Requieren calor muy suave. Como carecen de agua, la superficie del grano se calienta salvajemente rápido, mientras el núcleo permanece frío. Estos granos son muy susceptibles a quemaduras (scorching y tipping).",
+        "points": [
+          "La alta capacidad calorífica del agua actuando como amortiguador térmico",
+          "Por qué los cafés de 'cosecha pasada' secos se tuestan tan rápido y saben a papel",
+          "Adaptar la temperatura de carga y la aplicación inicial de gas basado en lecturas de humedad"
+        ]
+      }
+    ]
+  }
 };

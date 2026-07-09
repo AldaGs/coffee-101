@@ -108,6 +108,7 @@ export default function Topic({ courseId, modId, topicIdx, topicData, ui, lang, 
               courseId={courseId}
               modId={modId}
               topicIdx={topicIdx}
+              lang={lang}
             />
           )}
           

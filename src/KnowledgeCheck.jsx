@@ -4,7 +4,7 @@ import { reviewCard, isMastered } from './sr';
 import { addXP, XP } from './game';
 import { generateMCQ } from './mcqGenerator';
 
-export default function KnowledgeCheck({ flashcards, courseId, modId, topicIdx }) {
+export default function KnowledgeCheck({ flashcards, courseId, modId, topicIdx, lang }) {
   if (!flashcards || flashcards.length === 0) return null;
 
   return (
@@ -20,6 +20,7 @@ export default function KnowledgeCheck({ flashcards, courseId, modId, topicIdx }
               answer={fc.a}
               cardId={cardId}
               courseId={courseId}
+              lang={lang}
             />
           );
         })}
@@ -28,14 +29,14 @@ export default function KnowledgeCheck({ flashcards, courseId, modId, topicIdx }
   );
 }
 
-function QuizCard({ question, answer, cardId, courseId }) {
+function QuizCard({ question, answer, cardId, courseId, lang }) {
   const [selected, setSelected] = useState(null);
   const [xpPop, setXpPop]      = useState(null);
   const mastered = isMastered(cardId);
 
   const mcq = useMemo(
-    () => generateMCQ(cardId, question, answer, courseId),
-    [cardId, question, answer, courseId]
+    () => generateMCQ(cardId, question, answer, courseId, lang),
+    [cardId, question, answer, courseId, lang]
   );
 
   const handleSelect = (option) => {

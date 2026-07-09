@@ -1,21 +1,15 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-import { getAllCardIds, getCardContent } from './cardRegistry';
+import { getCompletedCardIds, getCardContent } from './cardRegistry';
 import { getDueIds, reviewCard, isNew } from './sr';
 import { addXP, touchStreak, checkBadges, awardBadge, XP, getLevel } from './game';
+import { generateMCQ } from './mcqGenerator';
 
 const COURSE_LABELS = {
   brewing: 'Brewing', espresso: 'Espresso', roasting: 'Roasting',
   history: 'History', agronomy: 'Agronomy', sensory: 'Sensory', barista: 'Barista',
 };
-
-const RATINGS = [
-  { label: 'Again', quality: 1, cls: 'rating-again', hint: 'Completely wrong' },
-  { label: 'Hard',  quality: 3, cls: 'rating-hard',  hint: 'Correct but difficult' },
-  { label: 'Good',  quality: 4, cls: 'rating-good',  hint: 'Correct with hesitation' },
-  { label: 'Easy',  quality: 5, cls: 'rating-easy',  hint: 'Perfect recall' },
-];
 
 function shuffle(arr) {
   const a = [...arr];
@@ -26,18 +20,20 @@ function shuffle(arr) {
   return a;
 }
 
+const LETTERS = ['A', 'B', 'C', 'D'];
+
 export default function Review() {
   const lang = localStorage.getItem('coffee101-lang') || 'en';
   const [queue, setQueue] = useState(null); // null = loading
   const [idx, setIdx]     = useState(0);
-  const [flipped, setFlipped] = useState(false);
+  const [selected, setSelected] = useState(null);
   const [sessionXP, setSessionXP] = useState(0);
   const [done, setDone]   = useState(false);
   const [newBadges, setNewBadges] = useState([]);
   const [xpPop, setXpPop] = useState(null);
 
   useEffect(() => {
-    const all = getAllCardIds();
+    const all = getCompletedCardIds();
     let due = getDueIds(all);
     if (due.length === 0) {
       // Fall back to new cards
@@ -49,14 +45,21 @@ export default function Review() {
 
   const current = queue ? getCardContent(queue[idx], lang) : null;
 
-  const handleRating = useCallback((quality) => {
-    if (!queue) return;
-    const id = queue[idx];
-    reviewCard(id, quality);
+  const mcq = useMemo(() => {
+    if (!current || !queue) return null;
+    return generateMCQ(queue[idx], current.q, current.a, current.courseId, lang);
+  }, [queue, idx, current, lang]);
 
-    let earned = XP.REVIEW_CARD;
-    if (quality === 4) earned += XP.REVIEW_GOOD;
-    if (quality === 5) earned += XP.REVIEW_EASY;
+  const handleSelect = useCallback((option) => {
+    if (!queue || !mcq || selected !== null) return;
+
+    setSelected(option);
+    const id = queue[idx];
+    const isCorrect = option === mcq.correctAnswer;
+    const quality = isCorrect ? 5 : 1;
+    const earned  = isCorrect ? XP.REVIEW_CORRECT : XP.REVIEW_WRONG;
+
+    reviewCard(id, quality);
     addXP(earned);
     setSessionXP(prev => prev + earned);
 
@@ -67,16 +70,18 @@ export default function Review() {
 
     // XP pop
     setXpPop(`+${earned} XP`);
-    setTimeout(() => setXpPop(null), 900);
+    setTimeout(() => setXpPop(null), 1000);
 
-    // Advance
-    if (idx + 1 >= queue.length) {
-      setDone(true);
-    } else {
-      setIdx(idx + 1);
-      setFlipped(false);
-    }
-  }, [queue, idx]);
+    // Auto-advance after a delay so user can see correct/wrong
+    setTimeout(() => {
+      if (idx + 1 >= queue.length) {
+        setDone(true);
+      } else {
+        setIdx(prev => prev + 1);
+        setSelected(null);
+      }
+    }, 1400);
+  }, [queue, idx, mcq, selected]);
 
   if (queue === null) {
     return (
@@ -119,7 +124,7 @@ export default function Review() {
               const all = getAllCardIds();
               const due = getDueIds(all);
               setQueue(shuffle(due.length ? due : all.filter(id => isNew(id))).slice(0, 30));
-              setIdx(0); setFlipped(false); setDone(false); setSessionXP(0); setNewBadges([]);
+              setIdx(0); setSelected(null); setDone(false); setSessionXP(0); setNewBadges([]);
             }}>Review more</button>
           </div>
         </div>
@@ -127,7 +132,7 @@ export default function Review() {
     );
   }
 
-  if (!current) {
+  if (!current || !mcq) {
     return (
       <div className="review-wrap">
         <div className="review-empty">
@@ -161,49 +166,49 @@ export default function Review() {
         {COURSE_LABELS[current.courseId]} · {current.modTitle}
       </div>
 
-      {/* Card */}
-      <div
-        className={`review-card ${flipped ? 'is-flipped' : ''}`}
-        onClick={() => !flipped && setFlipped(true)}
-      >
-        <div className="review-card-inner">
-          <div className="review-card-front">
-            <div className="review-card-label">Question</div>
-            <div className="review-card-text">
-              <ReactMarkdown>{current.q}</ReactMarkdown>
-            </div>
-            <div className="review-card-hint">Tap to reveal answer</div>
-          </div>
-          <div className="review-card-back">
-            <div className="review-card-label">Answer</div>
-            <div className="review-card-text">
-              <ReactMarkdown>{current.a}</ReactMarkdown>
-            </div>
-          </div>
+      {/* Quiz Card */}
+      <div className="review-quiz-card">
+        <div className="review-quiz-label">Question</div>
+        <div className="review-quiz-question">
+          <ReactMarkdown>{current.q}</ReactMarkdown>
         </div>
+
+        <div className="mcq-options review-mcq-options">
+          {mcq.options.map((opt, i) => {
+            let cls = 'mcq-option';
+            if (selected !== null) {
+              if (opt === mcq.correctAnswer) cls += ' correct';
+              if (opt === selected && opt !== mcq.correctAnswer) cls += ' wrong';
+              if (opt !== selected && opt !== mcq.correctAnswer) cls += ' dimmed';
+            }
+            return (
+              <button
+                key={i}
+                className={cls}
+                onClick={() => handleSelect(opt)}
+                disabled={selected !== null}
+              >
+                <span className="mcq-letter">{LETTERS[i]}</span>
+                <span className="mcq-text">{opt}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {selected !== null && (
+          <div className="review-mcq-result">
+            <span className={`mcq-result-icon ${selected === mcq.correctAnswer ? 'correct' : 'wrong'}`}>
+              {selected === mcq.correctAnswer ? '✓' : '✗'}
+            </span>
+            <span className={selected === mcq.correctAnswer ? 'mcq-correct-label' : 'mcq-wrong-label'}>
+              {selected === mcq.correctAnswer ? 'Correct!' : 'Not quite'}
+            </span>
+          </div>
+        )}
       </div>
 
       {/* XP pop */}
       {xpPop && <div className="review-xp-pop">{xpPop}</div>}
-
-      {/* Rating buttons — only after flip */}
-      {flipped && (
-        <div className="review-ratings">
-          <p className="review-ratings-label">How well did you recall it?</p>
-          <div className="review-ratings-row">
-            {RATINGS.map(r => (
-              <button
-                key={r.quality}
-                className={`review-rating-btn ${r.cls}`}
-                onClick={() => handleRating(r.quality)}
-                title={r.hint}
-              >
-                {r.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 }

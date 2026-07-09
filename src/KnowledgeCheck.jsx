@@ -1,14 +1,8 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { reviewCard, isMastered } from './sr';
 import { addXP, XP } from './game';
-
-const RATINGS = [
-  { label: 'Again', quality: 1, cls: 'rating-again' },
-  { label: 'Hard',  quality: 3, cls: 'rating-hard'  },
-  { label: 'Good',  quality: 4, cls: 'rating-good'  },
-  { label: 'Easy',  quality: 5, cls: 'rating-easy'  },
-];
+import { generateMCQ } from './mcqGenerator';
 
 export default function KnowledgeCheck({ flashcards, courseId, modId, topicIdx }) {
   if (!flashcards || flashcards.length === 0) return null;
@@ -20,11 +14,12 @@ export default function KnowledgeCheck({ flashcards, courseId, modId, topicIdx }
         {flashcards.map((fc, idx) => {
           const cardId = `${courseId}:${modId}:${topicIdx}:${idx}`;
           return (
-            <Flashcard
+            <QuizCard
               key={idx}
               question={fc.q}
               answer={fc.a}
               cardId={cardId}
+              courseId={courseId}
             />
           );
         })}
@@ -33,65 +28,73 @@ export default function KnowledgeCheck({ flashcards, courseId, modId, topicIdx }
   );
 }
 
-function Flashcard({ question, answer, cardId }) {
-  const [isFlipped, setIsFlipped]   = useState(false);
-  const [rated, setRated]           = useState(false);
-  const [xpPop, setXpPop]          = useState(null);
+function QuizCard({ question, answer, cardId, courseId }) {
+  const [selected, setSelected] = useState(null);
+  const [xpPop, setXpPop]      = useState(null);
   const mastered = isMastered(cardId);
 
-  const handleRate = (quality) => {
-    if (rated) return;
+  const mcq = useMemo(
+    () => generateMCQ(cardId, question, answer, courseId),
+    [cardId, question, answer, courseId]
+  );
+
+  const handleSelect = (option) => {
+    if (selected !== null) return; // already answered
+    setSelected(option);
+
+    const isCorrect = option === mcq.correctAnswer;
+    const quality = isCorrect ? 5 : 1;
+    const earned  = isCorrect ? XP.REVIEW_CORRECT : XP.REVIEW_WRONG;
+
     reviewCard(cardId, quality);
-    let earned = XP.REVIEW_CARD;
-    if (quality === 4) earned += XP.REVIEW_GOOD;
-    if (quality === 5) earned += XP.REVIEW_EASY;
     addXP(earned);
     setXpPop(`+${earned} XP`);
-    setRated(true);
-    setTimeout(() => setXpPop(null), 1000);
+    setTimeout(() => setXpPop(null), 1200);
   };
+
+  const LETTERS = ['A', 'B', 'C', 'D'];
 
   return (
     <div className="flashcard-wrap">
       {mastered && <div className="fc-mastered-badge">✓ Mastered</div>}
 
-      <div
-        className={`flashcard ${isFlipped ? 'flipped' : ''}`}
-        onClick={() => !isFlipped && setIsFlipped(true)}
-      >
-        <div className="flashcard-inner">
-          <div className="flashcard-front">
-            <div className="fc-icon">?</div>
-            <ReactMarkdown>{question}</ReactMarkdown>
-            <div className="fc-hint">Tap to flip</div>
-          </div>
-          <div className="flashcard-back">
-            <div className="fc-icon">!</div>
-            <ReactMarkdown>{answer}</ReactMarkdown>
-          </div>
+      <div className="mcq-card">
+        <div className="mcq-question">
+          <ReactMarkdown>{question}</ReactMarkdown>
         </div>
+
+        <div className="mcq-options">
+          {mcq.options.map((opt, i) => {
+            let cls = 'mcq-option';
+            if (selected !== null) {
+              if (opt === mcq.correctAnswer) cls += ' correct';
+              if (opt === selected && opt !== mcq.correctAnswer) cls += ' wrong';
+              if (opt !== selected && opt !== mcq.correctAnswer) cls += ' dimmed';
+            }
+            return (
+              <button
+                key={i}
+                className={cls}
+                onClick={() => handleSelect(opt)}
+                disabled={selected !== null}
+              >
+                <span className="mcq-letter">{LETTERS[i]}</span>
+                <span className="mcq-text">{opt}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {selected !== null && (
+          <div className="mcq-result">
+            {xpPop && <span className="review-xp-pop fc-xp-pop">{xpPop}</span>}
+            <span className={`mcq-result-label ${selected === mcq.correctAnswer ? 'mcq-correct-label' : 'mcq-wrong-label'}`}>
+              {selected === mcq.correctAnswer ? 'Correct! ✓' : 'Not quite — review the answer above'}
+            </span>
+            <span className="fc-rated-label">Scheduled for review ✓</span>
+          </div>
+        )}
       </div>
-
-      {isFlipped && !rated && (
-        <div className="fc-ratings">
-          {RATINGS.map(r => (
-            <button
-              key={r.quality}
-              className={`review-rating-btn ${r.cls} fc-rate-btn`}
-              onClick={() => handleRate(r.quality)}
-            >
-              {r.label}
-            </button>
-          ))}
-        </div>
-      )}
-
-      {rated && (
-        <div className="fc-rated-msg">
-          {xpPop && <span className="review-xp-pop fc-xp-pop">{xpPop}</span>}
-          <span className="fc-rated-label">Scheduled for review ✓</span>
-        </div>
-      )}
     </div>
   );
 }

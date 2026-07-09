@@ -1,4 +1,4 @@
-/* Knowledge Check Flashcards */
+/* Knowledge Check — MCQ Cards */
 .knowledge-check {
   margin-top: 24px;
   padding-top: 16px;
@@ -19,74 +19,149 @@
   gap: 16px;
 }
 
-.flashcard {
-  background-color: transparent;
-  width: 100%;
-  min-height: 120px;
-  perspective: 1000px;
-  cursor: pointer;
-}
-
-.flashcard-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
-  transform-style: preserve-3d;
-}
-
-.flashcard.flipped .flashcard-inner {
-  transform: rotateY(180deg);
-}
-
-.flashcard-front, .flashcard-back {
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 10px;
+/* MCQ Card */
+.mcq-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
   padding: 20px;
+}
+
+.mcq-question {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink);
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mcq-question p {
+  margin: 0;
+}
+
+/* MCQ Options */
+.mcq-options {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid var(--line);
+  gap: 8px;
 }
 
-.flashcard-front {
-  background-color: var(--paper);
-  color: var(--ink);
-}
-
-.flashcard-back {
-  background-color: var(--accent-soft);
-  color: var(--accent-text);
-  transform: rotateY(180deg);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.fc-icon {
-  font-size: 24px;
-  font-family: var(--serif);
-  font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 8px;
-  opacity: 0.5;
-}
-
-.fc-hint {
-  font-size: 11px;
-  color: var(--ink-soft);
-  margin-top: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.flashcard-front p, .flashcard-back p {
-  margin: 0;
-  font-size: 15px;
+.mcq-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
   line-height: 1.5;
+  color: var(--ink);
+  transition: border-color .15s, background .15s, transform .1s, box-shadow .15s;
+}
+
+.mcq-option:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateX(2px);
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+
+.mcq-option:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.mcq-option:disabled {
+  cursor: default;
+}
+
+.mcq-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 26px;
+  height: 26px;
+  border-radius: 7px;
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  font-weight: 700;
+  font-size: 12px;
+  flex-shrink: 0;
+  transition: background .15s, color .15s;
+}
+
+.mcq-text {
+  flex: 1;
+  padding-top: 2px;
+}
+
+/* Correct answer */
+.mcq-option.correct {
+  border-color: #43A047;
+  background: #E8F5E9;
+  animation: mcq-correct-pop .35s ease;
+}
+
+.mcq-option.correct .mcq-letter {
+  background: #43A047;
+  color: #fff;
+}
+
+@keyframes mcq-correct-pop {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+/* Wrong answer */
+.mcq-option.wrong {
+  border-color: #E53935;
+  background: #FFEBEE;
+  animation: mcq-wrong-shake .4s ease;
+}
+
+.mcq-option.wrong .mcq-letter {
+  background: #E53935;
+  color: #fff;
+}
+
+@keyframes mcq-wrong-shake {
+  0%, 100% { transform: translateX(0); }
+  20%      { transform: translateX(-4px); }
+  40%      { transform: translateX(4px); }
+  60%      { transform: translateX(-2px); }
+  80%      { transform: translateX(2px); }
+}
+
+/* Dimmed (unselected, not-correct) */
+.mcq-option.dimmed {
+  opacity: 0.4;
+}
+
+/* Result bar */
+.mcq-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.mcq-result-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.mcq-correct-label {
+  color: #2E7D32;
+}
+
+.mcq-wrong-label {
+  color: #C62828;
 }

@@ -42,6 +42,15 @@ export function getAllCardIds() {
   return ids;
 }
 
+// Only cards from topics the user has checked off
+export function getCompletedCardIds() {
+  return getAllCardIds().filter(id => {
+    const [courseId, modId, topicIdx] = id.split(':');
+    const doneKey = `${courseId}-syllabus:${modId}-${topicIdx}-done`;
+    return localStorage.getItem(doneKey) === '1';
+  });
+}
+
 export function getCardContent(id, lang = 'en') {
   const parts = id.split(':');
   if (parts.length !== 4) return null;

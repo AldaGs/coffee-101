@@ -677,48 +677,16 @@ footer {
   margin-bottom: 16px;
 }
 
-.review-card {
+/* Review Quiz Card (MCQ) */
+.review-quiz-card {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 14px;
-  min-height: 220px;
-  cursor: pointer;
-  perspective: 1000px;
-  user-select: none;
+  padding: 28px 24px 24px;
   margin-bottom: 0;
 }
 
-.review-card-inner {
-  position: relative;
-  width: 100%;
-  min-height: 220px;
-  transition: transform .45s ease;
-  transform-style: preserve-3d;
-}
-
-.review-card.is-flipped .review-card-inner {
-  transform: rotateY(180deg);
-  cursor: default;
-}
-
-.review-card-front,
-.review-card-back {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  padding: 28px 28px 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.review-card-back {
-  transform: rotateY(180deg);
-  background: var(--accent-soft);
-  border-radius: 13px;
-}
-
-.review-card-label {
+.review-quiz-label {
   font-size: 10.5px;
   font-weight: 700;
   text-transform: uppercase;
@@ -727,25 +695,58 @@ footer {
   margin-bottom: 14px;
 }
 
-.review-card-back .review-card-label {
-  color: var(--accent-text);
-}
-
-.review-card-text {
-  flex: 1;
+.review-quiz-question {
   font-size: 16px;
   line-height: 1.65;
   color: var(--ink);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
 }
 
-.review-card-text p { margin: 0 0 8px; }
-.review-card-text p:last-child { margin: 0; }
+.review-quiz-question p { margin: 0 0 8px; }
+.review-quiz-question p:last-child { margin: 0; }
 
-.review-card-hint {
-  font-size: 12px;
-  color: var(--ink-soft);
-  margin-top: 16px;
-  text-align: center;
+.review-mcq-options .mcq-option {
+  padding: 14px 16px;
+  font-size: 15px;
+}
+
+.review-mcq-options .mcq-letter {
+  min-width: 28px;
+  height: 28px;
+  font-size: 13px;
+}
+
+.review-mcq-result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.mcq-result-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.mcq-result-icon.correct {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+.mcq-result-icon.wrong {
+  background: #FFEBEE;
+  color: #C62828;
 }
 
 .review-xp-pop {
@@ -763,39 +764,6 @@ footer {
   40%  { opacity: 1; transform: translateY(-4px) scale(1.05); }
   100% { opacity: 0; transform: translateY(-14px) scale(1); }
 }
-
-.review-ratings {
-  margin-top: 20px;
-}
-
-.review-ratings-label {
-  font-size: 12px;
-  text-align: center;
-  color: var(--ink-soft);
-  margin: 0 0 10px;
-}
-
-.review-ratings-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-}
-
-.review-rating-btn {
-  padding: 10px 8px;
-  border-radius: 8px;
-  border: 1.5px solid transparent;
-  font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: filter .1s;
-}
-.review-rating-btn:hover { filter: brightness(1.07); }
-
-.rating-again { background: #FDECEA; border-color: #F5C6C0; color: #B03A2E; }
-.rating-hard  { background: #FEF5E7; border-color: #F5CBA7; color: #9A6114; }
-.rating-good  { background: var(--accent-soft); border-color: var(--line); color: var(--accent-text); }
-.rating-easy  { background: #E8F5E9; border-color: #A5D6A7; color: #2E7D32; }
 
 /* Review summary */
 .review-summary {
@@ -909,7 +877,7 @@ footer {
   font-size: 15px;
 }
 
-/* ── Flashcard SR upgrades ────────────────────────────────── */
+/* ── Knowledge Check MCQ upgrades ─────────────────────────── */
 .flashcard-wrap {
   position: relative;
   margin-bottom: 16px;
@@ -927,27 +895,6 @@ footer {
   border-radius: 4px;
   padding: 2px 7px;
   z-index: 1;
-}
-
-.fc-ratings {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
-  margin-top: 8px;
-}
-
-.fc-rate-btn {
-  padding: 7px 6px;
-  font-size: 12px;
-}
-
-.fc-rated-msg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 6px;
-  min-height: 24px;
 }
 
 .fc-rated-label {

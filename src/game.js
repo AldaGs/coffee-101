@@ -15,6 +15,8 @@ export const XP = {
   REVIEW_CARD: 5,
   REVIEW_GOOD: 3,   // bonus on top of REVIEW_CARD
   REVIEW_EASY: 5,  // bonus on top of REVIEW_CARD
+  REVIEW_CORRECT: 10, // MCQ correct answer
+  REVIEW_WRONG: 2,    // MCQ wrong answer (still rewards trying)
 };
 
 export function addXP(amount) {

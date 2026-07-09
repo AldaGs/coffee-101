@@ -67,7 +67,7 @@ export default function LearningPath() {
 
   const openNode = (node) => {
     if (node.state === 'locked') return;
-    navigate(`/course/${node.courseId}#${node.modId}`);
+    navigate(`/lesson/${node.courseId}/${node.modId}`);
   };
 
   return (

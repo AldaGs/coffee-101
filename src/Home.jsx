@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { UI_DICT } from './data/translations';
-import { getAllCardIds } from './cardRegistry';
+import { getAllCardIds, getCompletedCardIds } from './cardRegistry';
 import { getDueIds } from './sr';
 import { getLevel, getStreak, touchStreak, getEarnedBadges, BADGE_DEFS } from './game';
 
@@ -21,7 +21,8 @@ function Dashboard() {
   useEffect(() => {
     touchStreak();
     const all = getAllCardIds();
-    const due = getDueIds(all);
+    const completed = getCompletedCardIds();
+    const due = getDueIds(completed);
     const level = getLevel();
     const streak = getStreak();
     const earned = getEarnedBadges();

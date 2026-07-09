@@ -9,8 +9,9 @@
   --accent: #3E6E5C; 
   --accent-soft: #DCEAE3; 
   --accent-text: #1F4536;
-  --done: #5C7A52; 
-  --done-bg: #E7EEE3; 
+  --done: #5C7A52;
+  --done-bg: #E7EEE3;
+  --flame: #E08A2B;
   --mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
   --serif: 'Source Serif 4', 'Georgia', serif; 
   --sans: -apple-system, 'Inter', Helvetica, Arial, sans-serif;
@@ -1062,6 +1063,49 @@ footer {
   border-radius: 999px;
 }
 
+/* Mastered (max crown): gold node */
+.pathnode-mastered {
+  background: linear-gradient(160deg, #E6BC43, #C9982A);
+  box-shadow: 0 5px 0 #9A7315;
+}
+/* Crown-level pip on a completed-but-not-mastered node */
+.pathnode-crown-pip {
+  position: absolute;
+  bottom: -8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 800;
+  color: #fff;
+  background: #C9982A;
+  padding: 1px 6px 1px 4px;
+  border-radius: 999px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+/* Cracked: completed but review is due */
+.pathnode-cracked {
+  background: var(--done);
+  box-shadow: 0 5px 0 rgba(0,0,0,0.22);
+  filter: saturate(0.55) brightness(0.97);
+}
+.pathnode-cracked.pathnode-mastered { filter: saturate(0.5) brightness(0.95); }
+.pathnode-refresh {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--flame, #E08A2B);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--bg);
+}
+.pathnode-count.is-cracked { color: var(--flame, #E08A2B); font-weight: 700; }
+
 .pathnode-caption {
   display: flex;
   flex-direction: column;
@@ -1347,7 +1391,21 @@ footer {
 .lesson-complete-sub {
   color: var(--ink-soft);
   font-size: 13px;
-  margin: 0 0 22px;
+  margin: 0 0 16px;
+}
+.lesson-crowns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0 0 20px;
+}
+.lesson-crowns-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-text);
+  margin-left: 6px;
 }
 .lesson-result-stats {
   display: flex;
@@ -1626,3 +1684,101 @@ footer {
 .profile-badge.locked { opacity: 0.55; }
 .profile-badge.locked .profile-badge-ic { background: var(--line); color: var(--ink-soft); }
 .profile-badge.locked .profile-badge-label { color: var(--ink-soft); }
+
+/* ── Practice hub ─────────────────────────────────────────── */
+.practice-page {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+}
+.practice-title {
+  font-family: var(--serif);
+  font-size: 26px;
+  margin: 0 0 18px;
+}
+.practice-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 14px;
+}
+.daily-card { display: flex; align-items: center; gap: 16px; }
+.daily-ring {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.daily-ring-inner {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.daily-ring-xp { font-family: var(--mono); font-weight: 700; font-size: 16px; color: var(--accent-text); }
+.daily-ring-goal { font-family: var(--mono); font-size: 10px; color: var(--ink-soft); }
+.daily-head { font-weight: 700; font-size: 15px; }
+.daily-sub { color: var(--ink-soft); font-size: 13px; margin-top: 2px; }
+
+.practice-review-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.practice-review-title { font-weight: 700; font-size: 15px; }
+.practice-review-sub { color: var(--ink-soft); font-size: 13px; margin-top: 3px; max-width: 42ch; }
+.practice-due-badge {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--flame);
+  padding: 4px 9px;
+  border-radius: 999px;
+}
+
+.practice-section {
+  font-family: var(--serif);
+  font-size: 18px;
+  margin: 24px 0 12px;
+}
+.cracked-list { display: flex; flex-direction: column; gap: 10px; }
+.cracked-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--flame);
+  border-radius: 12px;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform .15s, box-shadow .15s;
+}
+.cracked-item:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+.cracked-ic {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: var(--accent-soft);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.cracked-body { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.cracked-mod { font-family: var(--mono); font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-soft); }
+.cracked-title { font-size: 14px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cracked-refresh { flex-shrink: 0; display: flex; }

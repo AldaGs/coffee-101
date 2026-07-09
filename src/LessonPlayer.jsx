@@ -5,8 +5,8 @@ import { WikiLink } from './WikiCard';
 import { getModules, subjectOfCourse } from './courseData';
 import { generateMCQ } from './mcqGenerator';
 import { reviewCard } from './sr';
-import { addXP, XP, touchStreak, checkBadges, awardBadge, getLevel } from './game';
-import { CelebrateIcon, BadgeIcon } from './icons';
+import { addXP, XP, touchStreak, checkBadges, awardBadge, getLevel, bumpCrown, getCrown, MAX_CROWN } from './game';
+import { CelebrateIcon, BadgeIcon, CrownIcon, CROWN_GOLD } from './icons';
 
 const MD_COMPONENTS = { a: WikiLink };
 const LETTERS = ['A', 'B', 'C', 'D'];
@@ -91,6 +91,7 @@ export default function LessonPlayer() {
   const finish = useCallback(() => {
     // Belt-and-suspenders: ensure every topic is flagged complete.
     (mod?.topics || []).forEach((_, i) => markTopicDone(courseId, modId, i));
+    bumpCrown(courseId, modId); // level up mastery for this module
     setDone(true);
   }, [mod, courseId, modId]);
 
@@ -157,6 +158,22 @@ export default function LessonPlayer() {
           <div className="lesson-complete-icon"><CelebrateIcon size={48} color="#D4A72C" /></div>
           <h2>{es ? '¡Lección completa!' : 'Lesson complete!'}</h2>
           <p className="lesson-complete-sub">{mod.mod} · {mod.title}</p>
+
+          {(() => {
+            const crown = getCrown(courseId, modId);
+            return (
+              <div className="lesson-crowns" title={es ? `Nivel de corona ${crown}` : `Crown level ${crown}`}>
+                {Array.from({ length: MAX_CROWN }).map((_, i) => (
+                  <CrownIcon key={i} size={22} color={i < crown ? CROWN_GOLD : 'var(--line)'} />
+                ))}
+                <span className="lesson-crowns-label">
+                  {crown >= MAX_CROWN
+                    ? (es ? 'Dominado' : 'Mastered')
+                    : (es ? `Corona ${crown}/${MAX_CROWN}` : `Crown ${crown}/${MAX_CROWN}`)}
+                </span>
+              </div>
+            );
+          })()}
 
           <div className="lesson-result-stats">
             <div className="lesson-result-stat">

@@ -4,6 +4,8 @@ const KEYS = {
   streak: 'game:streak',
   lastDate: 'game:lastDate',
   badges: 'game:badges',
+  daily: 'game:daily',
+  crowns: 'game:crowns',
 };
 
 // XP thresholds for levels 0-10
@@ -22,8 +24,51 @@ export const XP = {
 export function addXP(amount) {
   const next = getXP() + amount;
   try { localStorage.setItem(KEYS.xp, next); } catch {}
+  addDailyXP(amount);
   checkBadges();
   return next;
+}
+
+// ── Daily goal ──────────────────────────────────────────────
+export const DAILY_GOAL = 40; // XP per day
+
+function addDailyXP(amount) {
+  const today = new Date().toDateString();
+  const xp = getDailyXP() + amount;
+  try { localStorage.setItem(KEYS.daily, JSON.stringify({ date: today, xp })); } catch {}
+}
+
+export function getDailyXP() {
+  const today = new Date().toDateString();
+  try {
+    const d = JSON.parse(localStorage.getItem(KEYS.daily));
+    return d && d.date === today ? d.xp : 0;
+  } catch { return 0; }
+}
+
+export function getDailyProgress() {
+  const xp = getDailyXP();
+  return { xp, goal: DAILY_GOAL, progress: Math.min(1, xp / DAILY_GOAL), met: xp >= DAILY_GOAL };
+}
+
+// ── Crowns / mastery ────────────────────────────────────────
+export const MAX_CROWN = 3;
+
+function loadCrowns() {
+  try { return JSON.parse(localStorage.getItem(KEYS.crowns)) || {}; } catch { return {}; }
+}
+
+export function getCrown(courseId, modId) {
+  return loadCrowns()[`${courseId}:${modId}`] || 0;
+}
+
+// Called when a lesson session is completed; levels up mastery to a cap.
+export function bumpCrown(courseId, modId) {
+  const crowns = loadCrowns();
+  const key = `${courseId}:${modId}`;
+  crowns[key] = Math.min(MAX_CROWN, (crowns[key] || 0) + 1);
+  try { localStorage.setItem(KEYS.crowns, JSON.stringify(crowns)); } catch {}
+  return crowns[key];
 }
 
 export function getXP() {

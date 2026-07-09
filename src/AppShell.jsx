@@ -5,14 +5,14 @@ import { StreakIcon, XpIcon, TAB_ICONS } from './icons';
 
 const TABS = [
   { key: 'learn',      to: '/',           labelEn: 'Learn',      labelEs: 'Aprende' },
-  { key: 'practice',   to: '/review',     labelEn: 'Practice',   labelEs: 'Práctica' },
+  { key: 'practice',   to: '/practice',   labelEn: 'Practice',   labelEs: 'Práctica' },
   { key: 'simulators', to: '/simulators', labelEn: 'Simulators', labelEs: 'Simuladores' },
   { key: 'profile',    to: '/profile',    labelEn: 'Profile',    labelEs: 'Perfil' },
 ];
 
 // Which tab owns the current path.
 function activeTab(pathname) {
-  if (pathname.startsWith('/review')) return 'practice';
+  if (pathname.startsWith('/practice') || pathname.startsWith('/review')) return 'practice';
   if (pathname.startsWith('/simulators')) return 'simulators';
   if (pathname.startsWith('/profile')) return 'profile';
   return 'learn'; // '/', '/path/*', '/course/*', '/lesson/*'

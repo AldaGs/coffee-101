@@ -6,6 +6,7 @@ import LearningPath from './LearningPath';
 import LessonPlayer from './LessonPlayer';
 import Syllabus from './Syllabus';
 import Review from './Review';
+import Practice from './Practice';
 import SimulatorsHub from './SimulatorsHub';
 import Profile from './Profile';
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/path/:subjectId" element={<LearningPath />} />
         <Route path="/course/:courseId" element={<Syllabus />} />
+        <Route path="/practice" element={<Practice />} />
         <Route path="/simulators" element={<SimulatorsHub />} />
         <Route path="/profile" element={<Profile />} />
       </Route>

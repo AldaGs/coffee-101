@@ -5,6 +5,7 @@ import {
   MdSchool, MdFitnessCenter, MdScience, MdPerson,
   MdCheckCircle, MdStar, MdLock, MdStyle, MdCelebration, MdChevronRight,
   MdEmojiEvents, MdMilitaryTech, MdWorkspacePremium, MdWhatshot, MdCoffee, MdShowChart,
+  MdAutorenew,
 } from 'react-icons/md';
 
 // ── Subjects ─────────────────────────────────────────────
@@ -60,6 +61,9 @@ export const LockIcon     = MdLock;
 export const TrophyIcon   = MdEmojiEvents;
 export const CelebrateIcon = MdCelebration;
 export const ChevronIcon  = MdChevronRight;
+export const CrownIcon    = MdWorkspacePremium;
+export const RefreshIcon  = MdAutorenew;
+export const CROWN_GOLD   = '#D4A72C';
 
 // ── Bottom-nav tabs (monochrome; color comes from active state) ─
 export const TAB_ICONS = {

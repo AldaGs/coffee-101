@@ -6,6 +6,8 @@
 // progress carries over and the two views stay in sync — no new source of truth.
 
 import { SUBJECTS, getModules } from './courseData.js';
+import { getCard, isNew } from './sr.js';
+import { getCrown } from './game.js';
 
 // ── Per-module progress ─────────────────────────────────────
 export function getModuleProgress(courseId, mod) {
@@ -15,6 +17,27 @@ export function getModuleProgress(courseId, mod) {
     if (localStorage.getItem(`${courseId}-syllabus:${mod.id}-${i}-done`) === '1') done++;
   }
   return { done, total };
+}
+
+// Stable card ids for every flashcard in a module.
+export function getModuleCardIds(courseId, mod) {
+  const ids = [];
+  (mod.topics || []).forEach((top, ti) => {
+    (top.flashcards || []).forEach((_, ci) => ids.push(`${courseId}:${mod.id}:${ti}:${ci}`));
+  });
+  return ids;
+}
+
+// A completed module is "cracked" when cards it has actually been quizzed on
+// have fallen due for spaced-repetition review. New (never-quizzed) cards do
+// not crack a node, so reading-only completion isn't nagged prematurely.
+export function getModuleDue(courseId, mod) {
+  const now = Date.now();
+  let due = 0;
+  for (const id of getModuleCardIds(courseId, mod)) {
+    if (!isNew(id) && getCard(id).due <= now) due++;
+  }
+  return due;
 }
 
 export function isModuleComplete(courseId, mod) {
@@ -52,6 +75,9 @@ export function getSubjectPath(subjectId, lang = 'en') {
         state = 'locked';
       }
 
+      const crown = getCrown(courseId, mod.id);
+      const cracked = complete && getModuleDue(courseId, mod) > 0;
+
       return {
         courseId,
         modId: mod.id,
@@ -61,6 +87,8 @@ export function getSubjectPath(subjectId, lang = 'en') {
         topicCount: total,
         done,
         state,
+        crown,
+        cracked,
         globalIndex: `${courseId}:${mod.id}`,
       };
     });
@@ -77,6 +105,24 @@ export function getSubjectPath(subjectId, lang = 'en') {
   // When no 'current' was assigned, every reachable node is complete.
   const allComplete = !currentAssigned && units.every(u => u.total > 0 && u.done === u.total);
   return { subject, units, allComplete };
+}
+
+// All completed modules that have fallen due for review (for the Practice hub).
+export function getCrackedModules(lang = 'en') {
+  const out = [];
+  for (const subject of SUBJECTS) {
+    for (const courseId of subject.tiers) {
+      for (const mod of getModules(courseId, lang)) {
+        const { done, total } = getModuleProgress(courseId, mod);
+        if (total === 0 || done !== total) continue;
+        const due = getModuleDue(courseId, mod);
+        if (due > 0) {
+          out.push({ subjectId: subject.id, courseId, modId: mod.id, modNum: mod.mod, title: mod.title, due });
+        }
+      }
+    }
+  }
+  return out;
 }
 
 // ── Subject-level rollup (for Home cards) ───────────────────

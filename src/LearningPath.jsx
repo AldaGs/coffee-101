@@ -3,15 +3,17 @@ import { useParams, useNavigate, useOutletContext, Link } from 'react-router-dom
 import { UI_DICT } from './data/translations';
 import { getSubject, TIER_LABELS } from './courseData';
 import { getSubjectPath } from './progress';
-import { SubjectIcon, CompleteIcon, CurrentIcon, LockIcon, TrophyIcon } from './icons';
+import { SubjectIcon, CompleteIcon, CurrentIcon, LockIcon, TrophyIcon, CrownIcon, RefreshIcon } from './icons';
+import { MAX_CROWN } from './game';
 
 // Nodes weave left → center → right → center so the trail reads as a path.
 const OFFSETS = [0, 34, 0, -34];
 
-function NodeIcon({ state }) {
-  if (state === 'complete') return <CompleteIcon size={30} />;
-  if (state === 'locked') return <LockIcon size={22} />;
-  return <CurrentIcon size={28} />;
+function NodeIcon({ node }) {
+  if (node.state === 'locked') return <LockIcon size={22} />;
+  if (node.state !== 'complete') return <CurrentIcon size={28} />;
+  if (node.crown >= MAX_CROWN) return <CrownIcon size={28} />;
+  return <CompleteIcon size={30} />;
 }
 
 function ProgressRing({ done, total }) {
@@ -88,10 +90,16 @@ export default function LearningPath() {
             <div className="path-nodes">
               {unit.nodes.map((node, nIdx) => {
                 const offset = OFFSETS[nIdx % OFFSETS.length];
+                const mastered = node.state === 'complete' && node.crown >= MAX_CROWN;
+                const cls = [
+                  'pathnode', `pathnode-${node.state}`,
+                  mastered ? 'pathnode-mastered' : '',
+                  node.cracked ? 'pathnode-cracked' : '',
+                ].filter(Boolean).join(' ');
                 return (
                   <div className="path-node-row" key={node.globalIndex} style={{ transform: `translateX(${offset}px)` }}>
                     <button
-                      className={`pathnode pathnode-${node.state}`}
+                      className={cls}
                       onClick={() => openNode(node)}
                       disabled={node.state === 'locked'}
                       aria-label={node.title}
@@ -100,17 +108,35 @@ export default function LearningPath() {
                       {node.state === 'current' && node.done > 0 && (
                         <ProgressRing done={node.done} total={node.topicCount} />
                       )}
-                      <span className="pathnode-glyph"><NodeIcon state={node.state} /></span>
+                      <span className="pathnode-glyph"><NodeIcon node={node} /></span>
                       {node.state === 'current' && (
                         <span className="pathnode-start">{es ? 'EMPEZAR' : 'START'}</span>
+                      )}
+                      {node.state === 'complete' && node.crown > 0 && !mastered && (
+                        <span className="pathnode-crown-pip">
+                          <CrownIcon size={11} color="#fff" /> {node.crown}
+                        </span>
+                      )}
+                      {node.cracked && (
+                        <span className="pathnode-refresh" title={es ? 'Repaso pendiente' : 'Needs refresh'}>
+                          <RefreshIcon size={13} color="#fff" />
+                        </span>
                       )}
                     </button>
                     <div className="pathnode-caption">
                       <span className="pathnode-modnum">{node.modNum}</span>
                       <span className="pathnode-modtitle">{node.title}</span>
-                      {node.topicCount > 0 && (
+                      {node.state === 'complete' ? (
+                        <span className={`pathnode-count ${node.cracked ? 'is-cracked' : ''}`}>
+                          {node.cracked
+                            ? (es ? 'Repasar' : 'Refresh')
+                            : mastered
+                              ? (es ? 'Dominado' : 'Mastered')
+                              : (es ? 'Completo' : 'Complete')}
+                        </span>
+                      ) : node.topicCount > 0 && (
                         <span className="pathnode-count">
-                          {node.done}/{node.topicCount} {es ? 'temas' : 'lessons'}
+                          {node.done}/{node.topicCount} {es ? 'temas' : 'lecciones'}
                         </span>
                       )}
                     </div>

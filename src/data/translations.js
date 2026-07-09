@@ -9,9 +9,13 @@ export const UI_DICT = {
         roasting: { title: 'Coffee Roasting Theory', desc: 'A deep technical syllabus on heat transfer and chemistry.' },
         roasting2: { title: 'Advanced Roasting', desc: 'Volatile chemistry, probe calibration, burner physics, acid science, green evaluation, packaging, and blending theory.' },
         history: { title: 'Coffee History & Origins', desc: 'The global spread of coffee and Mexico\'s rich heritage.' },
+        history2: { title: 'Coffee History: Intermediate', desc: 'Coffeehouse society, the great producing regions, processing, and brewing devices through history.' },
+        history3: { title: 'Coffee History: Advanced', desc: 'The C-market, the history of roasting, competitions, and the science and institutions of specialty.' },
         agronomy: { title: 'Agronomy & Terroir', desc: 'Cultivars, processing methods, and farm-level variables.' },
         sensory: { title: 'Sensory & SCA Standards', desc: 'The science of tasting, defect identification, and cupping.' },
-        barista: { title: 'Barista 101', desc: 'Hospitality, workflow, and foundational drink execution.' }
+        barista: { title: 'Barista 101', desc: 'Hospitality, workflow, and foundational drink execution.' },
+        barista2: { title: 'Intermediate Barista', desc: 'Latte art, milk & alternative milks, the espresso menu, and the manual brew bar.' },
+        barista3: { title: 'Advanced Barista', desc: 'Machine & grinder mastery, refractometry & profiling, competition, and café leadership.' }
       }
     },
     es: {
@@ -23,9 +27,13 @@ export const UI_DICT = {
         roasting: { title: 'Teoría del Tueste', desc: 'Un programa técnico profundo sobre transferencia de calor y química.' },
         roasting2: { title: 'Tueste Avanzado', desc: 'Química volátil, calibración de sondas, física de quemadores, ciencia de ácidos, evaluación de verde, empaque y teoría de mezclas.' },
         history: { title: 'Historia y Orígenes', desc: 'La expansión global del café y la rica herencia de México.' },
+        history2: { title: 'Historia del Café: Intermedio', desc: 'La sociedad de las cafeterías, las grandes regiones productoras, el procesamiento y los métodos de preparación a través de la historia.' },
+        history3: { title: 'Historia del Café: Avanzado', desc: 'El mercado C, la historia del tueste, las competencias y la ciencia e instituciones de la especialidad.' },
         agronomy: { title: 'Agronomía y Terroir', desc: 'Variedades, métodos de procesamiento y variables a nivel de finca.' },
         sensory: { title: 'Sensorial y Estándares SCA', desc: 'La ciencia de la catación, identificación de defectos y protocolos.' },
-        barista: { title: 'Barista 101', desc: 'Hospitalidad, flujo de trabajo y ejecución de bebidas fundamentales.' }
+        barista: { title: 'Barista 101', desc: 'Hospitalidad, flujo de trabajo y ejecución de bebidas fundamentales.' },
+        barista2: { title: 'Barista Intermedio', desc: 'Arte latte, leche y leches alternativas, el menú de espresso y la barra de métodos manuales.' },
+        barista3: { title: 'Barista Avanzado', desc: 'Dominio de máquina y molino, refractometría y perfilado, competencia y liderazgo de cafetería.' }
       }
     }
   },
@@ -203,6 +211,62 @@ export const UI_DICT = {
       sub: "Hospitalidad, flujo de trabajo y ejecución de bebidas fundamentales para la barra profesional.",
       formatnote: "El progreso se guarda localmente.",
       progress: (d, t) => `${d} / ${t} completados`, expand: "expandir", collapse: "colapsar", covers: "Incluye", refs: "Referencias", notes: "Tus notas", placeholder: "Anota aquí...", footer: "Fuentes: Estándares del SCA Barista Guild.", saved: "Guardado"
+    }
+  },
+  barista2: {
+    en: {
+      title: "Intermediate Barista",
+      sub: "The craft layer above the basics — latte art, milk and alternative-milk science, the espresso menu, and running a manual brew bar.",
+      formatnote: "Progress saves locally. Bilingual content.",
+      progress: (d, t) => `${d} / ${t} complete`, expand: "expand", collapse: "collapse", covers: "Covers", refs: "References", notes: "Your notes", placeholder: "Jot notes here...", footer: "Sources: Barista Hustle, SCA Barista Skills, Hoffmann (2018).", saved: "Saved"
+    },
+    es: {
+      title: "Barista Intermedio",
+      sub: "La capa de oficio sobre lo básico — arte latte, ciencia de la leche y leches alternativas, el menú de espresso y operar una barra de métodos manuales.",
+      formatnote: "El progreso se guarda localmente. Contenido bilingüe.",
+      progress: (d, t) => `${d} / ${t} completados`, expand: "expandir", collapse: "colapsar", covers: "Incluye", refs: "Referencias", notes: "Tus notas", placeholder: "Anota aquí...", footer: "Fuentes: Barista Hustle, SCA Barista Skills, Hoffmann (2018).", saved: "Guardado"
+    }
+  },
+  barista3: {
+    en: {
+      title: "Advanced Barista",
+      sub: "From operator to technician — machine and grinder mastery, refractometry and pressure profiling, competition, and café leadership and quality systems.",
+      formatnote: "Progress saves locally. Bilingual content.",
+      progress: (d, t) => `${d} / ${t} complete`, expand: "expand", collapse: "collapse", covers: "Covers", refs: "References", notes: "Your notes", placeholder: "Jot notes here...", footer: "Sources: Barista Hustle, SCA Coffee Skills, Gagné (2020), World Coffee Events.", saved: "Saved"
+    },
+    es: {
+      title: "Barista Avanzado",
+      sub: "De operador a técnico — dominio de máquina y molino, refractometría y perfilado de presión, competencia y liderazgo de cafetería y sistemas de calidad.",
+      formatnote: "El progreso se guarda localmente. Contenido bilingüe.",
+      progress: (d, t) => `${d} / ${t} completados`, expand: "expandir", collapse: "colapsar", covers: "Incluye", refs: "Referencias", notes: "Tus notas", placeholder: "Anota aquí...", footer: "Fuentes: Barista Hustle, SCA Coffee Skills, Gagné (2020), World Coffee Events.", saved: "Guardado"
+    }
+  },
+  history2: {
+    en: {
+      title: "Coffee History: Intermediate",
+      sub: "How coffee shaped society and was shaped by geography — coffeehouse culture, the great producing regions, the evolution of processing, and the history of brewing devices.",
+      formatnote: "Progress saves locally. Bilingual content.",
+      progress: (d, t) => `${d} / ${t} complete`, expand: "expand", collapse: "collapse", covers: "Covers", refs: "References", notes: "Your notes", placeholder: "Jot notes here...", footer: "Sources: Pendergrast (1999), Ukers (1922), Hoffmann (2018), Cowan (2005).", saved: "Saved"
+    },
+    es: {
+      title: "Historia del Café: Intermedio",
+      sub: "Cómo el café moldeó la sociedad y fue moldeado por la geografía — la cultura de las cafeterías, las grandes regiones productoras, la evolución del procesamiento y la historia de los métodos de preparación.",
+      formatnote: "El progreso se guarda localmente. Contenido bilingüe.",
+      progress: (d, t) => `${d} / ${t} completados`, expand: "expandir", collapse: "colapsar", covers: "Incluye", refs: "Referencias", notes: "Tus notas", placeholder: "Anota aquí...", footer: "Fuentes: Pendergrast (1999), Ukers (1922), Hoffmann (2018), Cowan (2005).", saved: "Guardado"
+    }
+  },
+  history3: {
+    en: {
+      title: "Coffee History: Advanced",
+      sub: "The economics and institutions of modern coffee — the commodity C-market and its crises, the history of roasting, the competition era, and the science and institutions of specialty.",
+      formatnote: "Progress saves locally. Bilingual content.",
+      progress: (d, t) => `${d} / ${t} complete`, expand: "expand", collapse: "collapse", covers: "Covers", refs: "References", notes: "Your notes", placeholder: "Jot notes here...", footer: "Sources: Daviron & Ponte (2005), Talbot (2004), Pendergrast (1999), SCA / CQI.", saved: "Saved"
+    },
+    es: {
+      title: "Historia del Café: Avanzado",
+      sub: "La economía y las instituciones del café moderno — el mercado commodity 'C' y sus crisis, la historia del tueste, la era de las competencias y la ciencia e instituciones de la especialidad.",
+      formatnote: "El progreso se guarda localmente. Contenido bilingüe.",
+      progress: (d, t) => `${d} / ${t} completados`, expand: "expandir", collapse: "colapsar", covers: "Incluye", refs: "Referencias", notes: "Tus notas", placeholder: "Anota aquí...", footer: "Fuentes: Daviron & Ponte (2005), Talbot (2004), Pendergrast (1999), SCA / CQI.", saved: "Guardado"
     }
   }
 };

@@ -5,7 +5,15 @@ import { getAllCardIds } from './cardRegistry';
 import { getDueIds } from './sr';
 import { getLevel, getStreak, touchStreak, getEarnedBadges, BADGE_DEFS } from './game';
 
-const COURSE_ORDER = ['brewing', 'espresso', 'roasting', 'roasting2', 'history', 'history2', 'history3', 'agronomy', 'sensory', 'barista', 'barista2', 'barista3'];
+const COURSE_ORDER = [
+  'brewing', 'brewing2', 'brewing3',
+  'espresso', 'espresso2', 'espresso3',
+  'roasting', 'roasting2', 'roasting3',
+  'agronomy', 'agronomy2', 'agronomy3',
+  'sensory', 'sensory2', 'sensory3',
+  'history', 'history2', 'history3',
+  'barista', 'barista2', 'barista3'
+];
 
 function Dashboard() {
   const [stats, setStats] = useState(null);

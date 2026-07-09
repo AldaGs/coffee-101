@@ -1,17 +1,12 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, useOutletContext, Link } from 'react-router-dom';
 import { UI_DICT } from './data/translations';
 import { DATA_MAP } from './courseData.js';
 import Topic from './Topic';
 
 export default function Syllabus() {
   const { courseId } = useParams();
-  const [lang, setLang] = useState(() => localStorage.getItem('coffee101-lang') || 'en');
-
-  const switchLang = (l) => {
-    setLang(l);
-    localStorage.setItem('coffee101-lang', l);
-  };
+  const { lang } = useOutletContext();
   const [progress, setProgress] = useState({ done: 0, total: 0 });
   const [openTopicKey, setOpenTopicKey] = useState(null);
 
@@ -72,15 +67,8 @@ export default function Syllabus() {
   return (
     <>
       <header>
-        <Link to="/" className="back-link">← Back to Hub</Link>
-        
-        {hasEs && (
-          <div className="lang-switch">
-            <button className={`lang-btn ${lang === 'en' ? 'active' : ''}`} onClick={() => switchLang('en')}>EN</button>
-            <button className={`lang-btn ${lang === 'es' ? 'active' : ''}`} onClick={() => switchLang('es')}>ES</button>
-          </div>
-        )}
-        
+        <Link to="/" className="back-link">← {currentLang === 'es' ? 'Rutas' : 'Paths'}</Link>
+
         <h1>{ui.title}</h1>
         <p className="sub">{ui.sub}</p>
         

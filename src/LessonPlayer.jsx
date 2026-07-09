@@ -6,6 +6,7 @@ import { getModules, subjectOfCourse } from './courseData';
 import { generateMCQ } from './mcqGenerator';
 import { reviewCard } from './sr';
 import { addXP, XP, touchStreak, checkBadges, awardBadge, getLevel } from './game';
+import { CelebrateIcon, BadgeIcon } from './icons';
 
 const MD_COMPONENTS = { a: WikiLink };
 const LETTERS = ['A', 'B', 'C', 'D'];
@@ -153,7 +154,7 @@ export default function LessonPlayer() {
     return (
       <div className="lesson-wrap">
         <div className="lesson-complete">
-          <div className="lesson-complete-icon">🎉</div>
+          <div className="lesson-complete-icon"><CelebrateIcon size={48} color="#D4A72C" /></div>
           <h2>{es ? '¡Lección completa!' : 'Lesson complete!'}</h2>
           <p className="lesson-complete-sub">{mod.mod} · {mod.title}</p>
 
@@ -187,7 +188,7 @@ export default function LessonPlayer() {
               <p className="lesson-badges-label">{es ? 'Insignias desbloqueadas' : 'Badges unlocked'}</p>
               {newBadges.map(b => (
                 <div key={b.id} className="lesson-badge-item">
-                  <span>{b.icon}</span> <strong>{b.label}</strong> — {b.desc}
+                  <BadgeIcon id={b.id} size={18} /> <strong>{b.label}</strong> — {b.desc}
                 </div>
               ))}
             </div>

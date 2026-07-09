@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, useNavigate, useOutletContext, Link } from 'react-router-dom';
 import { UI_DICT } from './data/translations';
 import { getSubject, TIER_LABELS } from './courseData';
 import { getSubjectPath } from './progress';
-import { getLevel, getStreak, touchStreak } from './game';
+import { SubjectIcon, CompleteIcon, CurrentIcon, LockIcon, TrophyIcon } from './icons';
 
 // Nodes weave left → center → right → center so the trail reads as a path.
 const OFFSETS = [0, 34, 0, -34];
 
 function NodeIcon({ state }) {
-  if (state === 'complete') return <span className="pathnode-glyph">✓</span>;
-  if (state === 'locked') return <span className="pathnode-glyph">🔒</span>;
-  return <span className="pathnode-glyph">★</span>;
+  if (state === 'complete') return <CompleteIcon size={30} />;
+  if (state === 'locked') return <LockIcon size={22} />;
+  return <CurrentIcon size={28} />;
 }
 
 function ProgressRing({ done, total }) {
@@ -28,16 +28,10 @@ function ProgressRing({ done, total }) {
 export default function LearningPath() {
   const { subjectId } = useParams();
   const navigate = useNavigate();
-  const [lang, setLang] = useState(() => localStorage.getItem('coffee101-lang') || 'en');
+  const { lang } = useOutletContext();
   const [path, setPath] = useState(null);
-  const [header, setHeader] = useState(null);
 
   const subject = getSubject(subjectId);
-
-  const switchLang = (l) => {
-    setLang(l);
-    localStorage.setItem('coffee101-lang', l);
-  };
 
   useEffect(() => {
     if (subject) document.body.className = subject.theme || '';
@@ -46,9 +40,7 @@ export default function LearningPath() {
 
   useEffect(() => {
     if (!subject) return;
-    touchStreak();
     setPath(getSubjectPath(subjectId, lang));
-    setHeader({ level: getLevel(), streak: getStreak() });
   }, [subjectId, lang, subject]);
 
   if (!subject) {
@@ -59,7 +51,7 @@ export default function LearningPath() {
       </div>
     );
   }
-  if (!path || !header) return null;
+  if (!path) return null;
 
   const subjectTitle = UI_DICT.home[lang].courses[subject.tiers[0]].title.replace(/\s*101.*$/, '').trim();
   const tierLabels = TIER_LABELS[lang] || TIER_LABELS.en;
@@ -73,18 +65,11 @@ export default function LearningPath() {
   return (
     <div className="path-page">
       <header className="path-header">
-        <div className="path-header-top">
-          <Link to="/" className="back-link">← {es ? 'Inicio' : 'Hub'}</Link>
-          <div className="path-stats">
-            <span className="path-chip" title={es ? 'Racha' : 'Streak'}>🔥 {header.streak}</span>
-            <span className="path-chip" title="XP">⚡ {es ? 'Nv.' : 'Lv.'} {header.level.level}</span>
-            <div className="lang-switch">
-              <button className={`lang-btn ${lang === 'en' ? 'active' : ''}`} onClick={() => switchLang('en')}>EN</button>
-              <button className={`lang-btn ${lang === 'es' ? 'active' : ''}`} onClick={() => switchLang('es')}>ES</button>
-            </div>
-          </div>
-        </div>
-        <h1 className="path-title"><span className="path-title-icon">{subject.icon}</span> {subjectTitle}</h1>
+        <Link to="/" className="back-link">← {es ? 'Rutas' : 'Paths'}</Link>
+        <h1 className="path-title">
+          <span className="path-title-icon"><SubjectIcon id={subject.id} size={26} /></span>
+          {subjectTitle}
+        </h1>
       </header>
 
       <div className="path-track">
@@ -112,10 +97,10 @@ export default function LearningPath() {
                       aria-label={node.title}
                     >
                       {node.state === 'current' && <span className="pathnode-pulse" />}
-                      {(node.state === 'current') && node.done > 0 && (
+                      {node.state === 'current' && node.done > 0 && (
                         <ProgressRing done={node.done} total={node.topicCount} />
                       )}
-                      <NodeIcon state={node.state} />
+                      <span className="pathnode-glyph"><NodeIcon state={node.state} /></span>
                       {node.state === 'current' && (
                         <span className="pathnode-start">{es ? 'EMPEZAR' : 'START'}</span>
                       )}
@@ -144,7 +129,8 @@ export default function LearningPath() {
 
         {path.allComplete && (
           <div className="path-complete">
-            🏆 {es ? '¡Ruta completa! Dominaste este tema.' : 'Path complete! You mastered this track.'}
+            <TrophyIcon size={20} color="#D4A72C" style={{ verticalAlign: 'middle', marginRight: 6 }} />
+            {es ? '¡Ruta completa! Dominaste este tema.' : 'Path complete! You mastered this track.'}
           </div>
         )}
       </div>

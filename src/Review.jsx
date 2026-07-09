@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
-import { getCompletedCardIds, getCardContent } from './cardRegistry';
+import { getAllCardIds, getCompletedCardIds, getCardContent } from './cardRegistry';
 import { getDueIds, reviewCard, isNew } from './sr';
 import { addXP, touchStreak, checkBadges, awardBadge, XP, getLevel } from './game';
 import { generateMCQ } from './mcqGenerator';
+import { CelebrateIcon, BadgeIcon } from './icons';
 
 const COURSE_LABELS = {
   brewing: 'Brewing', espresso: 'Espresso', roasting: 'Roasting',
@@ -96,7 +97,7 @@ export default function Review() {
     return (
       <div className="review-wrap">
         <div className="review-summary">
-          <div className="review-summary-icon">🎉</div>
+          <div className="review-summary-icon"><CelebrateIcon size={44} color="#D4A72C" /></div>
           <h2>Session complete!</h2>
           <p className="review-summary-xp">+{sessionXP} XP earned</p>
           <div className="review-level-bar-wrap">
@@ -113,7 +114,7 @@ export default function Review() {
               <p className="review-badges-label">Badges unlocked</p>
               {newBadges.map(b => (
                 <div key={b.id} className="review-badge-item">
-                  <span>{b.icon}</span> <strong>{b.label}</strong> — {b.desc}
+                  <BadgeIcon id={b.id} size={18} /> <strong>{b.label}</strong> — {b.desc}
                 </div>
               ))}
             </div>

@@ -4,16 +4,14 @@ import { UI_DICT } from './data/translations';
 import { getAllCardIds, getCompletedCardIds } from './cardRegistry';
 import { getDueIds } from './sr';
 import { getLevel, getStreak, touchStreak, getEarnedBadges, BADGE_DEFS } from './game';
+import { SUBJECTS } from './courseData';
+import { getSubjectSummary } from './progress';
 
-const COURSE_ORDER = [
-  'brewing', 'brewing2', 'brewing3',
-  'espresso', 'espresso2', 'espresso3',
-  'roasting', 'roasting2', 'roasting3',
-  'agronomy', 'agronomy2', 'agronomy3',
-  'sensory', 'sensory2', 'sensory3',
-  'history', 'history2', 'history3',
-  'barista', 'barista2', 'barista3'
-];
+// Clean subject name from the tier-1 course title ("Brewing 101" -> "Brewing").
+function subjectName(subject, lang) {
+  const raw = UI_DICT.home[lang].courses[subject.tiers[0]].title;
+  return raw.replace(/\s*101.*$/, '').trim();
+}
 
 function Dashboard() {
   const [stats, setStats] = useState(null);
@@ -124,15 +122,28 @@ function Home() {
         </Link>
 
         <div style={{ fontSize: 11, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', color: 'var(--ink-soft)', marginBottom: 12 }}>
-          {lang === 'es' ? 'Cursos' : 'Courses'}
+          {lang === 'es' ? 'Rutas de aprendizaje' : 'Learning paths'}
         </div>
 
-        {COURSE_ORDER.map(id => {
-          const c = ui.courses[id];
+        {SUBJECTS.map(subject => {
+          const { done, total } = getSubjectSummary(subject.id, lang);
+          const pct = total > 0 ? Math.round((done / total) * 100) : 0;
           return (
-            <Link key={id} to={`/course/${id}`} className="course-card">
-              <h2>{c.title}</h2>
-              <p>{c.desc}</p>
+            <Link key={subject.id} to={`/path/${subject.id}`} className="course-card subject-card">
+              <div className="subject-card-icon">{subject.icon}</div>
+              <div className="subject-card-body">
+                <h2>{subjectName(subject, lang)}</h2>
+                <p>{ui.courses[subject.tiers[0]].desc}</p>
+                <div className="subject-card-progress">
+                  <div className="subject-card-bar">
+                    <div className="subject-card-fill" style={{ width: `${pct}%` }} />
+                  </div>
+                  <span className="subject-card-count">
+                    {done}/{total} {lang === 'es' ? 'módulos' : 'modules'}
+                  </span>
+                </div>
+              </div>
+              <span className="subject-card-chevron">›</span>
             </Link>
           );
         })}

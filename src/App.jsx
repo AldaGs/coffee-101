@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import Home from './Home';
+import LearningPath from './LearningPath';
 import Syllabus from './Syllabus';
 import Review from './Review';
 import SimulatorsHub from './SimulatorsHub';
@@ -12,6 +13,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/path/:subjectId" element={<LearningPath />} />
       <Route path="/course/:courseId" element={<Syllabus />} />
       <Route path="/review" element={<Review />} />
       <Route path="/simulators" element={<SimulatorsHub />} />

@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
+import { SIM_ICONS } from './icons';
 
 const SIMS = [
   {
@@ -46,28 +46,13 @@ const SIMS = [
 ];
 
 export default function SimulatorsHub() {
-  const [lang, setLang] = useState(() => localStorage.getItem('coffee101-lang') || 'en');
-
-  const toggleLang = (l) => {
-    setLang(l);
-    localStorage.setItem('coffee101-lang', l);
-  };
-
+  const { lang } = useOutletContext();
   const isEn = lang === 'en';
 
   return (
     <div className="home-container">
       <header style={{ padding: '0 0 24px 0', borderBottom: '1px solid var(--line)', marginBottom: '28px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <Link to="/" style={{ fontSize: 14, fontWeight: 600, color: 'var(--ink-soft)', textDecoration: 'none' }}>
-            ← {isEn ? 'Back to Hub' : 'Volver al Hub'}
-          </Link>
-          <div className="lang-switch">
-            <button className={`lang-btn ${lang === 'en' ? 'active' : ''}`} onClick={() => toggleLang('en')}>EN</button>
-            <button className={`lang-btn ${lang === 'es' ? 'active' : ''}`} onClick={() => toggleLang('es')}>ES</button>
-          </div>
-        </div>
-        <h1 style={{ fontFamily: 'var(--serif)', fontSize: 32, fontWeight: 600, margin: '16px 0 6px' }}>
+        <h1 style={{ fontFamily: 'var(--serif)', fontSize: 32, fontWeight: 600, margin: '0 0 6px' }}>
           {isEn ? 'Simulators' : 'Simuladores'}
         </h1>
         <p className="sub">
@@ -107,7 +92,7 @@ export default function SimulatorsHub() {
                 </span>
               )}
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 10 }}>
-                <span style={{ fontSize: 28 }}>{sim.icon}</span>
+                {(() => { const SimIcon = SIM_ICONS[sim.id]; return SimIcon ? <SimIcon size={30} color={sim.accent} /> : null; })()}
                 <h2 style={{ fontFamily: 'var(--serif)', fontSize: 22, margin: 0, color: sim.accent }}>{title}</h2>
               </div>
               <p style={{ color: 'var(--ink-soft)', fontSize: 14.5, margin: '0 0 14px', lineHeight: 1.6, maxWidth: 600 }}>{desc}</p>

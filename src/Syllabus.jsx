@@ -1,43 +1,12 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, useOutletContext, Link } from 'react-router-dom';
 import { UI_DICT } from './data/translations';
-import { brewingData }   from './data/brewing/index.js';
-import { espressoData }  from './data/espresso/index.js';
-import { roastingData }  from './data/roasting/index.js';
-import { roasting2Data } from './data/roasting2/index.js';
-import { historyData }   from './data/history/index.js';
-import { history2Data }  from './data/history2/index.js';
-import { history3Data }  from './data/history3/index.js';
-import { agronomyData }  from './data/agronomy/index.js';
-import { sensoryData }   from './data/sensory/index.js';
-import { baristaData }   from './data/barista/index.js';
-import { barista2Data }  from './data/barista2/index.js';
-import { barista3Data }  from './data/barista3/index.js';
+import { DATA_MAP } from './courseData.js';
 import Topic from './Topic';
-
-const DATA_MAP = {
-  brewing:   brewingData,
-  espresso:  espressoData,
-  roasting:  roastingData,
-  roasting2: roasting2Data,
-  history:   historyData,
-  history2:  history2Data,
-  history3:  history3Data,
-  agronomy:  agronomyData,
-  sensory:   sensoryData,
-  barista:   baristaData,
-  barista2:  barista2Data,
-  barista3:  barista3Data
-};
 
 export default function Syllabus() {
   const { courseId } = useParams();
-  const [lang, setLang] = useState(() => localStorage.getItem('coffee101-lang') || 'en');
-
-  const switchLang = (l) => {
-    setLang(l);
-    localStorage.setItem('coffee101-lang', l);
-  };
+  const { lang } = useOutletContext();
   const [progress, setProgress] = useState({ done: 0, total: 0 });
   const [openTopicKey, setOpenTopicKey] = useState(null);
 
@@ -50,17 +19,14 @@ export default function Syllabus() {
   }, [courseId]);
 
   const rawData = DATA_MAP[courseId];
-  if (!rawData) {
-    return <div style={{ padding: '24px' }}>Course not found</div>;
-  }
 
   // Determine available languages for this course
-  const hasEs = !!rawData.es;
+  const hasEs = !!rawData?.es;
   const currentLang = hasEs ? lang : 'en';
-  
+
   // Data structure differences: roasting is an array, others are {en: [], es: []}
-  const courseData = Array.isArray(rawData) ? rawData : rawData[currentLang];
-  
+  const courseData = rawData ? (Array.isArray(rawData) ? rawData : rawData[currentLang]) : [];
+
   // Get UI strings
   const ui = UI_DICT[courseId]?.[currentLang] || UI_DICT.brewing.en;
 
@@ -68,7 +34,7 @@ export default function Syllabus() {
   const updateProgress = () => {
     let done = 0;
     let total = 0;
-    courseData.forEach((mod, mIdx) => {
+    courseData.forEach((mod) => {
       mod.topics.forEach((top, tIdx) => {
         total++;
         const key = `${courseId}-syllabus:${mod.id}-${tIdx}-done`;
@@ -83,18 +49,26 @@ export default function Syllabus() {
     updateProgress();
   }, [courseId, currentLang]);
 
+  // When arriving from the Learning Path via /course/:id#modId, scroll to that
+  // module so the tapped node lands on its content.
+  useEffect(() => {
+    const hash = window.location.hash?.slice(1);
+    if (!hash) return;
+    const t = setTimeout(() => {
+      document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 120);
+    return () => clearTimeout(t);
+  }, [courseId, currentLang]);
+
+  if (!rawData) {
+    return <div style={{ padding: '24px' }}>Course not found</div>;
+  }
+
   return (
     <>
       <header>
-        <Link to="/" className="back-link">← Back to Hub</Link>
-        
-        {hasEs && (
-          <div className="lang-switch">
-            <button className={`lang-btn ${lang === 'en' ? 'active' : ''}`} onClick={() => switchLang('en')}>EN</button>
-            <button className={`lang-btn ${lang === 'es' ? 'active' : ''}`} onClick={() => switchLang('es')}>ES</button>
-          </div>
-        )}
-        
+        <Link to="/" className="back-link">← {currentLang === 'es' ? 'Rutas' : 'Paths'}</Link>
+
         <h1>{ui.title}</h1>
         <p className="sub">{ui.sub}</p>
         
@@ -118,7 +92,7 @@ export default function Syllabus() {
       </nav>
 
       <main>
-        {courseData.map((mod, mIdx) => (
+        {courseData.map((mod) => (
           <div key={mod.id} id={mod.id} className="module">
             <div className="module-head">
               <span className="module-num">{mod.mod}</span>
